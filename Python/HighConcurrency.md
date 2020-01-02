@@ -11,13 +11,13 @@
 ### 非阻塞I/O和水平触发通知，比如使用select或者poll
 ### 非阻塞I/O和边缘触发通知，比如epoll
 
-## 使用异步
-
+### 使用异步I/O (Asynchronous I/O, 简称AIO)
+## gong zuo
 # Python 协程
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIwMzIxMjg3LC03NzI1ODU4NDhdfQ==
+eyJoaXN0b3J5IjpbLTE1NDA3NDMzOSwtNzcyNTg1ODQ4XX0=
 -->
