@@ -6,7 +6,8 @@
 第二，怎么更节省资源地处理客户请求，也就是要用更少的线程来服务这些请求。是不是可以继续用原来的100个或者更少的线程，来服务现在的10000个请求呢？
 # C10K and C1000K
 
-## I/O多路复用
+## I/O模型优化
+异步、非阻塞I/O的解决思路，其实就是我们在网络编程中经常yong多路复用
 
 ## select, poll and epoll
 
@@ -16,5 +17,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NjgyOTY2NCwtNzcyNTg1ODQ4XX0=
+eyJoaXN0b3J5IjpbMTE5NTQ5MzY2NiwtNzcyNTg1ODQ4XX0=
 -->
