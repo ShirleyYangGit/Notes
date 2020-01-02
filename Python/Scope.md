@@ -3,7 +3,7 @@
 ## Understanding UnboundLocalError in Python
 [https://eli.thegreenplace.net/2011/05/15/understanding-unboundlocalerror-in-python](https://eli.thegreenplace.net/2011/05/15/understanding-unboundlocalerror-in-python)
 
-
+ One of the stages in the compilation of Python into bytecode is building the symbol table [[4]](https://eli.thegreenplace.net/2011/05/15/understanding-unboundlocalerror-in-python#id10). An important goal of building the symbol table is for Python to be able to mark the scope of variables it encounters - which variables are local to functions, which are global, which are free (lexically bound) and so on.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMDI2MDA5NV19
+eyJoaXN0b3J5IjpbLTEzNTM2OTU5MjRdfQ==
 -->
