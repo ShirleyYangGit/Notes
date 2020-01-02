@@ -10,7 +10,8 @@
 
 在代码运行时，解释器会根据符号表来去找变量和操作变量。
 
-##
+## 闭包
+[https://foofish.net/python-closure.html](https://foofish.net/python-closure.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNDcwMTc0OSwtNzA4NTc4MDMzXX0=
+eyJoaXN0b3J5IjpbMTAyMTc2NDU0LC03MDg1NzgwMzNdfQ==
 -->
