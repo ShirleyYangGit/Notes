@@ -8,7 +8,7 @@
 符号表
 将Python编译成字节码的一个阶段是构建符号表。构建符号表的一个重要目标是让Python能够标记它遇到的变量的范围——哪些变量是函数的局部变量，哪些是全局变量，哪些是自由变量(按词法绑定)，等等。
 
-在代码运行shi
+在代码运行时，解释器会根据符号表来去找变量和操作变量。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMjA1Mzk3M119
+eyJoaXN0b3J5IjpbLTcwODU3ODAzM119
 -->
