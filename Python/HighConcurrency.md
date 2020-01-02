@@ -8,9 +8,10 @@
 
 ## I/O模型优化
 异步、非阻塞I/O的解决思路，其实就是我们在网络编程中经常用到的I/O多路复用（I/O Multiplexing）。
+### 非阻塞I/O和水平触发通知，比如使用select或者poll
+### 非阻塞I/O和边缘触发通知，比如epoll
 
-
-## select, poll and epoll
+## 使用异步
 
 # Python 协程
 
@@ -18,5 +19,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzY1NDcwNjIsLTc3MjU4NTg0OF19
+eyJoaXN0b3J5IjpbMzIwMzIxMjg3LC03NzI1ODU4NDhdfQ==
 -->
