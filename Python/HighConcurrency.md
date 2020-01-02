@@ -7,7 +7,8 @@
 # C10K and C1000K
 
 ## I/O模型优化
-异步、非阻塞I/O的解决思路，其实就是我们在网络编程中经常yong多路复用
+异步、非阻塞I/O的解决思路，其实就是我们在网络编程中经常用到的I/O多路复用（I/O Multiplexing）。
+
 
 ## select, poll and epoll
 
@@ -17,5 +18,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NTQ5MzY2NiwtNzcyNTg1ODQ4XX0=
+eyJoaXN0b3J5IjpbLTE5NzY1NDcwNjIsLTc3MjU4NTg0OF19
 -->
