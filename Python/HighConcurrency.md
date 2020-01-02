@@ -12,12 +12,15 @@
 ### 非阻塞I/O和边缘触发通知，比如epoll
 
 ### 使用异步I/O (Asynchronous I/O, 简称AIO)
-## gong zuo
+## 工作模型优化
+### 主进程 + 多个worker子进程
+
+### 监听到相同端口的duo jin c
 # Python 协程
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDA3NDMzOSwtNzcyNTg1ODQ4XX0=
+eyJoaXN0b3J5IjpbMTcyODkwNjkwMiwtNzcyNTg1ODQ4XX0=
 -->
