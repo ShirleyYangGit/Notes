@@ -18,12 +18,12 @@
 ### 监听到相同端口的多进程模型
 
 ## C10M
-
+最大请求量可以无限增多。特别是当升级完硬件（比如足够多的内存、带宽足够大的网卡、更多的网络功能卸载de
 # Python 协程
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA4MTIzOTY5LC03NzI1ODU4NDhdfQ==
+eyJoaXN0b3J5IjpbMjAwMjE1OTYsLTc3MjU4NTg0OF19
 -->
