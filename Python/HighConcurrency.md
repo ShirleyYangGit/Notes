@@ -6,11 +6,15 @@
 第二，怎么更节省资源地处理客户请求，也就是要用更少的线程来服务这些请求。是不是可以继续用原来的100个或者更少的线程，来服务现在的10000个请求呢？
 # C10K and C1000K
 
-# 
+## I/O多路复用
+
+## select, poll and epoll
+
+# Python 协程
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDE4MTU3ODcsLTc3MjU4NTg0OF19
+eyJoaXN0b3J5IjpbLTc5NjgyOTY2NCwtNzcyNTg1ODQ4XX0=
 -->
