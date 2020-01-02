@@ -1,7 +1,6 @@
+# Scope
 
-
-
-> Written with [StackEdit](https://stackedit.io/).
+## 局部作用yu
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE0NzM2NjIzMTNdfQ==
 -->
