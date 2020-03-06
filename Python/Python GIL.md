@@ -7,6 +7,9 @@ Python模拟了操作系统的时钟机制，也有一套类似的执行NUM步�
 操作系统决定
 
 如果没有调用到多线程，GIL不会被初始化，程序将一直执行，不会被GIL打断。
+
+Python的线程调度
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjYxNDk3MDksLTczMzM1NTQxOV19
+eyJoaXN0b3J5IjpbLTI3NDcxMDEzMCwtMTc2NjE0OTcwOSwtNz
+MzMzU1NDE5XX0=
 -->
