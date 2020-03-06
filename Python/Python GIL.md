@@ -4,7 +4,7 @@
 Python中的线程受GIL互斥锁限制，只有获取了GIL的线程才能够使用Python解释器执行代码。
 
 1. 线程何时释放GIL
-Python模拟了操作系统的时钟机制，也有一套类似的执行NUM步骤后，自动释放GIL，通过操作系统唤醒下一个等待线程
+Python模拟了操作系统的时钟机制，也有一套类似的执行py_ticker()步骤后，自动释放GIL，通过操作系统唤醒下一个等待线程
 3. 如何从等待的线程池中选择下一个执行的线程
 操作系统决定
 
@@ -13,8 +13,8 @@ Python模拟了操作系统的时钟机制，也有一套类似的执行NUM步�
 在线程初始化成功前，操作系统线程调度并没有和Python的线程调度一致。
 当所有的线程都初始化成功后，Python的线程调度才和操作系统的线程调度一致。确切地说，是操作系统的线程调度会受GIL限制，根据GIL的获取和释放来进行线程调度。
 
-Python的线程调度
+## Python的线程调度
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzA1NjcwNzEsLTE3NjYxNDk3MDksLT
-czMzM1NTQxOV19
+eyJoaXN0b3J5IjpbLTEwNTQ2Mjc1NTIsLTEzNzA1NjcwNzEsLT
+E3NjYxNDk3MDksLTczMzM1NTQxOV19
 -->
