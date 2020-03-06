@@ -8,8 +8,10 @@ Python模拟了操作系统的时钟机制，也有一套类似的执行NUM步�
 
 如果没有调用到多线程，GIL不会被初始化，程序将一直执行，不会被GIL打断。
 
+当所有的线程都初始化成功后，Python的线程调度才和操作系统的线程调度一致。确切地说，是操作系统的线程调度会受GIL限制，根据GIL的
+
 Python的线程调度
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NDcxMDEzMCwtMTc2NjE0OTcwOSwtNz
-MzMzU1NDE5XX0=
+eyJoaXN0b3J5IjpbLTE2NTIxMzM4ODYsLTE3NjYxNDk3MDksLT
+czMzM1NTQxOV19
 -->
