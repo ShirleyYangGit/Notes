@@ -6,7 +6,7 @@ Python模拟了操作系统的时钟机制，也有一套类似的执行NUM步�
 3. 如何从等待的线程池中选择下一个执行的线程
 操作系统决定
 
-如果没有调用到多线程，GIL不会被chu shi h
+如果没有调用到多线程，GIL不会被初始化，程序将一直执行，不会被GIL打断。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTE3MTgzODYsLTczMzM1NTQxOV19
+eyJoaXN0b3J5IjpbLTE3NjYxNDk3MDksLTczMzM1NTQxOV19
 -->
