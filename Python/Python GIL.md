@@ -23,9 +23,10 @@ Python内部通过软件模拟了操作系统的时钟中断机制，也有一�
 主线程销毁比子线程要多销毁python运行时的环境。
 子线程是要销毁线程状态对象，释放GIL
 
-## 
+##  用户级的互斥锁
+lock = thread.allocate_lock()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk5NjczMTk1LC05MzM1MDIyOTEsMTY2ND
-M2NjE3NCw5MzAwMjk2MzksLTEzNzA1NjcwNzEsLTE3NjYxNDk3
-MDksLTczMzM1NTQxOV19
+eyJoaXN0b3J5IjpbLTEzNDc1OTkwMTMsLTkzMzUwMjI5MSwxNj
+Y0MzY2MTc0LDkzMDAyOTYzOSwtMTM3MDU2NzA3MSwtMTc2NjE0
+OTcwOSwtNzMzMzU1NDE5XX0=
 -->
