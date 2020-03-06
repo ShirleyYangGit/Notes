@@ -17,7 +17,8 @@ Python内部通过软件模拟了操作系统的时钟中断机制，也有一�
 标准调度
 
 阻塞调度
+在线程阻塞调度切换sh
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkxODI4NTg1LDkzMDAyOTYzOSwtMTM3MD
-U2NzA3MSwtMTc2NjE0OTcwOSwtNzMzMzU1NDE5XX0=
+eyJoaXN0b3J5IjpbMjA0MTEwMTY4Myw5MzAwMjk2MzksLTEzNz
+A1NjcwNzEsLTE3NjYxNDk3MDksLTczMzM1NTQxOV19
 -->
