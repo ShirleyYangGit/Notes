@@ -18,7 +18,12 @@ Python内部通过软件模拟了操作系统的时钟中断机制，也有一�
 
 阻塞调度
 在线程通过阻塞调度切换时，Python内部的_Py_Ticker依然会保持，不会被重置为100。只有标准调度才会重置这个Python的模拟时钟。
+
+## 子线程的销毁
+主线程销毁比子线程要多销毁python运行时的环境。
+子线程是要销毁线程状态对象，释放GIL
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NDM2NjE3NCw5MzAwMjk2MzksLTEzNz
-A1NjcwNzEsLTE3NjYxNDk3MDksLTczMzM1NTQxOV19
+eyJoaXN0b3J5IjpbLTkzMzUwMjI5MSwxNjY0MzY2MTc0LDkzMD
+AyOTYzOSwtMTM3MDU2NzA3MSwtMTc2NjE0OTcwOSwtNzMzMzU1
+NDE5XX0=
 -->
