@@ -1,7 +1,7 @@
 
 # Python GIL
 
-Python中，所有ci
+Python中的线程受GIL互斥锁限制，只有获取了GIL的线程才能够使用Python解释器执行代码。
 
 1. 线程何时释放GIL
 Python模拟了操作系统的时钟机制，也有一套类似的执行NUM步骤后，自动释放GIL，通过操作系统唤醒下一个等待线程
@@ -15,6 +15,6 @@ Python模拟了操作系统的时钟机制，也有一套类似的执行NUM步�
 
 Python的线程调度
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNDc5Mzc4OSwtMTc2NjE0OTcwOSwtNz
-MzMzU1NDE5XX0=
+eyJoaXN0b3J5IjpbLTEzNzA1NjcwNzEsLTE3NjYxNDk3MDksLT
+czMzM1NTQxOV19
 -->
