@@ -4,7 +4,7 @@
 Python中的线程受GIL互斥锁限制，只有获取了GIL的线程才能够使用Python解释器执行代码。
 
 1. 线程何时释放GIL
-Python内部通过软件模拟了操作系统的时钟中断机制，也有一套类似的执行py_ticker(100)条指令后，自动释放GIL，通过操作系统唤醒下一个等待线程
+Python内部通过软件模拟了操作系统的时钟中断机制，也有一套类似的执行_Py_Ticker(100)条指令后，自动释放GIL，通过操作系统唤醒下一个等待线程
 3. 如何从等待的线程池中选择下一个执行的线程
 操作系统决定
 
@@ -17,8 +17,8 @@ Python内部通过软件模拟了操作系统的时钟中断机制，也有一�
 标准调度
 
 阻塞调度
-在线程阻塞调度切换sh
+在线程通过阻塞调度切换时，Python内部的_Py_Ticker依然会保持，不会被重置为100。只有标准调度才会重置这个Python的模拟时钟。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MTEwMTY4Myw5MzAwMjk2MzksLTEzNz
+eyJoaXN0b3J5IjpbMTY2NDM2NjE3NCw5MzAwMjk2MzksLTEzNz
 A1NjcwNzEsLTE3NjYxNDk3MDksLTczMzM1NTQxOV19
 -->
