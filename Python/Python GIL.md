@@ -14,7 +14,8 @@ Python内部通过软件模拟了操作系统的时钟中断机制，也有一�
 当所有的线程都初始化成功后，Python的线程调度才和操作系统的线程调度一致。确切地说，是操作系统的线程调度会受GIL限制，根据GIL的获取和释放来进行线程调度。
 
 ## Python的线程调度
+bi
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMwMDI5NjM5LC0xMzcwNTY3MDcxLC0xNz
-Y2MTQ5NzA5LC03MzMzNTU0MTldfQ==
+eyJoaXN0b3J5IjpbMTIxNTY4NDYyMiw5MzAwMjk2MzksLTEzNz
+A1NjcwNzEsLTE3NjYxNDk3MDksLTczMzM1NTQxOV19
 -->
