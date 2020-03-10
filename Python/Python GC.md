@@ -4,9 +4,8 @@
 ## python的内存管理架构
 Python所有的内存管理都有两套，一套是debug模式下。本文只关注非debug模式下的内存管理机制。
 Python内存管理机制的层次结构：
-一共有四层：
-- Layer 3:
-\[int\] \[dict\] \[list\] ... \[string\] 
+- Layer 3: 
+\[int\] \[dict\] \[list\] ... \[string\] Object-specific memory
 - Layer 2: 
 Python's object allocator (PyObj_API)
 Object Memory
@@ -17,6 +16,6 @@ Python memory (under PyMem manager's control)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MDc1MTcyOCwtMjA1NTc1OTQ2OSwxMT
-cyNjgzMjQxXX0=
+eyJoaXN0b3J5IjpbLTE2NDkwMDY4NjYsLTIwNTU3NTk0NjksMT
+E3MjY4MzI0MV19
 -->
