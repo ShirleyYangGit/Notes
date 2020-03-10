@@ -18,9 +18,9 @@ Python memory (under PyMem manager's control)
 
 block
 pool: 一个pool大小通常为一个系统内存页。每个pool中，block size只有一种。
-are
+arena
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MzI1MDk0OSw4MTI2NDk0MSwtMTE4OD
+eyJoaXN0b3J5IjpbMTU1MzczODA5OCw4MTI2NDk0MSwtMTE4OD
 E3MzAwMSw4MjI1MzM5MTQsLTIwNTU3NTk0NjksMTE3MjY4MzI0
 MV19
 -->
