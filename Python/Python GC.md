@@ -8,9 +8,10 @@ Python内存管理机制的层次结构：
 - Layer 0: 操作系统内存管理接口
 - Layer 1: 包装Layer 0, 提供统一的raw memory的管理接口
 Python's raw memory allocator (PyMem_API)
-
-- Layer 2: 
+Python memory (under PyMem manager's control)
+- Layer 2: Python's object allocator (PyObj_API)
+Object Me
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5OTUzNjI2MSwtMjA1NTc1OTQ2OSwxMT
-cyNjgzMjQxXX0=
+eyJoaXN0b3J5IjpbLTE2NTg3NTgwNDIsLTIwNTU3NTk0NjksMT
+E3MjY4MzI0MV19
 -->
