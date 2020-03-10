@@ -17,8 +17,8 @@ Python memory (under PyMem manager's control)
 执行大量的malloc和free操作，会导致操作系统频繁的在用户态和核心态之间进行切换，这将严重影响python执行效率。为了提供执行效率，Python引入了内存池机制，用于管理小块内存的申请和释放，这也就是Pymalloc机制。
 
 block
-pool: 一个pool大小通常为一个系统内存页
+pool: 一个pool大小通常为一个系统内存页。m
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODgxNzMwMDEsODIyNTMzOTE0LC0yMD
-U1NzU5NDY5LDExNzI2ODMyNDFdfQ==
+eyJoaXN0b3J5IjpbMTMzMTQ2OTM1NiwtMTE4ODE3MzAwMSw4Mj
+I1MzM5MTQsLTIwNTU3NTk0NjksMTE3MjY4MzI0MV19
 -->
