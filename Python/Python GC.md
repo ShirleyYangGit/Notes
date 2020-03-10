@@ -14,8 +14,8 @@ Python's raw memory allocator (PyMem_API)
 Python memory (under PyMem manager's control)
 - Layer 0: 操作系统内存管理接口
 
-
+执行大量的malloc和free操作，会导致操作系统频繁的在用户态和内核态频繁地切换
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxNjA3Mzg2NiwtMjA1NTc1OTQ2OSwxMT
+eyJoaXN0b3J5IjpbLTg3Mzg0NTIzNCwtMjA1NTc1OTQ2OSwxMT
 cyNjgzMjQxXX0=
 -->
