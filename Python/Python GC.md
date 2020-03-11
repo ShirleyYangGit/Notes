@@ -44,13 +44,14 @@ l2.append(l1)
 Python 会维护一个GC双向链表，所有的container对象都会被放到这个链表中。container对象在初始化的时候，会在其PyObject_HEAD前面，加上一个PyGC_Head，用来存储prev和next指针。
 垃圾检测：
 1. 扫描GC链表，找到root object
+2. 从root object开始，标记reachable的对象，添加到reachable链表，其他的则归为unreachable链表
 
 垃圾回收
 
 ### 分代收集
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyOTc1NDA2NCwxNTc2NDc2NTIzLDc0Mz
+eyJoaXN0b3J5IjpbMTY5NDk2NDExMywxNTc2NDc2NTIzLDc0Mz
 k2NTIyMSwtNTk1NzU4NjMyLC02MzI5ODQ0MTUsLTEzOTQ1NTg5
 MDcsODEyNjQ5NDEsLTExODgxNzMwMDEsODIyNTMzOTE0LC0yMD
 U1NzU5NDY5LDExNzI2ODMyNDFdfQ==
