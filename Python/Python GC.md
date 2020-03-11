@@ -46,12 +46,13 @@ Python 会维护一个GC双向链表，所有的container对象都会被放到�
 1. 扫描GC链表，找到root object
 2. 从root object开始，标记reachable的对象，添加到reachable链表，其他的则归为unreachable链表
 
-垃圾回收
+垃圾回收：
+1. 把unreachable链表zho
 
 ### 分代收集
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NDk2NDExMywxNTc2NDc2NTIzLDc0Mz
+eyJoaXN0b3J5IjpbMTkwNjg0MTcwOSwxNTc2NDc2NTIzLDc0Mz
 k2NTIyMSwtNTk1NzU4NjMyLC02MzI5ODQ0MTUsLTEzOTQ1NTg5
 MDcsODEyNjQ5NDEsLTExODgxNzMwMDEsODIyNTMzOTE0LC0yMD
 U1NzU5NDY5LDExNzI2ODMyNDFdfQ==
