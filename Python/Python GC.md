@@ -22,10 +22,15 @@ arena: arena_object与其管理的内存是分离的。
 
 ## Python循环引用的垃圾收集
 ### 引用计数
+在内存分配和释放时，加入引用计数的cao
+优点：
+实时性
+缺点：
 
 ### 三色标记模型
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NTc1ODYzMiwtNjMyOTg0NDE1LC0xMz
-k0NTU4OTA3LDgxMjY0OTQxLC0xMTg4MTczMDAxLDgyMjUzMzkx
-NCwtMjA1NTc1OTQ2OSwxMTcyNjgzMjQxXX0=
+eyJoaXN0b3J5IjpbMTQ0MzkzNTE0NSwtNTk1NzU4NjMyLC02Mz
+I5ODQ0MTUsLTEzOTQ1NTg5MDcsODEyNjQ5NDEsLTExODgxNzMw
+MDEsODIyNTMzOTE0LC0yMDU1NzU5NDY5LDExNzI2ODMyNDFdfQ
+==
 -->
