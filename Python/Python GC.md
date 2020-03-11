@@ -25,6 +25,7 @@ arena: arena_object与其管理的内存是分离的。
 在内存分配和释放时，加入管理引用计数的动作
 优点：
  - 实时性，任何内存一旦没有指向它的引用，就会立刻被回收。
+
 缺点：
  - 执行效率问题
  改进：引人内存池机制，还有针对特定对象（PyIntObject, PyStringObject, PyDictObject, PyListObject等）的内存池机制
@@ -55,7 +56,7 @@ Python中，通过数组维护了三个GC链表。分别为gc_generation[0], gc_
 当所有新分配的container对象都会被放到gc_generation[0]链表中。当对象数量超过threshold时，会触发针对当前gc_generation[0]链表的垃圾回收。
 经过一轮垃圾回收，没有被回收的对象，说明他们正在被使用，会将他们移到下一代，即gc_generation[1]链表。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NTM5ODA0MCwxNTc2NDc2NTIzLDc0Mz
+eyJoaXN0b3J5IjpbLTk0NzkzNTQzMCwxNTc2NDc2NTIzLDc0Mz
 k2NTIyMSwtNTk1NzU4NjMyLC02MzI5ODQ0MTUsLTEzOTQ1NTg5
 MDcsODEyNjQ5NDEsLTExODgxNzMwMDEsODIyNTMzOTE0LC0yMD
 U1NzU5NDY5LDExNzI2ODMyNDFdfQ==
