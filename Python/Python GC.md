@@ -24,13 +24,15 @@ arena: arena_object与其管理的内存是分离的。
 ### 引用计数
 在内存分配和释放时，加入管理引用计数的动作
 优点：
-实时性，任何内存一旦没有指向它的引用，就会立刻被回收。
+ - 实时性，任何内存一旦没有指向它的引用，就会立刻被回收。
 缺点：
+ - 执行效率问题
+ 改进：引人内存池机制，还有针对特定对象（PyIntObject, ）的内存池机制
 
 ### 三色标记模型
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODI2NjA4ODYsLTU5NTc1ODYzMiwtNj
-MyOTg0NDE1LC0xMzk0NTU4OTA3LDgxMjY0OTQxLC0xMTg4MTcz
-MDAxLDgyMjUzMzkxNCwtMjA1NTc1OTQ2OSwxMTcyNjgzMjQxXX
-0=
+eyJoaXN0b3J5IjpbLTIyNjIwNjUwNiwtNTk1NzU4NjMyLC02Mz
+I5ODQ0MTUsLTEzOTQ1NTg5MDcsODEyNjQ5NDEsLTExODgxNzMw
+MDEsODIyNTMzOTE0LC0yMDU1NzU5NDY5LDExNzI2ODMyNDFdfQ
+==
 -->
