@@ -28,11 +28,13 @@ arena: arena_object与其管理的内存是分离的。
 缺点：
  - 执行效率问题
  改进：引人内存池机制，还有针对特定对象（PyIntObject, PyStringObject, PyDictObject, PyListObject等）的内存池机制
- - 循环引用 
+ - 循环引用
+  ``````
 
 ### 三色标记模型
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQzOTY1MjIxLC01OTU3NTg2MzIsLTYzMj
-k4NDQxNSwtMTM5NDU1ODkwNyw4MTI2NDk0MSwtMTE4ODE3MzAw
-MSw4MjI1MzM5MTQsLTIwNTU3NTk0NjksMTE3MjY4MzI0MV19
+eyJoaXN0b3J5IjpbLTQ5MjcyMjQ5Myw3NDM5NjUyMjEsLTU5NT
+c1ODYzMiwtNjMyOTg0NDE1LC0xMzk0NTU4OTA3LDgxMjY0OTQx
+LC0xMTg4MTczMDAxLDgyMjUzMzkxNCwtMjA1NTc1OTQ2OSwxMT
+cyNjgzMjQxXX0=
 -->
