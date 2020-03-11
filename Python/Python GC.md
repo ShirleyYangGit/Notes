@@ -51,9 +51,9 @@ Python 会维护一个GC双向链表，所有的container对象都会被放到�
 2. 销毁剩余unreachable链表中的对象
 
 ### 分代收集
-Python中，通过数组维护了三个GC链表。
+Python中，通过数组维护了三个GC链表。分别为gc_generation[0]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE4MjUzNjY3LDE1NzY0NzY1MjMsNzQzOT
+eyJoaXN0b3J5IjpbLTIzNTgwODQ5LDE1NzY0NzY1MjMsNzQzOT
 Y1MjIxLC01OTU3NTg2MzIsLTYzMjk4NDQxNSwtMTM5NDU1ODkw
 Nyw4MTI2NDk0MSwtMTE4ODE3MzAwMSw4MjI1MzM5MTQsLTIwNT
 U3NTk0NjksMTE3MjY4MzI0MV19
