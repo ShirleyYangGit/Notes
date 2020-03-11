@@ -42,14 +42,15 @@ l2.append(l1)
 ### 三色标记模型
 主要用来针对可能出现循环引用的container对象。PyIntObject和PyStringObject等不可变对象主要依靠引用计数。
 Python 会维护一个GC双向链表，所有的container对象都会被放到这个链表中。container对象在初始化的时候，会在其PyObject_HEAD前面，加上一个PyGC_Head，用来存储prev和next指针。
-垃圾检测
+垃圾检测：
+1. 扫描GC链表，找到root object
 
 垃圾回收
 
 ### 分代收集
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2NDg1MzU1MiwxNTc2NDc2NTIzLDc0Mz
+eyJoaXN0b3J5IjpbLTkyOTc1NDA2NCwxNTc2NDc2NTIzLDc0Mz
 k2NTIyMSwtNTk1NzU4NjMyLC02MzI5ODQ0MTUsLTEzOTQ1NTg5
 MDcsODEyNjQ5NDEsLTExODgxNzMwMDEsODIyNTMzOTE0LC0yMD
 U1NzU5NDY5LDExNzI2ODMyNDFdfQ==
