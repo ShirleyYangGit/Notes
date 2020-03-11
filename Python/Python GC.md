@@ -37,12 +37,12 @@ l2.append(l1)
 ```
 这些变量实际上并没有被任何外部变量引用，它们只是相互引用。这意味着它们不会再有人使用这组对象，应该回收它们的所占用的内存。
 然而由于互相引用，这些对象的引用计数值都不为0，这意味着它们占用的内存不会被回收。
-为了弥补这个缺陷，Python又引入了标记——清楚和分代收集两种垃圾回收机制
+为了弥补这个缺陷，Python又引入了**标记——清除**和**分代收集**两种垃圾回收技术。
 
 ### 三色标记模型
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjM1OTg3OTQsNzQzOTY1MjIxLC01OT
-U3NTg2MzIsLTYzMjk4NDQxNSwtMTM5NDU1ODkwNyw4MTI2NDk0
-MSwtMTE4ODE3MzAwMSw4MjI1MzM5MTQsLTIwNTU3NTk0NjksMT
-E3MjY4MzI0MV19
+eyJoaXN0b3J5IjpbMTU3NjQ3NjUyMyw3NDM5NjUyMjEsLTU5NT
+c1ODYzMiwtNjMyOTg0NDE1LC0xMzk0NTU4OTA3LDgxMjY0OTQx
+LC0xMTg4MTczMDAxLDgyMjUzMzkxNCwtMjA1NTc1OTQ2OSwxMT
+cyNjgzMjQxXX0=
 -->
