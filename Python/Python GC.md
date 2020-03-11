@@ -19,8 +19,11 @@ Python memory (under PyMem manager's control)
 block
 pool: 一个pool大小通常为一个系统内存页。每个pool中，block size只有一种。pool_header与其管理的内存是连续的。
 arena: arena_object与其管理的内存是分离的。
+
+## Python垃圾回收机制
+### 循环引用
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTQ1NTg5MDcsODEyNjQ5NDEsLTExOD
-gxNzMwMDEsODIyNTMzOTE0LC0yMDU1NzU5NDY5LDExNzI2ODMy
-NDFdfQ==
+eyJoaXN0b3J5IjpbLTYzMjk4NDQxNSwtMTM5NDU1ODkwNyw4MT
+I2NDk0MSwtMTE4ODE3MzAwMSw4MjI1MzM5MTQsLTIwNTU3NTk0
+NjksMTE3MjY4MzI0MV19
 -->
