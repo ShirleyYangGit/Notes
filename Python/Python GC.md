@@ -20,10 +20,12 @@ block
 pool: 一个pool大小通常为一个系统内存页。每个pool中，block size只有一种。pool_header与其管理的内存是连续的。
 arena: arena_object与其管理的内存是分离的。
 
-## Python垃圾回收机制
-### 循环引用
+## Python循环引用的垃圾收集
+### 引用计数
+
+### 三色标记模型
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMjk4NDQxNSwtMTM5NDU1ODkwNyw4MT
-I2NDk0MSwtMTE4ODE3MzAwMSw4MjI1MzM5MTQsLTIwNTU3NTk0
-NjksMTE3MjY4MzI0MV19
+eyJoaXN0b3J5IjpbLTU5NTc1ODYzMiwtNjMyOTg0NDE1LC0xMz
+k0NTU4OTA3LDgxMjY0OTQxLC0xMTg4MTczMDAxLDgyMjUzMzkx
+NCwtMjA1NTc1OTQ2OSwxMTcyNjgzMjQxXX0=
 -->
