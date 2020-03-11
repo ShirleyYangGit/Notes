@@ -40,7 +40,8 @@ l2.append(l1)
 为了弥补这个缺陷，Python又引入了**标记——清除**和**分代收集**两种垃圾回收技术。
 
 ### 三色标记模型
-主要用来针对可能出现循环
+主要用来针对可能出现循环引用的对象。PyIntObject和PyStringObject等不可变对象主要依靠引用计数。
+Python 会wei hGC
 垃圾检测
 
 垃圾回收
@@ -48,8 +49,8 @@ l2.append(l1)
 ### 分代收集
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NTE5NzI2NywxNTc2NDc2NTIzLDc0Mz
-k2NTIyMSwtNTk1NzU4NjMyLC02MzI5ODQ0MTUsLTEzOTQ1NTg5
-MDcsODEyNjQ5NDEsLTExODgxNzMwMDEsODIyNTMzOTE0LC0yMD
-U1NzU5NDY5LDExNzI2ODMyNDFdfQ==
+eyJoaXN0b3J5IjpbLTE2MDM5NzI0OTcsMTU3NjQ3NjUyMyw3ND
+M5NjUyMjEsLTU5NTc1ODYzMiwtNjMyOTg0NDE1LC0xMzk0NTU4
+OTA3LDgxMjY0OTQxLC0xMTg4MTczMDAxLDgyMjUzMzkxNCwtMj
+A1NTc1OTQ2OSwxMTcyNjgzMjQxXX0=
 -->
