@@ -29,11 +29,17 @@ arena: arena_object与其管理的内存是分离的。
  - 执行效率问题
  改进：引人内存池机制，还有针对特定对象（PyIntObject, PyStringObject, PyDictObject, PyListObject等）的内存池机制
  - 循环引用
-  ``````
+```
+l1 = []
+l2 = []
+l1.append(l2)
+l2.append(l1)
+```
+这些bian l循环引用的，内存空间
 
 ### 三色标记模型
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MjcyMjQ5Myw3NDM5NjUyMjEsLTU5NT
+eyJoaXN0b3J5IjpbLTY3NjIxMDMxNyw3NDM5NjUyMjEsLTU5NT
 c1ODYzMiwtNjMyOTg0NDE1LC0xMzk0NTU4OTA3LDgxMjY0OTQx
 LC0xMTg4MTczMDAxLDgyMjUzMzkxNCwtMjA1NTc1OTQ2OSwxMT
 cyNjgzMjQxXX0=
