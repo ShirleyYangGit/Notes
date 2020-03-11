@@ -52,9 +52,10 @@ Python 会维护一个GC双向链表，所有的container对象都会被放到�
 
 ### 分代收集
 Python中，通过数组维护了三个GC链表。分别为gc_generation[0], gc_generation[1] 和gc_generation[2]。每个链表都有相应的threshold，就是可容纳的对象数量。
-当所有新分配的container对象都会被放到gc_generation[0]链表中。当对象数量超过threshold时，会触发针对当前
+当所有新分配的container对象都会被放到gc_generation[0]链表中。当对象数量超过threshold时，会触发针对当前gc_generation[0]链表的垃圾回收。
+经过一轮垃圾回收，没有被回收的对象，说明他们正在被使用，会将他们移到下一代，即gc_generation[1]链表。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMTk3Mzk4MywxNTc2NDc2NTIzLDc0Mz
+eyJoaXN0b3J5IjpbLTI2NTM5ODA0MCwxNTc2NDc2NTIzLDc0Mz
 k2NTIyMSwtNTk1NzU4NjMyLC02MzI5ODQ0MTUsLTEzOTQ1NTg5
 MDcsODEyNjQ5NDEsLTExODgxNzMwMDEsODIyNTMzOTE0LC0yMD
 U1NzU5NDY5LDExNzI2ODMyNDFdfQ==
