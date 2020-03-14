@@ -10,8 +10,8 @@ apt-get install -yqq libssl-dev
 make build
 make install 
 
-设计：用nginx把url请求路由给多个web服务。比如[http://0.0.0.0/gitlab/] -> gitlab_service[http://127.0.0.1]
-[http://0.0.0.0/url2/] -> service2[127.0.0.1:8000/]
+设计：用nginx把url请求路由给多个web服务。比如[http://x.x.x.x/gitlab/] -> gitlab_service[http://127.0.0.1]
+[http://x.x.x.x/url2/] -> service2[127.0.0.1:8000/]
 当前使用location中的proxy_pass来实现，配置如下：
 ```
 server {
@@ -30,9 +30,10 @@ server {
 
 }
 ```
-问题：从gitlab获取的html文件中，还需要加载一些静态文件，html中的配置d`css <link stylesheet="text/css" href="/static/abc.css">`
+问题：从gitlab获取的html文件中，还需要加载一些静态文件，html中的配置`css <link stylesheet="text/css" href="/assets/abc.css">`
+获取静态文件的url自动会更新成[http://x.x.x
 使用/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDMzMDAxMTksLTk4MjgzMjg0LDE1OD
-g1MTAzMTZdfQ==
+eyJoaXN0b3J5IjpbOTAxODAxMjE4LC05ODI4MzI4NCwxNTg4NT
+EwMzE2XX0=
 -->
