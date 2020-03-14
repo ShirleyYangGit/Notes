@@ -1,14 +1,13 @@
 
-# 
+# 安装Gitlab
 - 安装gitlab, apt-get install gitlab
+# 安装Nginx
 - 安装Nginx 依赖 
 下载 Nginx 源码wget link
-源码安装 ./configure --help
-
 apt-get install -yqq libpcre3-dev
 apt-get install -yqq zlib1g-dev
 apt-get install -yqq libssl-dev
-
+源码安装 ./configure --help
 make build
 make install 
 
@@ -36,6 +35,6 @@ __解决方案__：
 * 设置`/assets/`的重定向，将其重定向到`/gitlab/assets/`中去。缺点是：有可能第二个service中也用到`/assets/`，那就没办法处理了
 * 使用域名，这个需要先购买域名。然后可以为每个service配置子域名。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ2MzU2NjYxLC05ODI4MzI4NCwxNTg4NT
-EwMzE2XX0=
+eyJoaXN0b3J5IjpbMjA0NTMyMDQ5OSwtOTgyODMyODQsMTU4OD
+UxMDMxNl19
 -->
