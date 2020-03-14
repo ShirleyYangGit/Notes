@@ -7,6 +7,9 @@ apt-get install -yqq libpcre3-dev
 apt-get install -yqq zlib1g-dev
 apt-get install -yqq libssl-dev
 
+
+
+make 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4ODUxMDMxNl19
+eyJoaXN0b3J5IjpbLTk4MjgzMjg0LDE1ODg1MTAzMTZdfQ==
 -->
