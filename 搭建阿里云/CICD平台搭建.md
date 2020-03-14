@@ -10,14 +10,11 @@ apt-get install -yqq libssl-dev
 make build
 make install 
 
-设计：用nginx把url请求路由给多个web服务。
-
-比如[http://0.0.0.0/url1/](http://0.0.0.0/url1/) -> service1([127.0.0.1](127.0.0.1):3000/)
-
+设计：用nginx把url请求路由给多个web服务。比如[http://0.0.0.0/url1/] -> service1[http://127.0.0.1]
 [http://0.0.0.0/url2/](http://0.0.0.0/url2/) -> service2([127.0.0.1](127.0.0.1):8000/)
 问题1:
 使用/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTAwNjQyNDgsLTk4MjgzMjg0LDE1OD
+eyJoaXN0b3J5IjpbLTExNjQ5MDQ5OTgsLTk4MjgzMjg0LDE1OD
 g1MTAzMTZdfQ==
 -->
