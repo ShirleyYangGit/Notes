@@ -4,7 +4,7 @@ wget link
 apt-get install -yqq libpcre3-dev
 apt-get install -yqq zlib1g-dev
 apt-get install -yqq libssl-dev
-
+./configure
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzY5NjgxMTRdfQ==
+eyJoaXN0b3J5IjpbLTEyNjMwMTI3MDNdfQ==
 -->
