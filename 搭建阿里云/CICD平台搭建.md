@@ -1,9 +1,9 @@
 - 安装gitlab, apt-get install gitlab
 - 安装Nginx 依赖 
 wget link
-apt-get install -ylibpcre3-dev
-apt-get install zlib1g-dev
-apt-get install openssl-dev
+apt-get install -yqq libpcre3-dev
+apt-get install -yqq zlib1g-dev
+apt-get install -yqq openssl-dev
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NzU5ODgzOV19
+eyJoaXN0b3J5IjpbLTE5MzU5MjM1MjVdfQ==
 -->
