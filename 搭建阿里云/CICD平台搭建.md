@@ -12,9 +12,10 @@ make install
 
 设计：用nginx把url请求路由给多个web服务。比如[http://0.0.0.0/url1/] -> service1[http://127.0.0.1]
 [http://0.0.0.0/url2/] -> service2[127.0.0.1:8000/]
+当前使用location中的proxy_pass来实现
 问题1:
 使用/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MDk1ODY2MSwtOTgyODMyODQsMTU4OD
-UxMDMxNl19
+eyJoaXN0b3J5IjpbMjc5ODU2OTk3LC05ODI4MzI4NCwxNTg4NT
+EwMzE2XX0=
 -->
