@@ -31,9 +31,9 @@ server {
 }
 ```
 问题：从gitlab获取的html文件中，还需要加载一些静态文件，html中的配置`css <link stylesheet="text/css" href="/assets/abc.css">`
-获取静态文件的url自动会更新成[http://x.x.x
+获取静态文件的url自动会更新成[http://x.x.x.x/assets/abc.css]，从而导致获取失败。我们期望是[http://x.x.x.x/gitlab/assets/abc.css]，这样Nginx就能正确转给
 使用/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAxODAxMjE4LC05ODI4MzI4NCwxNTg4NT
-EwMzE2XX0=
+eyJoaXN0b3J5IjpbLTExNjEwNjY5NjYsLTk4MjgzMjg0LDE1OD
+g1MTAzMTZdfQ==
 -->
