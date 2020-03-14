@@ -30,9 +30,9 @@ server {
 
 }
 ```
-问题：从gitlab获取的html文件中，获取的html文件里面加载css <link stylesheet="text/css" href="/static/abc.css">
+问题：从gitlab获取的html文件中，还需要加载一些静态文件，html中的配置d`css <link stylesheet="text/css" href="/static/abc.css">`
 使用/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUzMDkwODA0LC05ODI4MzI4NCwxNTg4NT
-EwMzE2XX0=
+eyJoaXN0b3J5IjpbLTE1NDMzMDAxMTksLTk4MjgzMjg0LDE1OD
+g1MTAzMTZdfQ==
 -->
