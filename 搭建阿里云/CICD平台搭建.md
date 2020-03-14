@@ -32,9 +32,9 @@ server {
 __问题__：从gitlab获取的html文件中，还需要加载一些静态文件，html中的配置`css <link stylesheet="text/css" href="/assets/abc.css">`
 获取静态文件的url自动会更新成[http://x.x.x.x/assets/abc.css]，从而导致获取失败。我们期望是[http://x.x.x.x/gitlab/assets/abc.css]，这样Nginx就能正确转给gitlab。但是css的访问路径是由html自动发起的，路径拼接规则是定义在html中的，所以无法加上我们期望的`/gitlab`字符。
 __解决方案__：
-* 设置`/assets/`的重定向，将其重定向到`/gitlab/assets/`添加代码如下：
+* 设置`/assets/`的重定向，将其重定向到`/gitlab/assets/`中去。缺点是：有可能第二个service中也用到/assets
 * 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NTMxMDA4NCwtOTgyODMyODQsMTU4OD
-UxMDMxNl19
+eyJoaXN0b3J5IjpbNzYzOTk1NTgyLC05ODI4MzI4NCwxNTg4NT
+EwMzE2XX0=
 -->
