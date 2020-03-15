@@ -20,7 +20,7 @@ Python内存池可以视为一个层次结构：block->pool->arena->内存池。
 block：一个数据内存块，size可以为8，16，24， ...，256字节。
 pool：一组block的集合。 一个pool大小通常为一个系统内存页4KB。每个pool中，block size只有一种。pool_header与其管理的内存是连续的。
 arena: 一组pool的集合。一般为256KB，可以管理64个pool。arena_object与其管理的内存是分离的。
-内存池：一个包含了arena_object的list。每个arena
+内存池：一个包含了arena_object的list。每个arena_object通过链表指向其管理的pool。
 
 ## Python循环引用的垃圾收集
 ### 引用计数
@@ -58,7 +58,7 @@ Python中，通过数组维护了三个GC链表。分别为gc_generation[0], gc_
 当所有新分配的container对象都会被放到gc_generation[0]链表中。当对象数量超过threshold时，会触发针对当前gc_generation[0]链表的垃圾回收。
 经过一轮垃圾回收，没有被回收的对象，说明他们正在被使用，会将他们移到下一代，即gc_generation[1]链表。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMTY0Mzg5NiwtOTQ3OTM1NDMwLDE1Nz
+eyJoaXN0b3J5IjpbMTMyMzQ1MzI3MCwtOTQ3OTM1NDMwLDE1Nz
 Y0NzY1MjMsNzQzOTY1MjIxLC01OTU3NTg2MzIsLTYzMjk4NDQx
 NSwtMTM5NDU1ODkwNyw4MTI2NDk0MSwtMTE4ODE3MzAwMSw4Mj
 I1MzM5MTQsLTIwNTU3NTk0NjksMTE3MjY4MzI0MV19
