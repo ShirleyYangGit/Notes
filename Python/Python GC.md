@@ -17,9 +17,9 @@ Python memory (under PyMem manager's control)
 执行大量的malloc和free操作，会导致操作系统频繁的在用户态和核心态之间进行切换，这将严重影响python执行效率。为了提供执行效率，Python引入了内存池机制，用于管理小块内存的申请和释放，这也就是Pymalloc机制。
 
 Python内存池可以视为一个层次结构：block->pool->arena->内存池。
-block：一个数据内存块，可以为8，16，24， ...，256字节。
-pool: 一个pool大小通常为一个系统内存页4kKB。每个pool中，block size只有一种。pool_header与其管理的内存是连续的。
-arena: arena_object与其管理的内存是分离的。
+block：一个数据内存块，size可以为8，16，24， ...，256字节。
+pool：一组block的集合。 一个pool大小通常为一个系统内存页4KB。每个pool中，block size只有一种。pool_header与其管理的内存是连续的。
+arena: 一组pool的集合。一般为256KB，可以管理64个pool。arena_object与其管理的内存是分离的。
 
 ## Python循环引用的垃圾收集
 ### 引用计数
@@ -57,7 +57,7 @@ Python中，通过数组维护了三个GC链表。分别为gc_generation[0], gc_
 当所有新分配的container对象都会被放到gc_generation[0]链表中。当对象数量超过threshold时，会触发针对当前gc_generation[0]链表的垃圾回收。
 经过一轮垃圾回收，没有被回收的对象，说明他们正在被使用，会将他们移到下一代，即gc_generation[1]链表。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzkzNDMwNzIsLTk0NzkzNTQzMCwxNT
+eyJoaXN0b3J5IjpbLTE0NDg4MzkyNzAsLTk0NzkzNTQzMCwxNT
 c2NDc2NTIzLDc0Mzk2NTIyMSwtNTk1NzU4NjMyLC02MzI5ODQ0
 MTUsLTEzOTQ1NTg5MDcsODEyNjQ5NDEsLTExODgxNzMwMDEsOD
 IyNTMzOTE0LC0yMDU1NzU5NDY5LDExNzI2ODMyNDFdfQ==
