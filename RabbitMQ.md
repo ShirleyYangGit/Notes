@@ -25,8 +25,9 @@ properties = pika.BasicProperties(
 * exchange type = direct
 通过`routing_key`和exchange决定的那个唯一的queue可以接收消息
 在该模式下，worker在queue_bind的时候也可以为queue设置routing_key，exchange会根据routing_key来将消息分发到worker对应的队列。
-* 
+* exchange type = topic
+所有符合`routing_key`（此时可以是一个表达式）的
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA0Mzg2MTk2LDEwNjY0MTQxMywtMjA0Nj
-Y2MDAxOSwtMjA0NjIzOTE0Nl19
+eyJoaXN0b3J5IjpbLTU0NDIwNTIwMSwxMDY2NDE0MTMsLTIwND
+Y2NjAwMTksLTIwNDYyMzkxNDZdfQ==
 -->
