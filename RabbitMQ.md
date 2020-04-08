@@ -20,7 +20,7 @@ properties = pika.BasicProperties(
 通过exchange的类型来控制消息的发送机制
 * exchange type = fanout
 所有bind到此exchange的queue都可以接收到消息。
-`routing_key`其实代表的是queue name。在fanout广播模式下，producer可以将该值设为空。为queue设置“排他的”属性。
+`routing_key`可以代表queue name，也可以代表和queue相关的key信息。在fanout广播模式下，producer可以将该值设为空。consumer可以为queue设置“排他的”属性。
 该模式下，所有绑定了该exchange的、并且在工作的worker都可以收到该消息。没有绑定该exchange的、或者没有工作的worker是收不到消息的。
 * exchange type = direct
 通过`routing_key`和exchange决定的那个唯一的queue可以接收消息
@@ -28,6 +28,6 @@ properties = pika.BasicProperties(
 * exchange type = topic
 所有符合`routing_key`（此时可以是一个表达式）的`routing_key`所bind的queue可以接收消息
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ0MzgxMjY1LDEwNjY0MTQxMywtMjA0Nj
-Y2MDAxOSwtMjA0NjIzOTE0Nl19
+eyJoaXN0b3J5IjpbMTYwOTIxMTE2NywxMDY2NDE0MTMsLTIwND
+Y2NjAwMTksLTIwNDYyMzkxNDZdfQ==
 -->
