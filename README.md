@@ -11,6 +11,7 @@ AppInspect API 的访问量有多少，数据库每个表的大小，什么时�
 
 
 3. 遇到过什么性能问题？
+4. bu s
 
 网关部署
 
@@ -19,6 +20,6 @@ AppInspect API 的访问量有多少，数据库每个表的大小，什么时�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NTExMzcxMywtMTMxMTQ2NDM5NywtNj
-g3NjgyMzA0LDE5OTg4MDY0MTJdfQ==
+eyJoaXN0b3J5IjpbOTkxNzIwNjc1LC0zNTUxMTM3MTMsLTEzMT
+E0NjQzOTcsLTY4NzY4MjMwNCwxOTk4ODA2NDEyXX0=
 -->
