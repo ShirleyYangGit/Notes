@@ -16,8 +16,10 @@ properties = pika.BasicProperties(
     delivery_mode = 2
     )
 ```
-# di
+# 订阅发布
+通过exchange的类型来控制消息的发送机制
+当exchange type为fanout时，为发布模式。该模式下，所有在工作的绑定lworker都可以收到该消息，
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMDU3OTc0NywxMDY2NDE0MTMsLTIwND
-Y2NjAwMTksLTIwNDYyMzkxNDZdfQ==
+eyJoaXN0b3J5IjpbOTI5NTI1OTI5LDEwNjY0MTQxMywtMjA0Nj
+Y2MDAxOSwtMjA0NjIzOTE0Nl19
 -->
