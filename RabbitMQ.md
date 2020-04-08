@@ -16,8 +16,8 @@ properties = pika.BasicProperties(
     delivery_mode = 2
     )
 ```
-
+# di
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2NjQxNDEzLC0yMDQ2NjYwMDE5LC0yMD
-Q2MjM5MTQ2XX0=
+eyJoaXN0b3J5IjpbMTgzMDU3OTc0NywxMDY2NDE0MTMsLTIwND
+Y2NjAwMTksLTIwNDYyMzkxNDZdfQ==
 -->
