@@ -16,10 +16,12 @@ properties = pika.BasicProperties(
     delivery_mode = 2
     )
 ```
-# 订阅发布
+# 广播模式
 通过exchange的类型来控制消息的发送机制
-当exchange type为fanout时，为广播模式。该模式下，所有绑定了该exchange的、并且在工作的worker都可以收到该消息。没有绑定该exchange的、或者没有工作的worker是收不到消息的。
+* exchange type = fanout
+该模式下，所有绑定了该exchange的、并且在工作的worker都可以收到该消息。没有绑定该exchange的、或者没有工作的worker是收不到消息的。
+* exchange type = direct
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDExMTMyMzUsMTA2NjQxNDEzLC0yMD
-Q2NjYwMDE5LC0yMDQ2MjM5MTQ2XX0=
+eyJoaXN0b3J5IjpbLTU1MTk3MTkzLDEwNjY0MTQxMywtMjA0Nj
+Y2MDAxOSwtMjA0NjIzOTE0Nl19
 -->
