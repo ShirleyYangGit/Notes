@@ -21,9 +21,9 @@ properties = pika.BasicProperties(
 * exchange type = fanout
 该模式下，所有绑定了该exchange的、并且在工作的worker都可以收到该消息。没有绑定该exchange的、或者没有工作的worker是收不到消息的。
 * exchange type = direct
-在该模式下，worker可以在queue_bind的时候也设置routing_key，并可以根据routing_key来获取
+在该模式下，worker在queue_bind的时候也可以为queue设置routing_key，exchange会根据routing_key来将消息分发到worker对应的队列。
 * 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwODMzMDUyNywxMDY2NDE0MTMsLTIwND
+eyJoaXN0b3J5IjpbMjEwOTIzNzg1NSwxMDY2NDE0MTMsLTIwND
 Y2NjAwMTksLTIwNDYyMzkxNDZdfQ==
 -->
