@@ -11,7 +11,7 @@ AppInspect API 的访问量有多少，数据库每个表的大小，什么时�
 
 
 3. 遇到过什么性能问题？
-4. bu s
+CPU或者Memory资源不够
 
 网关部署
 
@@ -20,6 +20,7 @@ AppInspect API 的访问量有多少，数据库每个表的大小，什么时�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkxNzIwNjc1LC0zNTUxMTM3MTMsLTEzMT
-E0NjQzOTcsLTY4NzY4MjMwNCwxOTk4ODA2NDEyXX0=
+eyJoaXN0b3J5IjpbMTI3MDYzNjI0OSw5OTE3MjA2NzUsLTM1NT
+ExMzcxMywtMTMxMTQ2NDM5NywtNjg3NjgyMzA0LDE5OTg4MDY0
+MTJdfQ==
 -->
