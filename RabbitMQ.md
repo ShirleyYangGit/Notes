@@ -21,9 +21,9 @@ properties = pika.BasicProperties(
 * exchange type = fanout
 该模式下，所有绑定了该exchange的、并且在工作的worker都可以收到该消息。没有绑定该exchange的、或者没有工作的worker是收不到消息的。
 * exchange type = direct
-
+consume
 * 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE0MjIzNTE3LDEwNjY0MTQxMywtMjA0Nj
-Y2MDAxOSwtMjA0NjIzOTE0Nl19
+eyJoaXN0b3J5IjpbLTYzNDQzMjg4NSwxMDY2NDE0MTMsLTIwND
+Y2NjAwMTksLTIwNDYyMzkxNDZdfQ==
 -->
