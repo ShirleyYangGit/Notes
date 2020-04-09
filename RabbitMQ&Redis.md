@@ -75,8 +75,11 @@ lrange key 0 -1 # 获取所有value
 rpush key value1 value2 ... # 从右边加入
 LINSERT key BEFORE|AFTER value new_value
 lset key index new_value
+lpop key 
+blpop key value
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzE4ODYyMSwtMTU2MDE4NTg5NiwtMT
-Q1MzY1MDk5MSwtMjEwMjMwNDU5NCwxNjQwNTEyMTI5XX0=
+eyJoaXN0b3J5IjpbMTU5Mzk0MTA3MCwtMTM3MTg4NjIxLC0xNT
+YwMTg1ODk2LC0xNDUzNjUwOTkxLC0yMTAyMzA0NTk0LDE2NDA1
+MTIxMjldfQ==
 -->
