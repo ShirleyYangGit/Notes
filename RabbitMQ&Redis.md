@@ -69,7 +69,12 @@ hlen n1 # key数量
 hexists n1 k1 # 判断是否存在
 ```
 ## List
+```
+lpush key value1 value2 ... # 从左边加入
+lrange key 0 -1 # 获取所有value
+rpush key value1 value2 ... # 从右边加入
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTM2NTA5OTEsLTIxMDIzMDQ1OTQsMT
-Y0MDUxMjEyOV19
+eyJoaXN0b3J5IjpbLTE1NjAxODU4OTYsLTE0NTM2NTA5OTEsLT
+IxMDIzMDQ1OTQsMTY0MDUxMjEyOV19
 -->
