@@ -30,7 +30,7 @@ properties = pika.BasicProperties(
 
 ## RPC
 Remote Procedure Call
-远程调用执行，producer发一条指令到broker rpc_queue队列，consumer从broker rpc_queue队列拿到指令去执行，然后将结果返回到broker rpc_res队列，然后producer再从broker rpc_res队列中拿到结果
+远程调用执行，producer发一条指令到broker rpc_queue队列，consumer从broker rpc_queue队列拿到指令去执行，然后将结果通过广播模式返回到broker，然后producer再从broker rpc_res队列中拿到结果
 
 # Redis
 缓存系统，
@@ -51,5 +51,6 @@ getbit key offset # 和判断某个用户是否在线
 bitcount key # 统计这个value中二进制表示中有多少1，可以应用于统计在线用户数
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDIzMDQ1OTQsMTY0MDUxMjEyOV19
+eyJoaXN0b3J5IjpbMTU1MjAzMTQzMSwtMjEwMjMwNDU5NCwxNj
+QwNTEyMTI5XX0=
 -->
