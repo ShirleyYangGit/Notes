@@ -41,7 +41,7 @@ correction_id值用来标识哪一条指令的结果
 mongodb: 默认持久化，同时存在内存和硬盘中
 Redis: 半持久化，默认数据只存到内存中，需要手动持久化，存到硬盘中
 memcache: 只存在内存，不能持久化。
-
+参考：[https://redis.io/topics/quickstart](https://redis.io/topics/quickstart)
 ## String操作
 ```
 set key value
@@ -94,8 +94,8 @@ subscribe
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTQxNjIxODksLTU1NDQ3NjY0OSwtMT
-QxNDM5MTE3MywtMTE3Mzk1NDgwMywxNTkzOTQxMDcwLC0xMzcx
-ODg2MjEsLTE1NjAxODU4OTYsLTE0NTM2NTA5OTEsLTIxMDIzMD
-Q1OTQsMTY0MDUxMjEyOV19
+eyJoaXN0b3J5IjpbOTk1MzQ0Njc1LC01NTQ0NzY2NDksLTE0MT
+QzOTExNzMsLTExNzM5NTQ4MDMsMTU5Mzk0MTA3MCwtMTM3MTg4
+NjIxLC0xNTYwMTg1ODk2LC0xNDUzNjUwOTkxLC0yMTAyMzA0NT
+k0LDE2NDA1MTIxMjldfQ==
 -->
