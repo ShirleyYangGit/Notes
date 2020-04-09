@@ -80,13 +80,14 @@ blpop key value
 ```
 ## Set
 ```
+wu xu
 sadd key value1 ...
 smembers key
 sdiff key1 key2
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzM5NTQ4MDMsMTU5Mzk0MTA3MCwtMT
-M3MTg4NjIxLC0xNTYwMTg1ODk2LC0xNDUzNjUwOTkxLC0yMTAy
-MzA0NTk0LDE2NDA1MTIxMjldfQ==
+eyJoaXN0b3J5IjpbMTg5MTA3NjczNCwtMTE3Mzk1NDgwMywxNT
+kzOTQxMDcwLC0xMzcxODg2MjEsLTE1NjAxODU4OTYsLTE0NTM2
+NTA5OTEsLTIxMDIzMDQ1OTQsMTY0MDUxMjEyOV19
 -->
