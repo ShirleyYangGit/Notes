@@ -38,10 +38,11 @@ memcache: 只存在内存，不能持久化。
 ```
 set key value
 get key value
+# 用一个二进制位来表示用户是否在线，
 setbit key offset 0/1
-getbit key offset
-bitcount key # 统计这个value中二进制表示中有多少1，可以用来存
+getbit key offset # 和判断某个用户是否在线
+bitcount key # 统计这个value中二进制表示中有多少1，可以应用于统计在线用户数
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1OTcxMjY5OCwxNjQwNTEyMTI5XX0=
+eyJoaXN0b3J5IjpbLTE5NzY2OTM4MDMsMTY0MDUxMjEyOV19
 -->
