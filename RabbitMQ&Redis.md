@@ -68,8 +68,8 @@ hmget n2 field [field ...]
 hlen n1 # key数量
 hexists n1 k1 # 判断是否存在
 ```
-## 
+## List
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMDkwNTkwNSwtMjEwMjMwNDU5NCwxNj
-QwNTEyMTI5XX0=
+eyJoaXN0b3J5IjpbLTE0NTM2NTA5OTEsLTIxMDIzMDQ1OTQsMT
+Y0MDUxMjEyOV19
 -->
