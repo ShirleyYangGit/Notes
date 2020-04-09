@@ -66,9 +66,9 @@ hmset n2 key value [key value ...]
 hmget n2 field [field ...]
 
 hlen n1 # key数量
-hexists n1 k1
+hexists n1 k1 # 判断是否存在
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIxODg5NTE4LC0yMTAyMzA0NTk0LDE2ND
-A1MTIxMjldfQ==
+eyJoaXN0b3J5IjpbMTMwNTc0MTYyMywtMjEwMjMwNDU5NCwxNj
+QwNTEyMTI5XX0=
 -->
