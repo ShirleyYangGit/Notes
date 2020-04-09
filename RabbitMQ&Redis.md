@@ -80,14 +80,15 @@ blpop key value
 ```
 ## Set
 ```
-wu xu
+# 无序集合
 sadd key value1 ...
 smembers key
 sdiff key1 key2
-
+# 有序集合
+zadd key score value ...
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MTA3NjczNCwtMTE3Mzk1NDgwMywxNT
-kzOTQxMDcwLC0xMzcxODg2MjEsLTE1NjAxODU4OTYsLTE0NTM2
-NTA5OTEsLTIxMDIzMDQ1OTQsMTY0MDUxMjEyOV19
+eyJoaXN0b3J5IjpbLTE0MTQzOTExNzMsLTExNzM5NTQ4MDMsMT
+U5Mzk0MTA3MCwtMTM3MTg4NjIxLC0xNTYwMTg1ODk2LC0xNDUz
+NjUwOTkxLC0yMTAyMzA0NTk0LDE2NDA1MTIxMjldfQ==
 -->
