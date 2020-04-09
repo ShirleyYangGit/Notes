@@ -34,7 +34,14 @@ mongodb: 默认持久化，同时存在内存和硬盘中
 Redis: 半持久化，默认数据只存到内存中，需要手动持久化，存到硬盘中
 memcache: 只存在内存，不能持久化。
 
-## Stringcao
+## String操作
+```
+set key value
+get key value
+setbit key offset 0/1
+getbit key offset
+bitcount key # 统计这个value中二进制表示中有多少1，可以用来存
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDE2NDI4OSwxNjQwNTEyMTI5XX0=
+eyJoaXN0b3J5IjpbLTg1OTcxMjY5OCwxNjQwNTEyMTI5XX0=
 -->
