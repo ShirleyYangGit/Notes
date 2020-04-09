@@ -82,10 +82,11 @@ blpop key value
 ```
 sadd key value1 ...
 smembers key
+sdiff key1 key2
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTg4NTU3OCwxNTkzOTQxMDcwLC0xMz
-cxODg2MjEsLTE1NjAxODU4OTYsLTE0NTM2NTA5OTEsLTIxMDIz
-MDQ1OTQsMTY0MDUxMjEyOV19
+eyJoaXN0b3J5IjpbLTExNzM5NTQ4MDMsMTU5Mzk0MTA3MCwtMT
+M3MTg4NjIxLC0xNTYwMTg1ODk2LC0xNDUzNjUwOTkxLC0yMTAy
+MzA0NTk0LDE2NDA1MTIxMjldfQ==
 -->
