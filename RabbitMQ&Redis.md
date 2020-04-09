@@ -32,7 +32,7 @@ properties = pika.BasicProperties(
 Remote Procedure Call
 远程调用执行，producer发一条指令到broker rpc_queue队列，consumer从broker rpc_queue队列拿到指令去执行，然后将结果返回到broker，然后producer再从broker中拿到结果
 问题：producer如何知道从哪里拿取某一条指令的结果呢？
-
+1. producer在发送的时候，附带reply_to和correction_id
 
 # Redis
 缓存系统，
@@ -53,6 +53,6 @@ getbit key offset # 和判断某个用户是否在线
 bitcount key # 统计这个value中二进制表示中有多少1，可以应用于统计在线用户数
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NDYwMDMzNCwtMjEwMjMwNDU5NCwxNj
-QwNTEyMTI5XX0=
+eyJoaXN0b3J5IjpbMzQwMjIwNDc2LC0yMTAyMzA0NTk0LDE2ND
+A1MTIxMjldfQ==
 -->
