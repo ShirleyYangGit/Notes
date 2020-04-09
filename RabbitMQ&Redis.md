@@ -78,8 +78,14 @@ lset key index new_value
 lpop key 
 blpop key value
 ```
+## Set
+```
+sadd key value1 ...
+smembers key
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5Mzk0MTA3MCwtMTM3MTg4NjIxLC0xNT
-YwMTg1ODk2LC0xNDUzNjUwOTkxLC0yMTAyMzA0NTk0LDE2NDA1
-MTIxMjldfQ==
+eyJoaXN0b3J5IjpbLTE1NTg4NTU3OCwxNTkzOTQxMDcwLC0xMz
+cxODg2MjEsLTE1NjAxODU4OTYsLTE0NTM2NTA5OTEsLTIxMDIz
+MDQ1OTQsMTY0MDUxMjEyOV19
 -->
