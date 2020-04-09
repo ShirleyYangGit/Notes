@@ -74,8 +74,9 @@ lpush key value1 value2 ... # 从左边加入
 lrange key 0 -1 # 获取所有value
 rpush key value1 value2 ... # 从右边加入
 LINSERT key BEFORE|AFTER value new_value
+lset key index new_value
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MjQ2Nzc4NCwtMTU2MDE4NTg5NiwtMT
+eyJoaXN0b3J5IjpbLTEzNzE4ODYyMSwtMTU2MDE4NTg5NiwtMT
 Q1MzY1MDk5MSwtMjEwMjMwNDU5NCwxNjQwNTEyMTI5XX0=
 -->
