@@ -60,9 +60,10 @@ hset n1 key value
 HGETALL n1 # 获取n1桶里的所有key和value的值
 HGET n1 key # 获取n1桶里key对应的值
 HKEYS n1 # 获取n1桶里所有的key
-HVALUES n1 #获取n1桶里所有的value
+HVALS n1 #获取n1桶里所有的value
+hmset n2 key value [key value ...]
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyNzUyMzExMiwtMjEwMjMwNDU5NCwxNj
-QwNTEyMTI5XX0=
+eyJoaXN0b3J5IjpbMTI3MDU0NzMxLC0yMTAyMzA0NTk0LDE2ND
+A1MTIxMjldfQ==
 -->
