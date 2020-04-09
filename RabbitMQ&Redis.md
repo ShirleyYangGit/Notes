@@ -29,7 +29,7 @@ properties = pika.BasicProperties(
 所有符合`routing_key`（此时可以是一个表达式）的`routing_key`所bind的queue可以接收消息
 
 # Redis
-
+缓存系统
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY3Mjg3NzYwXX0=
+eyJoaXN0b3J5IjpbLTE1ODQwNzI1MDVdfQ==
 -->
