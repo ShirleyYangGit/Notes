@@ -73,8 +73,9 @@ hexists n1 k1 # 判断是否存在
 lpush key value1 value2 ... # 从左边加入
 lrange key 0 -1 # 获取所有value
 rpush key value1 value2 ... # 从右边加入
+LINSERT key BEFORE|AFTER value new_value
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjAxODU4OTYsLTE0NTM2NTA5OTEsLT
-IxMDIzMDQ1OTQsMTY0MDUxMjEyOV19
+eyJoaXN0b3J5IjpbMTA1MjQ2Nzc4NCwtMTU2MDE4NTg5NiwtMT
+Q1MzY1MDk5MSwtMjEwMjMwNDU5NCwxNjQwNTEyMTI5XX0=
 -->
