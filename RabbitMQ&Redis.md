@@ -57,10 +57,12 @@ bitcount key # 统计这个value中二进制表示中有多少1，可以应用�
 ## Hash操作
 ```
 hset n1 key value
-HGETALL n1 # 获取这个桶里的所有key和value的值
-HGET
+HGETALL n1 # 获取n1桶里的所有key和value的值
+HGET n1 key # 获取n1桶里key对应的值
+HKEYS n1 # 获取n1桶里所有的key
+HVALUES n1 #获取n1桶里所有的value
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MjQ0OTUxMywtMjEwMjMwNDU5NCwxNj
+eyJoaXN0b3J5IjpbLTcyNzUyMzExMiwtMjEwMjMwNDU5NCwxNj
 QwNTEyMTI5XX0=
 -->
