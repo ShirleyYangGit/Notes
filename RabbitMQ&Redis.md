@@ -28,6 +28,9 @@ properties = pika.BasicProperties(
 * exchange type = topic
 所有符合`routing_key`（此时可以是一个表达式）的`routing_key`所bind的queue可以接收消息
 
+## RPC
+R
+
 # Redis
 缓存系统，
 mongodb: 默认持久化，同时存在内存和硬盘中
@@ -39,12 +42,13 @@ memcache: 只存在内存，不能持久化。
 set key value
 get key value
 APPEND key value
-getset key vau
+getset key value
+mset key value [key value ...]
 # 用一个二进制位来表示用户是否在线，二进制位置即用户id
 setbit key offset 0/1
 getbit key offset # 和判断某个用户是否在线
 bitcount key # 统计这个value中二进制表示中有多少1，可以应用于统计在线用户数
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mjc1NDU4MTcsMTY0MDUxMjEyOV19
+eyJoaXN0b3J5IjpbNjQ2Njc2NDUwLDE2NDA1MTIxMjldfQ==
 -->
