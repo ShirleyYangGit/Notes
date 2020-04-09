@@ -30,8 +30,9 @@ properties = pika.BasicProperties(
 
 # Redis
 缓存系统，
-Redis: 半持久化，需要手动持久化，存到
+mongdb:
+Redis: 半持久化，默认数据只存到内存中，需要手动持久化，存到硬盘中
 memcache: 只存在内存，不能持久化。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzE1NDA1MjBdfQ==
+eyJoaXN0b3J5IjpbMjA5OTY2Nzk0MF19
 -->
