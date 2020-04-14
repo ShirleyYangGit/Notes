@@ -6,7 +6,8 @@
 5. 生成器，迭代器：
 6. __new__() 在哪里定义的
  
- 1. 
+ 1. 秒杀系统
+ 2. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ4MjQ3NDg5LC0yMDIzNTE2NDE2XX0=
+eyJoaXN0b3J5IjpbMTg2OTM4MzczNywtMjAyMzUxNjQxNl19
 -->
