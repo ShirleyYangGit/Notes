@@ -6,7 +6,8 @@ ELK是三个开源软件的缩写，分别表示：Elasticsearch , Logstash, Kib
   
 
 参考：https://www.jianshu.com/p/4b586c9b4fc5  
+参考：https://www.elastic.co/cn/what-is/elk-stack
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQyMjc4NjYxXX0=
+eyJoaXN0b3J5IjpbMjEzNTkzODY2NV19
 -->
