@@ -71,9 +71,11 @@ class Employee:
     def isAgeEquals(self, Employee: b):
         return self.__age == b.__age
 ```
-对于该
+对于类Employee的对象b，b.__dict__为：
+```{'name': 'Bob', '_Employee__age': 30}```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MDAzODIwLDkxNjA3NDgwMSw2MzA1MD
-A2NDAsLTExMTg5MDg2NTQsMTQzOTMxODQ4NywtNjMzMTIxMzcy
-LC0xNjg3MDI5MTM2LC0yMDIzNTE2NDE2XX0=
+eyJoaXN0b3J5IjpbLTE5NTE4NzE5MTUsOTE2MDc0ODAxLDYzMD
+UwMDY0MCwtMTExODkwODY1NCwxNDM5MzE4NDg3LC02MzMxMjEz
+NzIsLTE2ODcwMjkxMzYsLTIwMjM1MTY0MTZdfQ==
 -->
