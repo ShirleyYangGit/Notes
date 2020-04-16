@@ -32,6 +32,10 @@
 
 ## 面向对象
 ### 私有化
+- x 
+- _x
+- __x
+- __x__ 一般是Python特殊方法名，不建议自定义这种方法
 
 ### 类
 1. 静态方法
@@ -44,7 +48,7 @@
 
 方法
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxOTAyNDE3NywtMTExODkwODY1NCwxND
+eyJoaXN0b3J5IjpbLTU2MzE2MDE0NywtMTExODkwODY1NCwxND
 M5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLTIwMjM1
 MTY0MTZdfQ==
 -->
