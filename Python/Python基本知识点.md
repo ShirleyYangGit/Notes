@@ -31,18 +31,12 @@
 
 
 ## 面向对象
-### 私有化
-- `x`: 公有属性和方法名 
-- `_x`: 这种方式的命名视为“受保护的”属性，有时也可以约定为私有属性。Python解释器不会对其进行**名称改写**。很多程序员严格遵守约定，不会在类外部访问这种属性。不过在模块中，顶层名称使用一个前导下划线的话，的确会受影响：对`from mymod import *` 来说前缀为下划线的名称不会被导入。然而，依旧可以使用`from mymod import _privatefunc`将其导入。
-- `__x`: 私有属性或方法名。Python解释器会对这种名称进行**名称改写**，使外部无法通过该名对其进行访问。（但是如果直接访问改写后的名称`_classname__x`，仍然是可以的。）
-- `__x__`: 一般是Python特殊方法名，不建议自定义这种方法
-
 ### 类
 #### 属性
 1. 类属性
 类内和方法之外定义的属性，会放在类的__dict__中
 2. 对象属性
-`self.x`定义的属性，会放在实例对象的__dict__中
+`self.x`定义的属性，会放在实例对象的__dict__中。如果对象中添加了一个属性和类shu x
 
 #### 方法
 1. 静态方法
@@ -53,10 +47,17 @@
 
 2. 类方法
 使用`@classmethod`修饰，方法第一个参数是`cls`。
+
 3. 对象方法
-方法第一个参数是	
+方法第一个参数是	`self`。一般对实例对象进行操作的方法。
+
+### 私有化
+- `x`: 公有属性和方法名 
+- `_x`: 这种方式的命名视为“受保护的”属性，有时也可以约定为私有属性。Python解释器不会对其进行**名称改写**。很多程序员严格遵守约定，不会在类外部访问这种属性。不过在模块中，顶层名称使用一个前导下划线的话，的确会受影响：对`from mymod import *` 来说前缀为下划线的名称不会被导入。然而，依旧可以使用`from mymod import _privatefunc`将其导入。
+- `__x`: 私有属性或方法名。Python解释器会对这种名称进行**名称改写**，使外部无法通过该名对其进行访问。（但是如果直接访问改写后的名称`_classname__x`，仍然是可以的。）
+- `__x__`: 一般是Python特殊方法名，不建议自定义这种方法
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NTI1MDY3OCwtMTExODkwODY1NCwxND
-M5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLTIwMjM1
-MTY0MTZdfQ==
+eyJoaXN0b3J5IjpbMjcxMjU5NDA4LC0xMTE4OTA4NjU0LDE0Mz
+kzMTg0ODcsLTYzMzEyMTM3MiwtMTY4NzAyOTEzNiwtMjAyMzUx
+NjQxNl19
 -->
