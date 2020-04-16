@@ -16,11 +16,14 @@
 字典的key必须是可哈希的值，可哈希的值必须是不可变的
 1. 数值
 2. 字符串
-3. tupley
+3. 不包含可变类型的值的tuple元组
+
 
 ### 问题
 1. 什么是可变对象和不可变对象
+
+##
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTQ0NjM1MzUsLTYzMzEyMTM3MiwtMT
-Y4NzAyOTEzNiwtMjAyMzUxNjQxNl19
+eyJoaXN0b3J5IjpbMTc3NDQxOTk1LC02MzMxMjEzNzIsLTE2OD
+cwMjkxMzYsLTIwMjM1MTY0MTZdfQ==
 -->
