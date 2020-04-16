@@ -7,6 +7,9 @@
  1. 秒杀系统，如何性能测试
  2. 性能测试
 
+## 魔法方法
+又称特殊方法，即`__init__ __new__`等以shaun 高
+
 ## 基本数据结构
 ### 字典dict和集合set
 字典的key可以是哪些数据
@@ -21,12 +24,12 @@
 2. 什么是可变对象和不可变对象
 
 ## 控制结构
-1
+
 
 ## 面向对象
 ### 私有化
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMDk5OTExMSwtNjMzMTIxMzcyLC0xNj
-g3MDI5MTM2LC0yMDIzNTE2NDE2XX0=
+eyJoaXN0b3J5IjpbLTEyNDIwNDAwNzQsLTYzMzEyMTM3MiwtMT
+Y4NzAyOTEzNiwtMjAyMzUxNjQxNl19
 -->
