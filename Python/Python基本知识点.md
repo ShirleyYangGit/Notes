@@ -59,8 +59,18 @@ NOTE:
 - `_x`: 这种方式的命名视为“受保护的”属性，有时也可以约定为私有属性。Python解释器不会对其进行**名称改写**。很多程序员严格遵守约定，不会在类外部访问这种属性。不过在模块中，顶层名称使用一个前导下划线的话，的确会受影响：对`from mymod import *` 来说前缀为下划线的名称不会被导入。然而，依旧可以使用`from mymod import _privatefunc`将其导入。
 - `__x`: 私有属性或方法名。Python解释器会对这种名称进行**名称改写**，使外部无法通过该名对其进行访问。（但是如果直接访问改写后的名称`_classname__x`，仍然是可以的。）
 - `__x__`: 一般是Python特殊方法名，不建议自定义这种方法
+
+基于类的访问权限
+一个方法可以访问所属类的所有对象的私有数据。
+```
+class Employee:
+    def __init__(self, name, age):
+        self.name = name
+        self.__age = age
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE2MDc0ODAxLDYzMDUwMDY0MCwtMTExOD
-kwODY1NCwxNDM5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkx
-MzYsLTIwMjM1MTY0MTZdfQ==
+eyJoaXN0b3J5IjpbLTkyNDYzMDgyMyw5MTYwNzQ4MDEsNjMwNT
+AwNjQwLC0xMTE4OTA4NjU0LDE0MzkzMTg0ODcsLTYzMzEyMTM3
+MiwtMTY4NzAyOTEzNiwtMjAyMzUxNjQxNl19
 -->
