@@ -8,7 +8,9 @@
  2. 性能测试
 
 ## 魔法方法
-又称特殊方法，即`__init__ __new__`等以shaun 高
+又称特殊方法，即`__init__ __new__`等前后有双下划线的方法。
+这些方法其实一般不被开发者直接调用，即一般不以`a.__new__()`
+
 
 ## 基本数据结构
 ### 字典dict和集合set
@@ -30,6 +32,6 @@
 ### 私有化
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDIwNDAwNzQsLTYzMzEyMTM3MiwtMT
-Y4NzAyOTEzNiwtMjAyMzUxNjQxNl19
+eyJoaXN0b3J5IjpbNTM4MTY1NzY1LC02MzMxMjEzNzIsLTE2OD
+cwMjkxMzYsLTIwMjM1MTY0MTZdfQ==
 -->
