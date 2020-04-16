@@ -38,6 +38,12 @@
 - `__x__`: 一般是Python特殊方法名，不建议自定义这种方法
 
 ### 类
+#### 属性
+1. 类属性
+2. 对象属性
+`self.x`d
+
+#### 方法
 1. 静态方法
 使用`@staticmethod`修饰，方法不需要传递对象或者类作为参数。一般静态方法是不对对象进行操作的。可以使用类名或者对象调用。但是，我们因为静态方法与对象无关，最好是使用类名进行调用。
 在下面两种情况使用静态方法：
@@ -48,7 +54,7 @@
 
 方法
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ2NzEzMzE1LC0xMTE4OTA4NjU0LDE0Mz
-kzMTg0ODcsLTYzMzEyMTM3MiwtMTY4NzAyOTEzNiwtMjAyMzUx
-NjQxNl19
+eyJoaXN0b3J5IjpbMTc5NTY2NDE4NiwtMTExODkwODY1NCwxND
+M5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLTIwMjM1
+MTY0MTZdfQ==
 -->
