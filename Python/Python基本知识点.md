@@ -9,7 +9,9 @@
 
 ## 魔法方法
 又称特殊方法，即`__init__ __len__`等前后有双下划线的方法。
-这些方法其实一般不被开发者直接调用，即一般不以`a.__len__()`这样的方式使用。开发者使用`len(a)`即可，python解释器能够自动将`len(a)`解析成`a.__len__()`
+这些方法其实一般不被开发者直接调用，即一般不以`a.__len__()`这样的方式使用。开发者使用`len(a)`即可，python解释器能够自动将`len(a)`解析成`a.__len__()`。
+
+这种特殊方法能够使python代码更整洁、易于理解。
 
 
 ## 基本数据结构
@@ -31,7 +33,11 @@
 ## 面向对象
 ### 私有化
 
+### 类方法
+静态方法
+类方法
+方法
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MDk0MjQ3NCwtNjMzMTIxMzcyLC0xNj
+eyJoaXN0b3J5IjpbMTQzOTMxODQ4NywtNjMzMTIxMzcyLC0xNj
 g3MDI5MTM2LC0yMDIzNTE2NDE2XX0=
 -->
