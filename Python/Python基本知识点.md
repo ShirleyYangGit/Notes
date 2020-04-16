@@ -52,10 +52,11 @@
 - 一个方法只需访问类的静态域。（类的静态域是所有实例共享的，不属于任何独立对象。Python中类的静态域可以理解为类的__dict__）
 
 2. 类方法
-
-3. 方法
+使用`@classmethod`修饰，方法第一个参数是`cls`。
+3. 对象方法
+方法第一个参数是	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE1NjY1ODQ0LC0xMTE4OTA4NjU0LDE0Mz
-kzMTg0ODcsLTYzMzEyMTM3MiwtMTY4NzAyOTEzNiwtMjAyMzUx
-NjQxNl19
+eyJoaXN0b3J5IjpbMTU0NTI1MDY3OCwtMTExODkwODY1NCwxND
+M5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLTIwMjM1
+MTY0MTZdfQ==
 -->
