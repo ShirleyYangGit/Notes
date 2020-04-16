@@ -35,9 +35,10 @@
 
 ### 类方法
 静态方法
+
 类方法
 方法
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzOTMxODQ4NywtNjMzMTIxMzcyLC0xNj
-g3MDI5MTM2LC0yMDIzNTE2NDE2XX0=
+eyJoaXN0b3J5IjpbLTEwODA0NzcyMDcsMTQzOTMxODQ4NywtNj
+MzMTIxMzcyLC0xNjg3MDI5MTM2LC0yMDIzNTE2NDE2XX0=
 -->
