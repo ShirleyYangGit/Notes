@@ -35,10 +35,11 @@
 
 ### 类方法
 静态方法
+使用`@staticmethod`修饰，方法不需要传递对象或者类作为参数。可以使用类
 
 类方法
 方法
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODA0NzcyMDcsMTQzOTMxODQ4NywtNj
-MzMTIxMzcyLC0xNjg3MDI5MTM2LC0yMDIzNTE2NDE2XX0=
+eyJoaXN0b3J5IjpbLTYxNjA2MzU0OSwxNDM5MzE4NDg3LC02Mz
+MxMjEzNzIsLTE2ODcwMjkxMzYsLTIwMjM1MTY0MTZdfQ==
 -->
