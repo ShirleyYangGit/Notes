@@ -61,18 +61,19 @@ NOTE:
 - `__x__`: 一般是Python特殊方法名，不建议自定义这种方法
 
 基于类的访问权限
-一个方法可以访问所属类的所有对象的私有数据。
+一个方法可以访问所属类的所有对象的私有数据。比如下面的isAgeEquals方法。
 ```
 class Employee:
     def __init__(self, name, age):
         self.name = name
         self.__age = age
         
-    def isAgeEquals(self, b):
+    def isAgeEquals(self, Employee: b):
         return self.__age == b.__age
 ```
+对于该
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzOTM3MTYzOSw5MTYwNzQ4MDEsNjMwNT
-AwNjQwLC0xMTE4OTA4NjU0LDE0MzkzMTg0ODcsLTYzMzEyMTM3
-MiwtMTY4NzAyOTEzNiwtMjAyMzUxNjQxNl19
+eyJoaXN0b3J5IjpbMTQ4MDAzODIwLDkxNjA3NDgwMSw2MzA1MD
+A2NDAsLTExMTg5MDg2NTQsMTQzOTMxODQ4NywtNjMzMTIxMzcy
+LC0xNjg3MDI5MTM2LC0yMDIzNTE2NDE2XX0=
 -->
