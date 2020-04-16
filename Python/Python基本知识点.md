@@ -38,12 +38,12 @@
 使用`@staticmethod`修饰，方法不需要传递对象或者类作为参数。一般静态方法是不对对象进行操作的。可以使用类名或者对象调用。但是，我们因为静态方法与对象无关，最好是使用类名进行调用。
 在下面两种情况使用静态方法：
 - 一个方法不需要访问对象状态，其所需的参数都是通过显示参数提供
-- 一个f
+- 一个方法只需访问类的静态域
 
 2. 类方法
 
 方法
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDAwMTc0NDcsMTQzOTMxODQ4NywtNj
+eyJoaXN0b3J5IjpbLTExMTg5MDg2NTQsMTQzOTMxODQ4NywtNj
 MzMTIxMzcyLC0xNjg3MDI5MTM2LC0yMDIzNTE2NDE2XX0=
 -->
