@@ -36,7 +36,7 @@
 1. 类属性
 类内和方法之外定义的属性，会放在类的__dict__中
 2. 对象属性
-`self.x`定义的属性，会放在实例对象的__dict__中。如果对象中添加了一个属性和类shu x
+`self.x`定义的属性，会放在实例对象的__dict__中。如果对象中添加了一个属性和类属性名称相同，那么，使用对象对该属性进行调用时，会返回对象__dict__中的值，而非类__dict__中的。
 
 #### 方法
 1. 静态方法
@@ -57,7 +57,7 @@
 - `__x`: 私有属性或方法名。Python解释器会对这种名称进行**名称改写**，使外部无法通过该名对其进行访问。（但是如果直接访问改写后的名称`_classname__x`，仍然是可以的。）
 - `__x__`: 一般是Python特殊方法名，不建议自定义这种方法
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcxMjU5NDA4LC0xMTE4OTA4NjU0LDE0Mz
+eyJoaXN0b3J5IjpbNjMwNTAwNjQwLC0xMTE4OTA4NjU0LDE0Mz
 kzMTg0ODcsLTYzMzEyMTM3MiwtMTY4NzAyOTEzNiwtMjAyMzUx
 NjQxNl19
 -->
