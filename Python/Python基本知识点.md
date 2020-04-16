@@ -67,10 +67,12 @@ class Employee:
     def __init__(self, name, age):
         self.name = name
         self.__age = age
-
+        
+    def isAgeEquals(self, b):
+        return self.__age == b.__age
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNDYzMDgyMyw5MTYwNzQ4MDEsNjMwNT
+eyJoaXN0b3J5IjpbLTgzOTM3MTYzOSw5MTYwNzQ4MDEsNjMwNT
 AwNjQwLC0xMTE4OTA4NjU0LDE0MzkzMTg0ODcsLTYzMzEyMTM3
 MiwtMTY4NzAyOTEzNiwtMjAyMzUxNjQxNl19
 -->
