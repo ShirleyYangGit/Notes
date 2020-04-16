@@ -40,8 +40,9 @@
 ### 类
 #### 属性
 1. 类属性
+类内和方法之外定义的属性，会放在类的__dict__中
 2. 对象属性
-`self.x`d
+`self.x`定义的属性，会放在实例对象的__dict__中
 
 #### 方法
 1. 静态方法
@@ -54,7 +55,7 @@
 
 方法
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NTY2NDE4NiwtMTExODkwODY1NCwxND
-M5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLTIwMjM1
-MTY0MTZdfQ==
+eyJoaXN0b3J5IjpbLTE4NjE3MzkzODksLTExMTg5MDg2NTQsMT
+QzOTMxODQ4NywtNjMzMTIxMzcyLC0xNjg3MDI5MTM2LC0yMDIz
+NTE2NDE2XX0=
 -->
