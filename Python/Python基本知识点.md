@@ -1,8 +1,5 @@
-1. 可变对象和不可变对象
 
 2. 反射
-3. set() hashable unhashable
-4. dict 字典
 5. classmethod  staticmethod
 6. 生成器，迭代器。 range和xrange
 7. __new__() 在哪里定义的
@@ -20,10 +17,16 @@
 
 
 ### 问题
-1. 什么是可变对象和不可变对象
+1. 可哈希和不可哈希
+2. 什么是可变对象和不可变对象
 
-##
+## 控制结构
+1
+
+## 面向对象
+### 私有化
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NDQxOTk1LC02MzMxMjEzNzIsLTE2OD
-cwMjkxMzYsLTIwMjM1MTY0MTZdfQ==
+eyJoaXN0b3J5IjpbMTUwMDk5OTExMSwtNjMzMTIxMzcyLC0xNj
+g3MDI5MTM2LC0yMDIzNTE2NDE2XX0=
 -->
