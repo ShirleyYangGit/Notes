@@ -33,8 +33,8 @@
 ## 面向对象
 ### 私有化
 - `x`: 公有属性和方法名 
-- `_x`: 
-- `__x`: 私有属性或方法名。Python解释器会对这种名称进行__名称改写__，使外部无法通过该名对其进行访问。（但是如果直接访问改写后的名称`_classname__x`也是k y
+- `_x`: 有些程序员将这种方式的命名视为“受保护的”属性，有时也可以约定为私有属性。
+- `__x`: 私有属性或方法名。Python解释器会对这种名称进行__名称改写__，使外部无法通过该名对其进行访问。（但是如果直接访问改写后的名称`_classname__x`也是可以访问的。）
 - `__x__`: 一般是Python特殊方法名，不建议自定义这种方法
 
 ### 类
@@ -48,7 +48,7 @@
 
 方法
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMTA1Mzg2MSwtMTExODkwODY1NCwxND
+eyJoaXN0b3J5IjpbLTIwMTg0NDM0MCwtMTExODkwODY1NCwxND
 M5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLTIwMjM1
 MTY0MTZdfQ==
 -->
