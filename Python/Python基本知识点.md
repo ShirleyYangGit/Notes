@@ -11,10 +11,16 @@
  2. 性能测试
 
 ## 基本数据结构
-###字典和集合set
+### 字典dict和集合set
+字典的key可以是哪些数据
+字典的key必须是可哈希的值，可哈希的值必须是不可变的
+1. 数值
+2. 字符串
+3. tupley
+
 ### 问题
 1. 什么是可变对象和不可变对象
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MDMxNzg2NSwtNjMzMTIxMzcyLC0xNj
-g3MDI5MTM2LC0yMDIzNTE2NDE2XX0=
+eyJoaXN0b3J5IjpbLTE3NTQ0NjM1MzUsLTYzMzEyMTM3MiwtMT
+Y4NzAyOTEzNiwtMjAyMzUxNjQxNl19
 -->
