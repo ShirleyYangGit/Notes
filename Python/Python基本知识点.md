@@ -35,11 +35,11 @@
 
 ### 类方法
 静态方法
-使用`@staticmethod`修饰，方法不需要传递对象或者类作为参数。可以使用类
+使用`@staticmethod`修饰，方法不需要传递对象或者类作为参数。一般静态方法是不对对象进行操作的。可以使用类名或者对象调用。但是，我们
 
 类方法
 方法
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNjA2MzU0OSwxNDM5MzE4NDg3LC02Mz
+eyJoaXN0b3J5IjpbLTEyMjI5MTM1OSwxNDM5MzE4NDg3LC02Mz
 MxMjEzNzIsLTE2ODcwMjkxMzYsLTIwMjM1MTY0MTZdfQ==
 -->
