@@ -9,7 +9,12 @@
  
  1. 秒杀系统，如何性能测试
  2. 性能测试
+
+## 基本数据结构
+###字典和集合set
+### 问题
+1. 什么是可变对象和不可变对象
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMzEyMTM3MiwtMTY4NzAyOTEzNiwtMj
-AyMzUxNjQxNl19
+eyJoaXN0b3J5IjpbMTM4MDMxNzg2NSwtNjMzMTIxMzcyLC0xNj
+g3MDI5MTM2LC0yMDIzNTE2NDE2XX0=
 -->
