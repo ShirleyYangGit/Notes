@@ -38,6 +38,9 @@
 2. 对象属性
 `self.x`定义的属性，会放在实例对象的__dict__中。如果对象中添加了一个属性和类属性名称相同，那么，使用对象对该属性进行调用时，会返回对象__dict__中的值，而非类__dict__中的。
 
+NOTE: 
+在Java和C++中static关键字是指属于类但不属于类对象的变量和函数。
+
 #### 方法
 1. 静态方法
 使用`@staticmethod`修饰，方法不需要传递对象或者类作为参数。一般静态方法是不对对象进行操作的。可以使用类名或者对象调用。但是，我们因为静态方法与对象无关，最好是使用类名进行调用。
@@ -57,7 +60,7 @@
 - `__x`: 私有属性或方法名。Python解释器会对这种名称进行**名称改写**，使外部无法通过该名对其进行访问。（但是如果直接访问改写后的名称`_classname__x`，仍然是可以的。）
 - `__x__`: 一般是Python特殊方法名，不建议自定义这种方法
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMwNTAwNjQwLC0xMTE4OTA4NjU0LDE0Mz
-kzMTg0ODcsLTYzMzEyMTM3MiwtMTY4NzAyOTEzNiwtMjAyMzUx
-NjQxNl19
+eyJoaXN0b3J5IjpbOTE2MDc0ODAxLDYzMDUwMDY0MCwtMTExOD
+kwODY1NCwxNDM5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkx
+MzYsLTIwMjM1MTY0MTZdfQ==
 -->
