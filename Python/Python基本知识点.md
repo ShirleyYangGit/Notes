@@ -74,8 +74,11 @@ class Employee:
 对于类Employee的对象b，b.__dict__为：
 ```{'name': 'Bob', '_Employee__age': 30}```
 
+## 反射
+[https://www.jianshu.com/p/628f61f01a54](https://www.jianshu.com/p/628f61f01a54)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTE4NzE5MTUsOTE2MDc0ODAxLDYzMD
-UwMDY0MCwtMTExODkwODY1NCwxNDM5MzE4NDg3LC02MzMxMjEz
-NzIsLTE2ODcwMjkxMzYsLTIwMjM1MTY0MTZdfQ==
+eyJoaXN0b3J5IjpbLTE0MjQzODAyMjksLTE5NTE4NzE5MTUsOT
+E2MDc0ODAxLDYzMDUwMDY0MCwtMTExODkwODY1NCwxNDM5MzE4
+NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLTIwMjM1MTY0MT
+ZdfQ==
 -->
