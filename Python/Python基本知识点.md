@@ -45,8 +45,8 @@ NOTE:
 1. 静态方法
 使用`@staticmethod`修饰，方法不需要传递对象或者类作为参数。一般静态方法是不对对象进行操作的。可以使用类名或者对象调用。但是，我们因为静态方法与对象无关，最好是使用类名进行调用。
 在下面两种情况使用静态方法：
-- 一个方法不需要访问对象状态，其所需的参数都是通过显示参数提供
-- 一个方法只需访问类的静态域。（类的静态域是所有实例共享的，不属于任何独立对象。Python中类的静态域可以理解为类的__dict__）
+   - 一个方法不需要访问对象状态，其所需的参数都是通过显示参数提供
+   - 一个方法只需访问类的静态域。（类的静态域是所有实例共享的，不属于任何独立对象。Python中类的静态域可以理解为类的__dict__）
 
 2. 类方法
 使用`@classmethod`修饰，方法第一个参数是`cls`。
@@ -77,8 +77,8 @@ class Employee:
 ## 反射
 [https://www.jianshu.com/p/628f61f01a54](https://www.jianshu.com/p/628f61f01a54)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjQzODAyMjksLTE5NTE4NzE5MTUsOT
-E2MDc0ODAxLDYzMDUwMDY0MCwtMTExODkwODY1NCwxNDM5MzE4
-NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLTIwMjM1MTY0MT
-ZdfQ==
+eyJoaXN0b3J5IjpbMjI1NDU5MzM3LC0xOTUxODcxOTE1LDkxNj
+A3NDgwMSw2MzA1MDA2NDAsLTExMTg5MDg2NTQsMTQzOTMxODQ4
+NywtNjMzMTIxMzcyLC0xNjg3MDI5MTM2LC0yMDIzNTE2NDE2XX
+0=
 -->
