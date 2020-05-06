@@ -22,10 +22,12 @@
 2. 字符串
 3. 不包含可变类型的值的tuple元组
 
-
-### 问题
+**问题**
 1. 可哈希和不可哈希
 2. 什么是可变对象和不可变对象
+
+### 列表List
+在CPython中
 
 ## 控制结构
 
@@ -77,8 +79,8 @@ class Employee:
 ## 反射
 [https://www.jianshu.com/p/628f61f01a54](https://www.jianshu.com/p/628f61f01a54)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI1NDU5MzM3LC0xOTUxODcxOTE1LDkxNj
-A3NDgwMSw2MzA1MDA2NDAsLTExMTg5MDg2NTQsMTQzOTMxODQ4
-NywtNjMzMTIxMzcyLC0xNjg3MDI5MTM2LC0yMDIzNTE2NDE2XX
-0=
+eyJoaXN0b3J5IjpbMTAwNDU5OTc5NCwyMjU0NTkzMzcsLTE5NT
+E4NzE5MTUsOTE2MDc0ODAxLDYzMDUwMDY0MCwtMTExODkwODY1
+NCwxNDM5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLT
+IwMjM1MTY0MTZdfQ==
 -->
