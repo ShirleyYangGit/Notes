@@ -27,7 +27,8 @@
 2. 什么是可变对象和不可变对象
 
 ### 列表List
-在CPython中
+在CPython中，list本质上**长度可变的数组**
+
 
 ## 控制结构
 
@@ -79,7 +80,7 @@ class Employee:
 ## 反射
 [https://www.jianshu.com/p/628f61f01a54](https://www.jianshu.com/p/628f61f01a54)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNDU5OTc5NCwyMjU0NTkzMzcsLTE5NT
+eyJoaXN0b3J5IjpbLTEwNjM4MDc3NCwyMjU0NTkzMzcsLTE5NT
 E4NzE5MTUsOTE2MDc0ODAxLDYzMDUwMDY0MCwtMTExODkwODY1
 NCwxNDM5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLT
 IwMjM1MTY0MTZdfQ==
