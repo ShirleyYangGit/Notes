@@ -17,7 +17,8 @@ Java中的map<key, List<>> 如何遍历map，找出最长list
 2. 如何寻找一个bug原因。比如：远程机器down了。原因是啥？找IT帮忙重启，看log，看挂的原因。
 3. 为什么面试不自信。
 
-4. 英文自我介绍，Splunk culture. 如何看待云计算，云服务，未来发展。对VMware的了解。
+4. 英文自我介绍，Splunk culture，每天的工作。
+5. 如何看待云计算，云服务，未来发展。对VMware的了解。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc4MzI5MjQzLDE5NDEyMjIxMl19
+eyJoaXN0b3J5IjpbMTQ4ODIxMzYwNSwxOTQxMjIyMTJdfQ==
 -->
