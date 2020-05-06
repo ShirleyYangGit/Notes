@@ -37,22 +37,22 @@ Python中的`List`实现是基于数组或基于链表结构的。
 
 `List`的算法效率
 |function | Time complexity |
-|:-------:| ---------------:|
-|index() | O(1)|
-append O(1)
-pop() O(1)
-pop(i) O(n)
-insert(i,item) O(n)
-del operator O(n)
-iteration O(n)
-contains(in) O(n)
-get slice[x:y] O(k)
-del slice O(n)
-set slice O(n+k)
-reverse O(n)
-concatenate O(k)
-sort O(nlogn)
-multiply O(nk)
+|-------:| ---------------:|
+index()| O(1)
+append | O(1) 
+pop() | O(1) 
+pop(i)| O(n) 
+insert(i,item)| O(n)
+del operator | O(n)
+iteration | O(n)
+contains(in) | O(n)
+get slice[x:y] |O(k)
+del slice | O(n)
+set slice | O(n+k)
+reverse | O(n)
+concatenate | O(k)
+sort | O(nlogn)
+multiply | O(nk)
 
 
 ## 控制结构
@@ -105,8 +105,8 @@ class Employee:
 ## 反射
 [https://www.jianshu.com/p/628f61f01a54](https://www.jianshu.com/p/628f61f01a54)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjU0ODk1MiwyMjU0NTkzMzcsLTE5NT
-E4NzE5MTUsOTE2MDc0ODAxLDYzMDUwMDY0MCwtMTExODkwODY1
-NCwxNDM5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLT
-IwMjM1MTY0MTZdfQ==
+eyJoaXN0b3J5IjpbMjQ4NjE3MCwyMjU0NTkzMzcsLTE5NTE4Nz
+E5MTUsOTE2MDc0ODAxLDYzMDUwMDY0MCwtMTExODkwODY1NCwx
+NDM5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLTIwMj
+M1MTY0MTZdfQ==
 -->
