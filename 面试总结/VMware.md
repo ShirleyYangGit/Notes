@@ -2,7 +2,7 @@
 算法：
 1. 输入：字符串，target；输出字符串中和target匹配的子串的start index
 2. m个list，要取里面topK
-3. 栈实现，可以用数组，可以用链表。（注意：在栈顶head地方插入和删除），单向链表就可以满足了。
+3. 栈实现，可以用数组，可以用链表。（注意：在栈顶head地方插入和删除），单向链表就可以满足了。数组和链表实现的优缺点。
 
 JAVA
 Java中的map<key, List<>> 如何遍历map，找出最长list
@@ -20,5 +20,6 @@ Java中的map<key, List<>> 如何遍历map，找出最长list
 4. 英文自我介绍，Splunk culture，每天的工作。
 5. 如何看待云计算，云服务，未来发展。对VMware的了解。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4ODIxMzYwNSwxOTQxMjIyMTJdfQ==
+eyJoaXN0b3J5IjpbLTE3OTE1NTQzOTAsMTQ4ODIxMzYwNSwxOT
+QxMjIyMTJdfQ==
 -->
