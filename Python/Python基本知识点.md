@@ -30,13 +30,10 @@
 在CPython中，list本质上**长度可变的数组**
 `List`实际上采用的就是数据结构中的顺序表，而且是一种采用分离式技术实现的`动态顺序表`。
 顺序表就是通俗意义上其他语言中所说的数组，具有一块连续的内存空间来存储数据。
-Python中的`List`实现是基于数组或基于链表结构的。
-从细节上看，Python中的`List`是由对象的引用组成的连续数组。指向这个数组的指针及其长度被保存在一个列表头结构中。这意味着，每次添加或删除一个元素时，由引用组成的数组需要改变大小（重新分配）。幸运的是，Python在创建这些数组时采用了指数分配，所以并不是每次操作都xu y
 
-Python中的列表是由对其它对象的引用组成的连续数组。指向这个数组的指针及其长度被保存在一个列表头结构中。这意味着，每次添加或删除一个元素时，由引用组成的数组需要该标大小（重新分配）。幸运的是，Python在创建这些数组时采用了指数分配，所以并不是每次操作都需要改变数组的大小。但是，也因为这个原因添加或取出元素的平摊复杂度较低。
-————————————————
-版权声明：本文为CSDN博主「E.Wong」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/Yuyh131/java/article/details/83592608
+Python中的`List`实现是基于数组或基于链表结构的。
+从细节上看，Python中的`List`是由对象的引用组成的连续数组。指向这个数组的指针及其长度被保存在一个列表头结构中。这意味着，每次添加或删除一个元素时，由引用组成的数组需要改变大小（重新分配）。幸运的是，Python在创建这些数组时采用了指数分配，所以并不是每次操作都需要改变数组的大小。但是也因为这个原因添加或取出元素的的平摊复杂度较低。
+不幸的是，在普通链表上“**代价很小**”的其它一些操作在Python中计算复杂度相对过高。
 
 ## 控制结构
 
@@ -88,8 +85,8 @@ class Employee:
 ## 反射
 [https://www.jianshu.com/p/628f61f01a54](https://www.jianshu.com/p/628f61f01a54)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQzNDgxNzgwLDIyNTQ1OTMzNywtMTk1MT
-g3MTkxNSw5MTYwNzQ4MDEsNjMwNTAwNjQwLC0xMTE4OTA4NjU0
-LDE0MzkzMTg0ODcsLTYzMzEyMTM3MiwtMTY4NzAyOTEzNiwtMj
-AyMzUxNjQxNl19
+eyJoaXN0b3J5IjpbMTkzNTI1MTQsMjI1NDU5MzM3LC0xOTUxOD
+cxOTE1LDkxNjA3NDgwMSw2MzA1MDA2NDAsLTExMTg5MDg2NTQs
+MTQzOTMxODQ4NywtNjMzMTIxMzcyLC0xNjg3MDI5MTM2LC0yMD
+IzNTE2NDE2XX0=
 -->
