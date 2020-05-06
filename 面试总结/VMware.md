@@ -13,8 +13,10 @@ Java中的map<key, List<>> 如何遍历map，找出最长list
 在Celery中，如何提供用户删除job的功能。将job uuid和Celery中的thread id建立连接
 
 # 领导面
-1. 如何快速实现一个feature的测试
-2. 如何寻找一个bug原因。比如：远程机器dow
+1. 如何快速实现一个feature的测试。
+2. 如何寻找一个bug原因。比如：远程机器down了。原因是啥？找IT帮忙重启，看log，看挂的原因。
+3. 为什么面试不自信。
+4. 为什么
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODUzOTgyNDIsMTk0MTIyMjEyXX0=
+eyJoaXN0b3J5IjpbLTg0MzY2NDMyMSwxOTQxMjIyMTJdfQ==
 -->
