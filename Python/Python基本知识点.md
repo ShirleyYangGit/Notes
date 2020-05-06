@@ -32,8 +32,10 @@
 顺序表就是通俗意义上其他语言中所说的数组，具有一块连续的内存空间来存储数据。
 
 Python中的`List`实现是基于数组或基于链表结构的。
-从细节上看，Python中的`List`是由对象的引用组成的连续数组。指向这个数组的指针及其长度被保存在一个列表头结构中。这意味着，每次添加或删除一个元素时，由引用组成的数组需要改变大小（重新分配）。幸运的是，Python在创建这些数组时采用了指数分配，所以并不是每次操作都需要改变数组的大小。但是也因为这个原因添加或取出元素的的平摊复杂度较低。
-不幸的是，在普通链表上“**代价很小**”的其它一些操作在Python中计算复杂度相对过高。
+从细节上看，Python中的`List`是由对象的引用组成的连续数组。指向这个数组的指针及其长度被保存在一个列表头结构中。这意味着，每次添加或删除一个元素时，由引用组成的数组需要改变大小（重新分配）。dan s
+
+幸运的是，Python在创建这些数组时采用了指数分配，所以并不是每次操作都需要改变数组的大小。但是也因为这个原因添加或取出元素的的平摊复杂度较低。
+
 
 `List`的算法效率
 |function | Time complexity |
@@ -105,8 +107,8 @@ class Employee:
 ## 反射
 [https://www.jianshu.com/p/628f61f01a54](https://www.jianshu.com/p/628f61f01a54)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ4NjE3MCwyMjU0NTkzMzcsLTE5NTE4Nz
-E5MTUsOTE2MDc0ODAxLDYzMDUwMDY0MCwtMTExODkwODY1NCwx
-NDM5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLTIwMj
-M1MTY0MTZdfQ==
+eyJoaXN0b3J5IjpbMTEyODkzNTcxNSwyNDg2MTcwLDIyNTQ1OT
+MzNywtMTk1MTg3MTkxNSw5MTYwNzQ4MDEsNjMwNTAwNjQwLC0x
+MTE4OTA4NjU0LDE0MzkzMTg0ODcsLTYzMzEyMTM3MiwtMTY4Nz
+AyOTEzNiwtMjAyMzUxNjQxNl19
 -->
