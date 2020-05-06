@@ -5,10 +5,11 @@
 3. 栈实现，可以用数组，可以用链表。（注意：在栈顶head地方插入和删除），单向链表就可以满足了。
 
 JAVA
-Java中的map<key, List<>> 如何遍历map，如何
+Java中的map<key, List<>> 如何遍历map，找出最长list
 单例模式，JI
+
 # 二面
 在Celery中，如何提供用户删除job的功能。将job uuid和Celery中的thread id建立连接
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzAwMjUyNDUsMTk0MTIyMjEyXX0=
+eyJoaXN0b3J5IjpbNDI3NDkwNjcxLDE5NDEyMjIxMl19
 -->
