@@ -14,7 +14,7 @@ Java中的map<key, List<>> 如何遍历map，找出最长list
 
 # 领导面
 1. 如何快速实现一个feature的测试
-2. ru
+2. 如何寻找一个bug原因。比如：远程机器dow
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTI3MzcwMTMsMTk0MTIyMjEyXX0=
+eyJoaXN0b3J5IjpbLTEzODUzOTgyNDIsMTk0MTIyMjEyXX0=
 -->
