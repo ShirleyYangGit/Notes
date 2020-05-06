@@ -29,7 +29,8 @@
 ### 列表List
 在CPython中，list本质上**长度可变的数组**
 `List`实际上采用的就是数据结构中的顺序表，而且是一种采用分离式技术实现的`动态顺序表`。
-顺序表就是通俗意义上的
+顺序表就是通俗意义上其他语言中所说的数组，具有一块连续的内存空间来存储数据。
+Python中的L列表实现是基于数组或基于链表结构的
 
 ## 控制结构
 
@@ -81,8 +82,8 @@ class Employee:
 ## 反射
 [https://www.jianshu.com/p/628f61f01a54](https://www.jianshu.com/p/628f61f01a54)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjExNTcyMDEsMjI1NDU5MzM3LC0xOT
-UxODcxOTE1LDkxNjA3NDgwMSw2MzA1MDA2NDAsLTExMTg5MDg2
-NTQsMTQzOTMxODQ4NywtNjMzMTIxMzcyLC0xNjg3MDI5MTM2LC
-0yMDIzNTE2NDE2XX0=
+eyJoaXN0b3J5IjpbNjgzMTI3NzczLDIyNTQ1OTMzNywtMTk1MT
+g3MTkxNSw5MTYwNzQ4MDEsNjMwNTAwNjQwLC0xMTE4OTA4NjU0
+LDE0MzkzMTg0ODcsLTYzMzEyMTM3MiwtMTY4NzAyOTEzNiwtMj
+AyMzUxNjQxNl19
 -->
