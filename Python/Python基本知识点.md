@@ -33,7 +33,8 @@
 
 Python中的`List`实现是基于数组或基于链表结构的。
 从细节上看，Python中的`List`是由对象的引用组成的连续数组。指向这个数组的指针及其长度被保存在一个列表头结构中。这意味着，每次添加或删除一个元素时，由引用组成的数组需要改变大小（重新分配）。但是，并不是每次操作都需要改变数组大小的。
-在添加元素时，Python会调用list_resize() 重新设置一个新的 size，这个size是数组的内存空间大小。
+
+在添加元素时，当当前数组内存空间不够时，Python会调用list_resize() 重新设置一个新的 size（数组的内存空间大小）。它会多申请一些内存，这样也就避免了多次调用该allocate函数。
 
 幸运的是，Python在创建这些数组时采用了指数分配，所以并不是每次操作都需要改变数组的大小。但是也因为这个原因添加或取出元素的的平摊复杂度较低。
 
@@ -108,8 +109,8 @@ class Employee:
 ## 反射
 [https://www.jianshu.com/p/628f61f01a54](https://www.jianshu.com/p/628f61f01a54)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNzAwODA3LDI0ODYxNzAsMjI1NDU5Mz
-M3LC0xOTUxODcxOTE1LDkxNjA3NDgwMSw2MzA1MDA2NDAsLTEx
-MTg5MDg2NTQsMTQzOTMxODQ4NywtNjMzMTIxMzcyLC0xNjg3MD
-I5MTM2LC0yMDIzNTE2NDE2XX0=
+eyJoaXN0b3J5IjpbLTU0MzA3MjExMywyNDg2MTcwLDIyNTQ1OT
+MzNywtMTk1MTg3MTkxNSw5MTYwNzQ4MDEsNjMwNTAwNjQwLC0x
+MTE4OTA4NjU0LDE0MzkzMTg0ODcsLTYzMzEyMTM3MiwtMTY4Nz
+AyOTEzNiwtMjAyMzUxNjQxNl19
 -->
