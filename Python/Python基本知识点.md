@@ -28,7 +28,8 @@
 
 ### 列表List
 在CPython中，list本质上**长度可变的数组**
-
+`List`实际上采用的就是数据结构中的顺序表，而且是一种采用分离式技术实现的`动态顺序表`。
+顺序表就是通俗意义上的
 
 ## 控制结构
 
@@ -80,8 +81,8 @@ class Employee:
 ## 反射
 [https://www.jianshu.com/p/628f61f01a54](https://www.jianshu.com/p/628f61f01a54)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjM4MDc3NCwyMjU0NTkzMzcsLTE5NT
-E4NzE5MTUsOTE2MDc0ODAxLDYzMDUwMDY0MCwtMTExODkwODY1
-NCwxNDM5MzE4NDg3LC02MzMxMjEzNzIsLTE2ODcwMjkxMzYsLT
-IwMjM1MTY0MTZdfQ==
+eyJoaXN0b3J5IjpbLTEzNjExNTcyMDEsMjI1NDU5MzM3LC0xOT
+UxODcxOTE1LDkxNjA3NDgwMSw2MzA1MDA2NDAsLTExMTg5MDg2
+NTQsMTQzOTMxODQ4NywtNjMzMTIxMzcyLC0xNjg3MDI5MTM2LC
+0yMDIzNTE2NDE2XX0=
 -->
