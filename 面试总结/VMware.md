@@ -9,7 +9,8 @@ Java中的map<key, List<>> 如何遍历map，找出最长list
 线程安全的单例模式
 
 # 二面
+如何
 在Celery中，如何提供用户删除job的功能。将job uuid和Celery中的thread id建立连接
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODU3OTQxOSwxOTQxMjIyMTJdfQ==
+eyJoaXN0b3J5IjpbMzM0MDA1NzcwLDE5NDEyMjIxMl19
 -->
