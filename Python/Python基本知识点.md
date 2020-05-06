@@ -36,6 +36,8 @@ Python中的`List`实现是基于数组或基于链表结构的。
 
 在添加元素时，当当前数组内存空间不够时，Python会调用list_resize() 重新设置一个新的 size（数组的内存空间大小）。它会多申请一些内存，这样也就避免了多次调用该allocate函数。
 
+在删除元素时，当删除后的数组大小
+
 幸运的是，Python在创建这些数组时采用了指数分配，所以并不是每次操作都需要改变数组的大小。但是也因为这个原因添加或取出元素的的平摊复杂度较低。
 
 
@@ -109,8 +111,8 @@ class Employee:
 ## 反射
 [https://www.jianshu.com/p/628f61f01a54](https://www.jianshu.com/p/628f61f01a54)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MzA3MjExMywyNDg2MTcwLDIyNTQ1OT
-MzNywtMTk1MTg3MTkxNSw5MTYwNzQ4MDEsNjMwNTAwNjQwLC0x
-MTE4OTA4NjU0LDE0MzkzMTg0ODcsLTYzMzEyMTM3MiwtMTY4Nz
-AyOTEzNiwtMjAyMzUxNjQxNl19
+eyJoaXN0b3J5IjpbNTMxNDk3NywyNDg2MTcwLDIyNTQ1OTMzNy
+wtMTk1MTg3MTkxNSw5MTYwNzQ4MDEsNjMwNTAwNjQwLC0xMTE4
+OTA4NjU0LDE0MzkzMTg0ODcsLTYzMzEyMTM3MiwtMTY4NzAyOT
+EzNiwtMjAyMzUxNjQxNl19
 -->
