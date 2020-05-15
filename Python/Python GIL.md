@@ -32,14 +32,16 @@ lock = thread.allocate_lock()
 2. GIL：全局解释锁。每个线程在执行过程中，需要先获取GIL，保证同一时刻只有一个线程可以执行代码。
 Python中的线程受GIL互斥锁限制，只有获取了GIL的线程才能够使用Python解释器执行代码。
 3. 线程释放GIL锁的情况：
-    - Python内部通过软件模拟了操作系统的时钟中断机制，也有一套类似的：在Python 2.x中，执行_Py_Ticker(100)条指令后，自动释放GIL；在Python 3.x中，使用计时器，执行时间达到阈值后。之后通过操作系统唤醒下一个等待线程
+    - Python内部通过软件模拟了操作系统的时钟中断机制，也有一套类似的：在Python 2.x中，使用计数器，执行_Py_Ticker(100)条指令后，自动释放GIL；在Python 3.x中，使用计时器，执行时间达到阈值后，当前线程释放GIL。之后通过操作系统唤醒下一个等待线程
     - 在IO操作等可能引起阻塞的System call时，可以暂时释放GIL。执行完毕后，会重新去申请GIL。
+ 4. Python使用多进程是可以利用多核的cpu资源的。
+ 5. 多线程爬取比单线程性能有提升，因为遇到IOz
 Python多线程的程序对于I/O密集型程序，还是比单线程快
 计算密集型：进程
 IO密集型：线程、协程
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0ODk1ODIwMiwxMjg0OTE2NDMzLC0xMz
+eyJoaXN0b3J5IjpbMTU0OTg0NjgwNCwxMjg0OTE2NDMzLC0xMz
 Q3NTk5MDEzLC05MzM1MDIyOTEsMTY2NDM2NjE3NCw5MzAwMjk2
 MzksLTEzNzA1NjcwNzEsLTE3NjYxNDk3MDksLTczMzM1NTQxOV
 19
