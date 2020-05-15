@@ -27,9 +27,13 @@ Python内部通过软件模拟了操作系统的时钟中断机制，也有一�
 lock = thread.allocate_lock()
 
 ## 问题
-面试题：描述Python GIL的概念，
+面试题：描述Python GIL的概念，以及它对python多线程的影响？多线程爬取数据比单线程快吗？
+
+
+Python多线程的程序对于I/O密集型程序，还是
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTYyNzM0ODgsLTEzNDc1OTkwMTMsLT
-kzMzUwMjI5MSwxNjY0MzY2MTc0LDkzMDAyOTYzOSwtMTM3MDU2
-NzA3MSwtMTc2NjE0OTcwOSwtNzMzMzU1NDE5XX0=
+eyJoaXN0b3J5IjpbNDU5ODgyODMyLC0xMzQ3NTk5MDEzLC05Mz
+M1MDIyOTEsMTY2NDM2NjE3NCw5MzAwMjk2MzksLTEzNzA1Njcw
+NzEsLTE3NjYxNDk3MDksLTczMzM1NTQxOV19
 -->
