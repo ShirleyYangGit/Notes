@@ -29,14 +29,15 @@ lock = thread.allocate_lock()
 ## 问题
 面试题：描述Python GIL的概念，以及它对python多线程的影响？多线程爬取数据比单线程快吗？
 
-GIL是CPython解释器z
+GIL是CPython解释器中的问题，JPython中就没有。
+GIL使单进程中的多线程，只有拿到GIL锁才能够运行。
 
 Python多线程的程序对于I/O密集型程序，还是比单线程快
 计算密集型：进程
 IO密集型：线程、协程
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0MDg0MDQ2NCwtMTM0NzU5OTAxMywtOT
-MzNTAyMjkxLDE2NjQzNjYxNzQsOTMwMDI5NjM5LC0xMzcwNTY3
-MDcxLC0xNzY2MTQ5NzA5LC03MzMzNTU0MTldfQ==
+eyJoaXN0b3J5IjpbLTE4OTczNzg4NDYsLTEzNDc1OTkwMTMsLT
+kzMzUwMjI5MSwxNjY0MzY2MTc0LDkzMDAyOTYzOSwtMTM3MDU2
+NzA3MSwtMTc2NjE0OTcwOSwtNzMzMzU1NDE5XX0=
 -->
