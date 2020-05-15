@@ -35,13 +35,12 @@ Python中的线程受GIL互斥锁限制，只有获取了GIL的线程才能够�
     - Python内部通过软件模拟了操作系统的时钟中断机制，也有一套类似的：在Python 2.x中，使用计数器，执行_Py_Ticker(100)条指令后，自动释放GIL；在Python 3.x中，使用计时器，执行时间达到阈值后，当前线程释放GIL。之后通过操作系统唤醒下一个等待线程
     - 在IO操作等可能引起阻塞的System call时，可以暂时释放GIL。执行完毕后，会重新去申请GIL。
  4. Python使用多进程是可以利用多核的cpu资源的。
- 5. 多线程爬取比单线程性能有提升，因为遇到IOz
-Python多线程的程序对于I/O密集型程序，还是比单线程快
+ 5. 多线程爬取比单线程性能有提升，因为遇到IO阻塞会自动释放GIL锁。所以Python多线程的程序对于I/O密集型程序，还是比单线程快。
 计算密集型：进程
 IO密集型：线程、协程
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0OTg0NjgwNCwxMjg0OTE2NDMzLC0xMz
+eyJoaXN0b3J5IjpbMTA3MzY2MDgyNywxMjg0OTE2NDMzLC0xMz
 Q3NTk5MDEzLC05MzM1MDIyOTEsMTY2NDM2NjE3NCw5MzAwMjk2
 MzksLTEzNzA1NjcwNzEsLTE3NjYxNDk3MDksLTczMzM1NTQxOV
 19
