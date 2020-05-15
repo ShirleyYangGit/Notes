@@ -29,15 +29,15 @@ lock = thread.allocate_lock()
 ## 问题
 面试题：描述Python GIL的概念，以及它对python多线程的影响？并阐明多线程抓取程序是否可以比单线程性能有提升，并解释原因。
 1. Python语言和GIL没有关系，GIL是CPython解释器中的问题，JPython中就没有。由于历史原因，CPython解释器难以移除GIL。
-2. GIL：全局解释锁。每个线程
-3. Python中的线程受GIL互斥锁限制，只有获取了GIL的线程才能够使用Python解释器执行代码。
+2. GIL：全局解释锁。每个线程在执行过程中，需要先获取GIL，保证同一时刻只有一个线程可以执行代码。
+Python中的线程受GIL互斥锁限制，只有获取了GIL的线程才能够使用Python解释器执行代码。
 
 Python多线程的程序对于I/O密集型程序，还是比单线程快
 计算密集型：进程
 IO密集型：线程、协程
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjA3ODkxMTIsMTI4NDkxNjQzMywtMT
+eyJoaXN0b3J5IjpbLTE5NjkwMjE0NjYsMTI4NDkxNjQzMywtMT
 M0NzU5OTAxMywtOTMzNTAyMjkxLDE2NjQzNjYxNzQsOTMwMDI5
 NjM5LC0xMzcwNTY3MDcxLC0xNzY2MTQ5NzA5LC03MzMzNTU0MT
 ldfQ==
