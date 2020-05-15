@@ -25,8 +25,11 @@ Python内部通过软件模拟了操作系统的时钟中断机制，也有一�
 
 ##  用户级的互斥锁
 lock = thread.allocate_lock()
+
+## 问题
+面试题：描述Python GIL的概念，
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDc1OTkwMTMsLTkzMzUwMjI5MSwxNj
-Y0MzY2MTc0LDkzMDAyOTYzOSwtMTM3MDU2NzA3MSwtMTc2NjE0
-OTcwOSwtNzMzMzU1NDE5XX0=
+eyJoaXN0b3J5IjpbLTEzNTYyNzM0ODgsLTEzNDc1OTkwMTMsLT
+kzMzUwMjI5MSwxNjY0MzY2MTc0LDkzMDAyOTYzOSwtMTM3MDU2
+NzA3MSwtMTc2NjE0OTcwOSwtNzMzMzU1NDE5XX0=
 -->
