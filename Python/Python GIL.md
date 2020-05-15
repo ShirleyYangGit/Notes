@@ -27,7 +27,7 @@ Python内部通过软件模拟了操作系统的时钟中断机制，也有一�
 lock = thread.allocate_lock()
 
 ## 问题
-面试题：描述Python GIL的概念，以及它对python多线程的影响？多线程爬取数据比单线程快吗？
+面试题：描述Python GIL的概念，以及它对python多线程的影响？并阐明多线程抓取程序是否可以比单线程性能有提升，并解释原因。
 
 GIL是CPython解释器中的问题，JPython中就没有。
 Python中的线程受GIL互斥锁限制，只有获取了GIL的线程才能够使用Python解释器执行代码。
@@ -37,7 +37,8 @@ Python多线程的程序对于I/O密集型程序，还是比单线程快
 IO密集型：线程、协程
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NDkxNjQzMywtMTM0NzU5OTAxMywtOT
-MzNTAyMjkxLDE2NjQzNjYxNzQsOTMwMDI5NjM5LC0xMzcwNTY3
-MDcxLC0xNzY2MTQ5NzA5LC03MzMzNTU0MTldfQ==
+eyJoaXN0b3J5IjpbNTkxOTYxNDQsMTI4NDkxNjQzMywtMTM0Nz
+U5OTAxMywtOTMzNTAyMjkxLDE2NjQzNjYxNzQsOTMwMDI5NjM5
+LC0xMzcwNTY3MDcxLC0xNzY2MTQ5NzA5LC03MzMzNTU0MTldfQ
+==
 -->
