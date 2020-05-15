@@ -31,14 +31,16 @@ lock = thread.allocate_lock()
 1. Python语言和GIL没有关系，GIL是CPython解释器中的问题，JPython中就没有。由于历史原因，CPython解释器难以移除GIL。
 2. GIL：全局解释锁。每个线程在执行过程中，需要先获取GIL，保证同一时刻只有一个线程可以执行代码。
 Python中的线程受GIL互斥锁限制，只有获取了GIL的线程才能够使用Python解释器执行代码。
-
+3. 线程释放GIL锁的情况：
+    - 在一个时钟中断后，Python内部通过软件模拟了操作系统的时钟中断机制，也有一套类似的执行_Py_Ticker(100)条指令后，自动释放GIL，通过操作系统唤醒下一个等待线程
+    - 在IO操作等可能
 Python多线程的程序对于I/O密集型程序，还是比单线程快
 计算密集型：进程
 IO密集型：线程、协程
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjkwMjE0NjYsMTI4NDkxNjQzMywtMT
-M0NzU5OTAxMywtOTMzNTAyMjkxLDE2NjQzNjYxNzQsOTMwMDI5
-NjM5LC0xMzcwNTY3MDcxLC0xNzY2MTQ5NzA5LC03MzMzNTU0MT
-ldfQ==
+eyJoaXN0b3J5IjpbNTk3OTIwMTkxLDEyODQ5MTY0MzMsLTEzND
+c1OTkwMTMsLTkzMzUwMjI5MSwxNjY0MzY2MTc0LDkzMDAyOTYz
+OSwtMTM3MDU2NzA3MSwtMTc2NjE0OTcwOSwtNzMzMzU1NDE5XX
+0=
 -->
