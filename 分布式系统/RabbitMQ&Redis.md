@@ -47,7 +47,7 @@ memcache: 只存在内存，不能持久化。
 1. 内存数据库，存取时间快
 2. 具有一些数据类型，并且具每种数据类型都有一些特定的操作
 3. 底层实现基于epoll，多路复用IO
-4. 执行的worker是单线程，新版本中有专门的IO多线程。
+4. 执行的worker是单线程，新版本中有专门的IO多线程
 
 ## String操作
 ```
@@ -101,5 +101,5 @@ subscribe
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMjUyMjQsOTk1MzQ0Njc1XX0=
+eyJoaXN0b3J5IjpbLTM1NjM2MTMyNiw5OTUzNDQ2NzVdfQ==
 -->
