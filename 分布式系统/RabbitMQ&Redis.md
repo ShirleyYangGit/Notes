@@ -44,7 +44,9 @@ memcache: 只存在内存，不能持久化。
 参考：[https://redis.io/topics/quickstart](https://redis.io/topics/quickstart)
 
 ## 特点
-1. 内存数据库，cun c
+1. 内存数据库，存取时间快
+2. 具有一些数据类型，并且具每种数据类型都有一些特定的操作
+3. 底层实现基于epoll，多路复用IO
 
 ## String操作
 ```
@@ -98,5 +100,5 @@ subscribe
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MDA2Njg5MSw5OTUzNDQ2NzVdfQ==
+eyJoaXN0b3J5IjpbLTE4MTQ0MDgwOTQsOTk1MzQ0Njc1XX0=
 -->
