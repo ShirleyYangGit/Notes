@@ -1,13 +1,10 @@
 # Mac Start
 ## Config Environment
 
-1.  copy zsh related files to /Users/own_user/ path:  **.zshrc**  and  **.zsh_history**  and  **.oh-my-zsh**
-    
-2.  install HomeBrew: **/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"**
-    
-3.  install pip: **sudo easy_install pip**
-    
-4.  install virtualenv: **sudo pip install virtualenv**  or **pip install virtualenv --user**
+1.  Install HomeBrew: **/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"**
+2.  Install pip: **sudo easy_install pip**
+3.  Install virtualenv: **sudo pip install virtualenv**  or **pip install virtualenv --user**
+4. Config on-my-zsh. Copy zsh related files to /Users/own_user/ path:  **.zshrc**  and  **.zsh_history**  and  **.oh-my-zsh**
 
 ## Config on-my-zsh
 
@@ -17,5 +14,5 @@ refer to [https://www.sysgeek.cn/macos-fix-sound/](https://www.sysgeek.cn/macos-
 -   sudo killall coreaudiod  
 -   重启电脑
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzU3MTc3MzRdfQ==
+eyJoaXN0b3J5IjpbMTU4MDQzOTIyNCwtMTczNTcxNzczNF19
 -->
