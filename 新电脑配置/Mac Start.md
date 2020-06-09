@@ -8,11 +8,11 @@
 
 ## FAQ
 ## MacOS 声音故障
-refer to [https://www.sysgeek.cn/macos-fix-sound/](https://www.sysgeek.cn/macos-fix-sound/)
+Refer to [https://www.sysgeek.cn/macos-fix-sound/](https://www.sysgeek.cn/macos-fix-sound/)
 -   sudo killall coreaudiod  
 -   重启电脑
 ## Mac zsh terminal字体问题
-https://blog.csdn.net/liuchuo/article/details/79967960
+Refer to https://blog.csdn.net/liuchuo/article/details/79967960
 关于字体有背景色问题，打开terminal的偏好设置，点击描述文件（profiles），把“显示ANSI颜色”选项取消即可
 
 关于波浪线两边的两个问号问题，是因为配置中有非ascii字符编码，这两个问号本来是好看的箭头，但是箭头在当前字体中是不会被显示的……所以解决方法是重新下载一个支持非ascii编码的字体：
@@ -20,7 +20,16 @@ https://blog.csdn.net/liuchuo/article/details/79967960
 github上有一个字体：yizhen20133868/fonts
 
 在terminal中执行以下代码：
+```
+# clone
+> git clone https:``//github.com/powerline/fonts.git
+# install
+> cd fonts
+> ./install.sh
+```
+
+然后打开terminal的偏好设置Preferences->描述文件Profiles->Text->Change Font，在Family中更改字体为刚刚导入的那个字体，我选择的是 Meslo LG S DZ Regular for Powerline 字体
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzE4MTU4NTUsLTE3MzU3MTc3MzRdfQ
+eyJoaXN0b3J5IjpbLTE2NjQ3MTY4MjMsLTE3MzU3MTc3MzRdfQ
 ==
 -->
