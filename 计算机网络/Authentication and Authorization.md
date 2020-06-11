@@ -5,7 +5,7 @@
 Basic Auth (HTTP/1.0) is an authorization type that requires a verified username and password to access a data resource.
 
 In Request headers, the value of Authorization: Basic ***** is username:password encoded by base64.
-![https://github.com/ShirleyYangGit/Pictures/blob/master/ComputerNetwork/Authentication%20and%20Authorization/1%20Web%E6%B5%81%E7%A8%8B.png](https://github.com/ShirleyYangGit/Pictures/blob/master/ComputerNetwork/Authentication%20and%20Authorization/1%20Web%E6%B5%81%E7%A8%8B.png)
+![Client Server Communication](https://github.com/ShirleyYangGit/Pictures/blob/master/ComputerNetwork/Authentication%20and%20Authorization/1%20Web%E6%B5%81%E7%A8%8B.png)
 
 ## HTTP Digest Auth
 
@@ -114,6 +114,6 @@ An open protocol to allow **secure**  **authorization** in a simple and standard
 5.  应用程序向资源服务器出示访问令牌，并请求资源
 6.  如果访问令牌是有效的(比如：是否伪造，是否越权，是否过期)，资源服务器将会为应用程序提供资源
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDc0ODk3MDMsMTgxOTcxODMzOSwtMz
-QxMjI4NzNdfQ==
+eyJoaXN0b3J5IjpbMjAwNjEzNzc5NiwxODE5NzE4MzM5LC0zND
+EyMjg3M119
 -->
