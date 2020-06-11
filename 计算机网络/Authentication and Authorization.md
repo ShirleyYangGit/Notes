@@ -54,9 +54,64 @@ OpenID是以用户为中心的数字身份识别框架，它基于这样的概�
 -   Claimed Identifier：终端用户声明自己身份的一个标志，可以是一个URI或者XRI
 -   OP-Local Identifier：OP提供的局部ID
 
-  
 
 ## OpenID 验证流程
+
+1.  终端用户请求登录RP网站，用户选择了以OpenID方式来登录
+2.  RP将OpenId的登录界面返回给终端用户  
+3.  终端用户以OpenID登陆RP网站
+4.  RP网站对用户的OpenID进行标准化，此过程非常负责。由于OpenID可能是URI，也可能是XRI，所以标准化方式各不相同。具体标准化过程是：如果OpenID以xri://、xri://$ip或者xri://$dns开头，先去掉这些符号；然后对如下的字符串进行判断，如果第一个字符是=、@、+、$、!，则视为标准的XRI，否则视为HTTP URL（若没有http,为其增加http://）。
+5.  RP发现OP，如果OpenId是XRI，就采用XRI解析，如果是URL，则用Yadis协议解析，若Yadis解析失败，则用Http发现。
+6.  RP跟OP建立一个关联。两者之间可以建立一个安全通道，用于传输信息并降低交互次数。
+7.  OP处理RP的关联请求
+8.  RP请求OP对用户身份进行鉴权
+9.  OP对用户鉴权，请求用户进行登录认证
+10.  用户登录OP
+11.  OP将鉴权结果返回给RP
+12.  RP对OP的结果进行分析
+    
+# Authorization ------- OAuth
+Refer to [https://www.jianshu.com/p/b06944c92228](https://www.jianshu.com/p/b06944c92228)
+
+An open protocol to allow **secure**  **authorization** in a simple and standard method from web, mobile and desktop applications.
+
+## OAuth history
+
+-   **2007-12**  OAuth 1.0发布并迅速成为工业标准。
+-   **2008-06**  OAuth 1.0 Revision A发布，这是个稍作修改的修订版本，主要修正一个安全方面的漏洞。
+-   **2010-04**，OAuth 1.0 协议发布为  [RFC 5849](https://link.jianshu.com/?t=http://www.rfcreader.com/#rfc5849)
+-   **2011-05**  OAuth 2.0 草案发布
+-   **2012-10**  OAuth 2.0 协议发布为  [RFC 6749](https://link.jianshu.com/?t=http://www.rfcreader.com/#rfc6749)
+
+## OAuth 1.0
+
+过于复杂，易用性差，没有得到普及
+
+## OAuth 2.0
+
+-   **资源拥有者(Resource Owner)**  
+    资源拥有者其实就是用户(user)，用户将会授权一个第三方应用可以获取他们的账户资源。当然第三方应用程序对于用户账户的操作是有限制的(比如，read access, read and write access)！这个限制就是用户授权时给予的权限范围(**scope**)  
+    上面场景中，微博账户就是资源拥有者。read access就比如读取微博用户名，write access就比如以你的名义发了一个微博。
+    
+-   **客户端(Client)**  
+    客户端就是前面说的第三方应用程序，他们想要获取用户的账户资源，但在这么做之前必须经过授权  
+    上面场景中，简书就是客户端
+    
+-   **资源服务器(Resource Server)**  
+    资源服务器存放用户账户以及账户信息和资源  
+    上面场景中，新浪微博就是资源服务器，同时也是授权服务器
+    
+-   **授权服务器(Authorization Server)**  
+    授权服务器验证用户身份，并为第三方应用程序颁发授权令牌(access token)
+    
+资源服务器与授权服务器可以是同一台服务器，这里分开主要是便于解释清楚OAuth协议。从程序开发者的角度，这两个都是service's API会执行的事情。
+
+1.  应用程序向用户请求给予授权，以便获取服务器资源
+2.  如果用户同意授权，应用程序将获得相应授权
+3.  应用程序向授权服务器提供自己的身份证明(app key和app secret)和已被授权的证明(authorization grant)，并请求访问令牌(access token)
+4.  如果应用程序的身份被核实，并且授权是有效地，那么授权服务器将会发放访问令牌给应用程序。**此时，授权完成**
+5.  应用程序向资源服务器出示访问令牌，并请求资源
+6.  如果访问令牌是有效的(比如：是否伪造，是否越权，是否过期)，资源服务器将会为应用程序提供资源
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3ODUzMTQ1MCwtMzQxMjI4NzNdfQ==
+eyJoaXN0b3J5IjpbMTgxOTcxODMzOSwtMzQxMjI4NzNdfQ==
 -->
