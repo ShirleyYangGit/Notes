@@ -31,6 +31,8 @@ SSL的客户端与服务器端的认证握手图：
 
 ## 证书签发
 
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSL%20%26%20PKI/3%20ca-sign.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSL%20%26%20PKI/3%20ca-sign.png)
+
 1.  服务方S向第三方机构CA提交公钥、组织信息、个人信息(域名)等信息并申请认证;
     
 2.  CA通过线上、线下等多种手段验证申请者提供信息的真实性，如组织是否存在、企业是否合法，是否拥有域名的所有权等;
@@ -179,5 +181,5 @@ DSA只是一种算法，和RSA不同之处在于它不能用作加密和解密�
 [https://www.cnblogs.com/littlehann/p/3738141.html](https://www.cnblogs.com/littlehann/p/3738141.html)  
 [https://www.wosign.com/basic/howsslwork.htm](https://www.wosign.com/basic/howsslwork.htm)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgyNTE5MDgzLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMjk3NjEwMDYzLDczMDk5ODExNl19
 -->
