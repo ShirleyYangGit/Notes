@@ -133,44 +133,39 @@ DSA只是一种算法，和RSA不同之处在于它不能用作加密和解密�
 ## 生成自己的CA (Certificate Authority)
 
 1.  生成CA的key
-    
-    `openssl genrsa -des3 -out ca.key 4096`
+    ```
+    openssl genrsa -des3 -out ca.key 4096
+    ```
     
 2.  生成CA的证书
-    
-    `openssl req -``new`  `-x509 -days 365 -key ca.key -out ca.crt`
+    ```
+    openssl req -new -x509 -days 365 -key ca.key -out ca.crt
+    ```
     
 3.  生成我们的key和CSR
-    
-    `openssl genrsa -des3 -out myserver.key 4096`
-    
-    `openssl req -``new`  `-key myserver.key -out myserver.csr`
+    ```
+    openssl genrsa -des3 -out myserver.key 4096
+    openssl req -new -key myserver.key -out myserver.csr
+    ```
     
 4.  使用ca的证书和key，生成我们的证书
-    
-    `openssl x509 -req -days 365 -in myserver.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out myserver.crt`
-    
+    ```
+    openssl x509 -req -days 365 -in myserver.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out myserver.crt
+    ```
     注意: 这里的set_serial指明了证书的序号，如果证书过期了(365天后)， 或者证书key泄漏了，需要重新发证的时候，就要加1
-    
-
-  
 
 ## 查看证书
 
 1.  查看KEY信息
-    
     `openssl rsa -noout -text -in myserver.key`
     
 2.  查看CSR信息
-    
     `openssl req -noout -text -in myserver.csr`
     
 3.  查看证书信息
-    
     `openssl x509 -noout -text -in ca.crt`
     
 4.  验证签发的证书
-    
     `openssl verify -CAfile ca.crt myserver.crt`
     
       
@@ -184,5 +179,5 @@ DSA只是一种算法，和RSA不同之处在于它不能用作加密和解密�
 [https://www.cnblogs.com/littlehann/p/3738141.html](https://www.cnblogs.com/littlehann/p/3738141.html)  
 [https://www.wosign.com/basic/howsslwork.htm](https://www.wosign.com/basic/howsslwork.htm)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNjg4MjA2Nyw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbNjQxNDg0MzE5LDczMDk5ODExNl19
 -->
