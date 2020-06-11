@@ -5,6 +5,7 @@
 Basic Auth (HTTP/1.0) is an authorization type that requires a verified username and password to access a data resource.
 
 In Request headers, the value of Authorization: Basic ***** is username:password encoded by base64.
+
 ![Client Server Communication](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/Authentication%20and%20Authorization/1%20Web%E6%B5%81%E7%A8%8B.png)
 
 ## HTTP Digest Auth
@@ -55,9 +56,9 @@ OpenID是以用户为中心的数字身份识别框架，它基于这样的概�
 -   Claimed Identifier：终端用户声明自己身份的一个标志，可以是一个URI或者XRI
 -   OP-Local Identifier：OP提供的局部ID
 
-
 ## OpenID 验证流程
 
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/Authentication%20and%20Authorization/3%20openid.jpg](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/Authentication%20and%20Authorization/3%20openid.jpg)
 1.  终端用户请求登录RP网站，用户选择了以OpenID方式来登录
 2.  RP将OpenId的登录界面返回给终端用户  
 3.  终端用户以OpenID登陆RP网站
@@ -107,6 +108,8 @@ An open protocol to allow **secure**  **authorization** in a simple and standard
     
 资源服务器与授权服务器可以是同一台服务器，这里分开主要是便于解释清楚OAuth协议。从程序开发者的角度，这两个都是service's API会执行的事情。
 
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/Authentication%20and%20Authorization/4%20oauth2.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/Authentication%20and%20Authorization/4%20oauth2.png)
+
 1.  应用程序向用户请求给予授权，以便获取服务器资源
 2.  如果用户同意授权，应用程序将获得相应授权
 3.  应用程序向授权服务器提供自己的身份证明(app key和app secret)和已被授权的证明(authorization grant)，并请求访问令牌(access token)
@@ -115,6 +118,6 @@ An open protocol to allow **secure**  **authorization** in a simple and standard
 6.  如果访问令牌是有效的(比如：是否伪造，是否越权，是否过期)，资源服务器将会为应用程序提供资源
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MTgwOTIyOCwyMDI1MDc0MDM3LDE4MT
-k3MTgzMzksLTM0MTIyODczXX0=
+eyJoaXN0b3J5IjpbLTk4NzU1MzgwLDIwMjUwNzQwMzcsMTgxOT
+cxODMzOSwtMzQxMjI4NzNdfQ==
 -->
