@@ -12,6 +12,7 @@ SSL 连接总是由客户端启动的。在SSL 会话开始时执行 SSL 握手�
 
 SSL的客户端与服务器端的认证握手图：
 
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSL%20%26%20PKI/1%20SSL%E6%8F%A1%E6%89%8B.gif](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSL%20%26%20PKI/1%20SSL%E6%8F%A1%E6%89%8B.gif)
 
 # Public Key Infrastructure
 
@@ -26,6 +27,7 @@ SSL的客户端与服务器端的认证握手图：
 
 使用证书保护Web访问的安全实现SSL的基本原理如下：
 
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSL%20%26%20PKI/2%20ca-ssl.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSL%20%26%20PKI/2%20ca-ssl.png)
 
 ## 证书签发
 
@@ -168,8 +170,6 @@ DSA只是一种算法，和RSA不同之处在于它不能用作加密和解密�
 4.  验证签发的证书
     `openssl verify -CAfile ca.crt myserver.crt`
     
-      
-    
 
 # Client Certificates with Passphrases
 
@@ -179,5 +179,5 @@ DSA只是一种算法，和RSA不同之处在于它不能用作加密和解密�
 [https://www.cnblogs.com/littlehann/p/3738141.html](https://www.cnblogs.com/littlehann/p/3738141.html)  
 [https://www.wosign.com/basic/howsslwork.htm](https://www.wosign.com/basic/howsslwork.htm)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQxNDg0MzE5LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbNzgyNTE5MDgzLDczMDk5ODExNl19
 -->
