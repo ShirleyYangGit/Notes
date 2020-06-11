@@ -271,20 +271,17 @@ The key's randomart image is:
 ```
 $ ssh user@host -p 2222 'mkdir -p .ssh && cat >> .ssh/authorized_keys' < ./id_rsa_test.pub
 ```
-
 命令解析：
 (1) `$ ssh user@host -p 2222`，表示登录远程主机，端口2222；
 (2) 单引号中的`mkdir .ssh && cat >> .ssh/authorized_keys`，表示登录后在远程shell上执行的命令；
-(3）`$ mkdir -p .ssh`的作用是，如果用户主目录中的.ssh目录不存在，就创建一个；`
+(3) `$ mkdir -p .ssh`的作用是，如果用户主目录中的.ssh目录不存在，就创建一个；
+(4) `'cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa_test.pub` 
+的作用是，将本地的公钥文件`~/.ssh/id_rsa_test.pub`，重定向追加到远程文件`authorized_keys`的末尾。
 
-`(4)` `'cat >> .ssh/authorized_keys'`  `< ~/.ssh/id_rsa_test.pub的作用是，将本地的公钥文件~/.ssh/id_rsa_test.pub，重定向追加到远程文件authorized_keys的末尾。`
-
-`简单实现`
-
+简单实现
 `$ ssh-copy-id user@server`
 
-`指定本地的ssh公钥文件:`
-
+指定本地的ssh公钥文件:
 `$ ssh-copy-id -i ~/.ssh/id_rsa_test.pub yyx@127.0.0.1 -p 2222`
 
 `/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed:` `"./id_rsa_test.pub"`
@@ -399,5 +396,5 @@ ssh-agent是一种控制用来保存公钥身份验证所使用的私钥的程�
 -   [http://erik-2-blog.logdown.com/posts/74081-ssh-principle](http://erik-2-blog.logdown.com/posts/74081-ssh-principle)
 -   [http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc4MzU3NDg4LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTIxMTE2NDkxNzQsNzMwOTk4MTE2XX0=
 -->
