@@ -75,8 +75,9 @@ OpenSSL是一个强大的安全套接字层密码库。作为一个基于密码�
 ## RSA加解密
 
 -   生成一个私钥
-    
-    `[root@hunterfu ~]# openssl genrsa -out private.key 1024`
+    ```
+    [root@hunterfu ~]# openssl genrsa -out private.key 1024
+    ```
     
     注意: 需要注意的是这个文件包含了公钥和密钥两部分，也就是说这个文件即可用来加密也可以用来解密, 后面的1024是生成密钥的长度.
     
@@ -105,27 +106,27 @@ OpenSSL是一个强大的安全套接字层密码库。作为一个基于密码�
 DSA只是一种算法，和RSA不同之处在于它不能用作加密和解密，也不能进行密钥交换，只用于签名,它比RSA要快很多.
 
 -   生成一个密钥(私钥)
-    
-    `[root@hunterfu ~]# openssl dsaparam -out dsaparam.pem 1024`
-    
-    `[root@hunterfu ~]# openssl gendsa -out privkey.pem dsaparam.pem`
+    ```
+    [root@hunterfu ~]# openssl dsaparam -out dsaparam.pem 1024
+    [root@hunterfu ~]# openssl gendsa -out privkey.pem dsaparam.pem
+    ```
     
 -   生成公钥
-    
-    `[root@hunterfu ~]# openssl dsa -in privkey.pem -out pubkey.pem -pubout`
-    
-    `[root@hunterfu ~]# rm -fr dsaparam.pem`
+    ```
+    [root@hunterfu ~]# openssl dsa -in privkey.pem -out pubkey.pem -pubout
+    [root@hunterfu ~]# rm -fr dsaparam.pem
+    ```
     
 -   使用私钥签名
-    
-    `[root@hunterfu ~]# echo -n` `"123456"`  `| openssl dgst -dss1 -sign privkey.pem > sign.result`
+    ```
+    [root@hunterfu ~]# echo -n "123456" | openssl dgst -dss1 -sign privkey.pem > sign.result
+    ```
     
 -   使用公钥验证
-    
-    `[root@hunterfu ~]# echo -n` `"123456"` `| openssl dgst -dss1 -verify pubkey.pem -signature sign.result`
-    
-    `Verified OK`
-    
+    ```
+    [root@hunterfu ~]# echo -n "123456" | openssl dgst -dss1 -verify pubkey.pem -signature sign.result
+    Verified OK
+    ```
 
 至此，一次DSA签名与验证过程完成！
 
@@ -183,5 +184,5 @@ DSA只是一种算法，和RSA不同之处在于它不能用作加密和解密�
 [https://www.cnblogs.com/littlehann/p/3738141.html](https://www.cnblogs.com/littlehann/p/3738141.html)  
 [https://www.wosign.com/basic/howsslwork.htm](https://www.wosign.com/basic/howsslwork.htm)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxODM3OTQ3LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTgwNjg4MjA2Nyw3MzA5OTgxMTZdfQ==
 -->
