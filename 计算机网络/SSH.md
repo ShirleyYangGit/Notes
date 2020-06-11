@@ -239,22 +239,15 @@ $ ssh -v user@server -p 2222
 ## ssh-keygen
 
 运行上面的命令以后，系统会出现一系列提示，可以一路回车。其中有一个问题是，要不要对私钥设置口令（passphrase），如果担心私钥的安全，这里可以设置一个。
-
-`生成密钥：指定算法RSA，添加Email，指定密钥文件名`
-
-`$ ssh-keygen -t rsa -C` `"mytest@example.com"`  `-f` `"id_rsa_test"`
-
-`Generating` `public``/``private`  `rsa key pair.`
-
-`Enter passphrase (empty` `for`  `no passphrase):`
-
-`Enter same passphrase again:`
-
-`Your identification has been saved in id_rsa_test.`
-
-`Your` `public`  `key has been saved in id_rsa_test.pub.`
-
-`The key fingerprint is:`
+```
+生成密钥：指定算法RSA，添加Email，指定密钥文件名
+$ ssh-keygen -t rsa -C "mytest@example.com"  -f "id_rsa_test"
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in id_rsa_test.
+Your public key has been saved in id_rsa_test.pub.
+The key fingerprint is:
 
 `SHA256:jNmMVIVW0MCGmBQYTdeewEwF3xV/mNECQqeewi+racA mytest@example.com`
 
@@ -281,7 +274,7 @@ $ ssh -v user@server -p 2222
 `| . |`
 
 `+----[SHA256]-----+`
-
+```
 运行结束以后，在$HOME/.ssh/目录下，会新生成两个文件：id_rsa_test.pub和id_rsa_test。前者是你的公钥，后者是你的私钥。
 
 ## ssh-copy-id
@@ -422,5 +415,5 @@ ssh-agent是一种控制用来保存公钥身份验证所使用的私钥的程�
 -   [http://erik-2-blog.logdown.com/posts/74081-ssh-principle](http://erik-2-blog.logdown.com/posts/74081-ssh-principle)
 -   [http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDE3NzY3NDIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbODQ2OTkyMDgyLDczMDk5ODExNl19
 -->
