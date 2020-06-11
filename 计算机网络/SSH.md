@@ -347,25 +347,20 @@ ssh-agent是一种控制用来保存公钥身份验证所使用的私钥的程�
 - add id_rsa_test
 `$ ssh-add ~/.ssh/id_rsa_test`
 - 查看
-`$ ssh-add -l`
-`2048 SHA256:QOtjNmMVIVMEREWdsWfQdgdwF3xV/mNsdWEQqE+racA mytest@example.com (RSA)`
-`$ ssh-add -k`
-`Identity added: /Users/yaxingy/.ssh/id_rsa (yaxingy@splunk.com)`
-
+    ```
+    $ ssh-add -l
+    2048 SHA256:QOtjNmMVIVMEREWdsWfQdgdwF3xV/mNsdWEQqE+racA mytest@example.com (RSA)
+    $ ssh-add -k
+    Identity added: /Users/yaxingy/.ssh/id_rsa (yaxingy@splunk.com)
+    ```
 在每台服务器上都配置，告诉ssh 允许 ssh-agent 转发
-
-`修改全局：`
-
-`$ echo` `"ForwardAgent yes"`  `>> /etc/ssh/ssh_config`
-
-`修改个人`
-
+- 修改全局：
+`$ echo "ForwardAgent yes" >> /etc/ssh/ssh_config`
+- 修改个人
+- 
 `$ touch ~/.ssh/config`
-
 `$ vim ~/.ssh/config`
-
 `Host *`
-
 `　　ForwardAgent yes`
 
   
@@ -378,5 +373,5 @@ ssh-agent是一种控制用来保存公钥身份验证所使用的私钥的程�
 -   [http://erik-2-blog.logdown.com/posts/74081-ssh-principle](http://erik-2-blog.logdown.com/posts/74081-ssh-principle)
 -   [http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc4NDUyNTkzLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbNjg4MDY4MDU0LDczMDk5ODExNl19
 -->
