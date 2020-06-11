@@ -98,7 +98,20 @@ ssh-client与ssh-server连接建立的主要阶段可以划分为：
 2.  客户端发起TCP连接请求，服务端接收到该请求后，向客户端发送包括SSH协议版本信息
 3.  客户端接根据该版本信息与自己的版本，决定将要使用的SSH版本，并向服务端发送选用的SSH版本信息
 4.  服务端检查是否支持客户端的决定使用的SSH版本
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/11%20SSH%E5%8D%8F%E8%AE%AE%E5%8D%8F%E5%95%86.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/11%20SSH%E5%8D%8F%E8%AE%AE%E5%8D%8F%E5%95%86.png)
 
+如果该过程中，客户端或服务端发送SSH版本无法兼容，任何一方都可以断开连接。
+
+## 服务端认证——建立加密通道
+
+完成协议协商阶段后，客户端与服务端已经建立**明文**的通信通道，之后进入服务端认证阶段。
+
+1.  服务端向客户端发送Public Key, 8字节随机数（防止IP地址欺诈）， 加密算法、压缩方式和认证方式，  
+2.  客户端检查自己的knows host数据库（一般为~/.ssh/know_hosts文件），如果没有包含当前服务端的Public Key, 则需要**用户决定**是否信任该服务端
+3.  客户端生成**Session Key**，然后使用服务端的Public Key对Session Key进行加密, 然后发送给服务端。
+4.  服务端收到数据后，用Private Key进行解密，得到Session Key。
+
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/12%20SSH%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AE%A4%E8%AF%81.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/12%20SSH%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AE%A4%E8%AF%81.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1Mjg5MDI3Miw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTMyMTY1Nzc2Miw3MzA5OTgxMTZdfQ==
 -->
