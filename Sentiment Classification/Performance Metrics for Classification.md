@@ -56,9 +56,13 @@ Harmonic mean is kind of an average when x and y are equal. But when x and y are
 
 [An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at all classification thresholds.](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc)
 
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/6%20ROC.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/6%20ROC.png)
+
 # AUC: Area Under the ROC Curve
 
 [AUC stands for “Area under the ROC Curve.” That is, AUC measures the entire two-dimensional area underneath the entire ROC curve (think integral calculus) from (0,0) to (1,1).](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc)
+
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/7%20AUC.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/7%20AUC.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM0NDk1MDQwLC0xODA0MTYxMTk3XX0=
+eyJoaXN0b3J5IjpbNzg5NjUwNTkwLC0xODA0MTYxMTk3XX0=
 -->
