@@ -12,12 +12,48 @@ refer to
 The Confusion Matrix tool aims to help you understand what happens under the hood, and to guide you to further tune Smart Ticket to achieve a satisfactory categorization accuracy.
 
 A Confusion Matrix is basically a table to show users one specific test result. You can find out which categories are good or bad in this test, and then tune the system accordingly.
-tu
+图1
+
 The Confusion matrix in itself is not a performance measure as such, but almost all of the performance metrics are based on Confusion Matrix and the numbers inside it.
 
 # Accuracy 准确率
 
 Accuracy in classification problems is the number of correct predictions made by the model over all kinds predictions made.
+png2
+
+**Note:**
+-   Accuracy is a good measure when the target variable classes in the data are nearly balanced.
+-   Accuracy should NEVER be used as a measure when the target variable classes in the data are a majority of one class.
+
+# Precision 精确度
+
+Precision is a measure that tells us what proportion of class1 we predicted, actually belongs to class1.
+png3
+
+# Recall or Sensitivity 召回率或敏感性
+
+Precision is a measure that tells us what proportion of class1 was predicted to class1.
+
+# Specificity 特异性
+
+Specificity is the exact opposite of Recall or Sensitivity.
+
+# F1-Score
+
+A single score that kind of represents both Precision(P) and Recall(R).
+```
+F1 Score = Harmonic Mean(Precision, Recall) = 2 * Precision * Recall / (Precision + Recall) 调和平均
+```
+Harmonic mean is kind of an average when x and y are equal. But when x and y are different, then it’s closer to the smaller number as compared to the larger number.
+
+# ROC Curve
+
+[An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at all classification thresholds.](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc)
+
+# AUC: Area Under the ROC Curve
+
+[AUC stands for “Area under the ROC Curve.” That is, AUC measures the entire two-dimensional area underneath the entire ROC curve (think integral calculus) from (0,0) to (1,1).](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMDk5OTE5MCwtMTgwNDE2MTE5N119
+eyJoaXN0b3J5IjpbLTE3ODc0MTY2MjgsLTE4MDQxNjExOTddfQ
+==
 -->
