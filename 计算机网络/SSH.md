@@ -136,7 +136,71 @@ Public Key认证提供了一种更安全便捷的认证客户端的方式。这�
 -   客户端使用私钥对字符串进行解密，并将其结合session id生成一个MD5值发送给服务端。**结合session id的目的是为了避免攻击者采用重放攻击（replay attack）**。
 -   服务端采用同样的方式生成MD5值与客户端返回的MD5值进行比较，完成对客户端的认证。
 
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/14%20Public%20Key%E8%AE%A4%E8%AF%81.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/14%20Public%20Key%E8%AE%A4%E8%AF%81.png)
 
+# 中间人攻击
+
+SSH之所以能够保证安全，主要原因在于它采用了公钥加密来传输Session Key。
+
+过程大概是这样的：
+
+（1）远程主机收到用户的登录请求，把自己的公钥发给用户。
+（2）用户使用这个公钥，将Session Key加密后，发送回来。
+
+（3）远程主机用自己的私钥，解密得到Session Key。
+
+这个过程本身是安全的，但是实施的时候存在一个风险：如果有人截获了登录请求，然后冒充远程主机，将伪造的公钥发给用户，那么用户很难辨别真伪。因为SSH协议的公钥都是自己签发的。
+
+可以设想，如果攻击者插在用户与远程主机之间（比如在公共的wifi区域），用伪造的公钥，与用户建立加密通道，进而获取用户的登录密码。再用这个密码登录远程主机，那么SSH的安全机制就荡然无存了。
+
+这种风险就是著名的["中间人攻击"](http://en.wikipedia.org/wiki/Man-in-the-middle_attack)（Man-in-the-middle attack）。
+
+SSH协议是如何应对的呢？
+
+## SSH人工判断
+
+如果你是第一次登录对方主机，系统会出现下面的提示：
+
+> 　　$ ssh user@host
+> 　　The authenticity of host 'host (12.18.429.21)' can't be established.
+> 　　RSA key fingerprint is `98:2e:d7:e0:de:9f:ac:67:28:c2:42:2d:37:16:58:4d`.
+> 
+> 　　Are you sure you want to continue connecting (yes/no)?
+
+这段话的意思是，无法确认host主机的真实性，只知道它的公钥指纹，问你还想继续连接吗？
+
+所谓"公钥指纹"，是指公钥长度较长（这里采用RSA算法，长达1024位），很难比对，所以对其进行MD5计算，将它变成一个128位的指纹。上例中是`98:2e:d7:e0:de:9f:ac:67:28:c2:42:2d:37:16:58:4d`，再进行比较，就容易多了。
+
+很自然的一个问题就是，用户怎么知道远程主机的公钥指纹应该是多少？回答是没有好办法，远程主机必须在自己的网站上贴出公钥指纹，以便用户自行核对。
+
+假定经过风险衡量以后，用户决定接受这个远程主机的公钥。
+
+> 　　Are you sure you want to continue connecting (yes/no)? yes
+
+系统会出现一句提示，表示host主机已经得到认可。
+
+> 　　Warning: Permanently added 'host,12.18.429.21' (RSA) to the list of known hosts.
+
+然后，会要求输入密码。
+
+> 　　Password: (enter password)
+
+如果密码正确，就可以登录了。
+
+当远程主机的公钥被接受以后，它就会被保存在文件$HOME/.ssh/known_hosts之中。下次再连接这台主机，系统就会认出它的公钥已经保存在本地了，从而跳过警告部分，直接提示输入密码。
+
+每个SSH用户都有自己的known_hosts文件，此外系统也有一个这样的文件，通常是/etc/ssh/ssh_known_hosts，保存一些对所有用户都可信赖的远程主机的公钥。
+
+## SSL & TLS CA数字认证机构
+
+SSH其实是专门为shell设计的一种通信协议，它垮了两个网络层（传输层和应用层）。通俗点讲就是只有SSH客户端，和SSH服务器端之间的通信才能使用这个协议，其他软件服务无法使用它。但是其实我们非常需要一个通用的，建立在应用层之下的一个传输层安全协议，它的目标是建立一种对上层应用协议透明的，不管是HTTP、FTP、还是电子邮件协议或其他任何应用层协议都可以依赖的底层的可安全通信的传输层协议。
+
+网景公司于1994年为解决上面的问题，设计了SSL（Secure Sockets Layer）协议的1.0版本，但并未发布，直到1996年发布SSL3.0之后，开始大规模应用于互联网服务。TLS（Transport Layer Security）是SSL协议的一个后续版本，他是SSL经过IETF标准化之后的产物（详细参考[传输层安全协议](https://links.jianshu.com/go?to=https%3A%2F%2Fzh.wikipedia.org%2Fwiki%2F%25E5%2582%25B3%25E8%25BC%25B8%25E5%25B1%25A4%25E5%25AE%2589%25E5%2585%25A8%25E5%258D%2594%25E8%25AD%25B0)，下文中所说的SSL协议也包括TLS）。
+
+跟SSH相比SSL所面临的问题要更复杂一些，上面我们提到，SSH协议通过人工鉴别Public Key的printfinger来判断与之通信的服务器是否可信（不是伪装的中间人）。可是SSL是为了整个互联网上的所有客户端与服务器之间通信而设计的，他们彼此之间不可能自己判断通信的对方是否可信。那么如何解决这个问题呢？答案是[CA(数字证书认证机构)](https://links.jianshu.com/go?to=https%3A%2F%2Fzh.wikipedia.org%2Fwiki%2F%25E6%2595%25B0%25E5%25AD%2597%25E8%25AF%2581%25E4%25B9%25A6%25E8%25AE%25A4%25E8%25AF%2581%25E6%259C%25BA%25E6%259E%2584) 它为浏览器发行一个叫[数字证书](https://links.jianshu.com/go?to=https%3A%2F%2Fzh.wikipedia.org%2Fwiki%2F%25E9%259B%25BB%25E5%25AD%2590%25E8%25AD%2589%25E6%259B%25B8)。比较重要的信息有：
+
+-   服务器的公开密钥
+-   数字签名 ：服务器证书内容--->Hash得到摘要Digest--->CA私钥进行加密
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NzE3ODc1Myw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTY3MzM4OTgzMyw3MzA5OTgxMTZdfQ==
 -->
