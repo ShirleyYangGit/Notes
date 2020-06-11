@@ -134,8 +134,49 @@ Pragma: no-cache
 
 应用场景: 适用于所有无Server端配合的应用(由于应用往往位于一个User Agent里，如浏览器里面，因此这类应用在某些平台下又被称为`Client-Side Application`), 如手机/桌面客户端程序、浏览器插件等，以及基于JavaScript等脚本客户端脚本语言实现的应用，他们的一个共同特点是，无服务端,无法监听端口直接收到回调token, 并且应用无法妥善保管其应用密钥(App Secret Key), 如果采取Authorization Code模式，则会存在泄漏其应用密钥(api_scret)的可能性
 
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/5%20implicit%20grant%20type.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/5%20implicit%20grant%20type.png)
 
+（A）客户端将用户导向认证服务器。
+（B）用户决定是否给于客户端授权。
+（C）假设用户给予授权，认证服务器将用户导向客户端指定的"重定向URI"，并在URI的Hash部分包含了访问令牌。
+（D）浏览器向资源服务器发出请求，其中不包括上一步收到的Hash值。
+（E）资源服务器返回一个网页，其中包含的代码可以获取Hash值中的令牌。
+（F）浏览器执行上一步获得的脚本，提取出令牌。
+（G）浏览器将令牌发给客户端。
+
+A步骤中，客户端发出的HTTP请求，包含以下参数：
+
+-   **response_type**：表示授权类型，此处的值固定为"**token**"，必选项。
+-   client_id：表示客户端的ID，必选项。
+-   redirect_uri：表示重定向的URI，可选项。
+-   scope：表示权限范围，可选项。
+-   state：表示客户端的当前状态，可以指定任意值，认证服务器会原封不动地返回这个值。
+
+C步骤中，认证服务器回应客户端的URI，包含以下参数：
+
+-   access_token：表示访问令牌，必选项。
+-   token_type：表示令牌类型，该值大小写不敏感，必选项。
+-   expires_in：表示过期时间，单位为秒。如果省略该参数，必须其他方式设置过期时间。
+-   scope：表示权限范围，如果与客户端申请的范围一致，此项可省略。
+-   state：如果客户端的请求中包含这个参数，认证服务器的回应也必须一模一样包含这个参数。
+
+下面是一个例子：
+```
+HTTP/1.1 302 Found 
+Location: http://example.com/cb#access_token=2YotnFZFEjr1zCsicMWpAA &state=xyz&token_type=example&expires_in=3600
+```
+在上面的例子中，认证服务器用HTTP头信息的Location栏，指定浏览器重定向的网址。注意，在这个网址的Hash部分包含了令牌。
+
+根据上面的D步骤，下一步浏览器会访问Location指定的网址，但是Hash部分不会发送。接下来的E步骤，服务提供商的资源服务器发送过来的代码，会提取出Hash中的令牌。
+
+**注意**：在该模式的实现过程中, D和E步一般都会省略掉, 因为Web-Hosted Client Resource提供的这段token提取脚本, 客户端可以自己实现。
+
+## 密码模式（resource owner password credentials）
+
+密码模式（Resource Owner Password Credentials Grant）中，**用户向客户端提供自己的用户名和密码**。客户端使用这些信息，向"服务商提供商"索要授权。
+
+在这种模式中，用户必须把自己的密码给客户端，但是**客户端不得储存密码**。这通常用在用户对**客户端高度信任**的情况下，比如客户端是操作系统的一部分，或者由一个著名公司出品。而认证服务器只有在其他授权模式无法执行的情况下，才能考虑使用这种模式。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4Njc5NjA5OSwtMzIwNjcwMzUsLTE3Nz
+eyJoaXN0b3J5IjpbMTM1MDUzNzQ2NCwtMzIwNjcwMzUsLTE3Nz
 k3ODQ1MjJdfQ==
 -->
