@@ -297,16 +297,15 @@ and check to make sure that only the key(s) you wanted were added.
 ## scp
 
 scp是 secure copy的缩写, scp是linux系统下基于ssh登陆进行安全的远程文件拷贝命令。
+```
+$ scp [可选参数] file_source file_target
 
-`$ scp [可选参数] file_source file_target`
+从本地复制到远程 (远程端口 2222)
+$ scp -P 2222 local_file remote_username@remote_ip:remote_file
 
-`从本地复制到远程 (远程端口 2222)`
-
-`$ scp -P 2222 local_file remote_username@remote_ip:remote_file`
-
-`从远程复制到本地（远程端口 2222）`
-
-`$ scp -P 2222 remote@www.runoob.com:/usr/local/``sin``.sh`
+从远程复制到本地（远程端口 2222）
+$ scp -P 2222 remote@www.runoob.com:/usr/local/sin.sh
+```
 
 ## ssh-keyscan
 
@@ -319,8 +318,8 @@ ssh-keyscan 批量获取集群上机器的密钥指纹。
     ```
     
 2.  执行命令
-    
-    `$ ssh-keyscan -f hostlist.txt`
+    ```
+    $ ssh-keyscan -f hostlist.txt`
     
     `# 127.0.0.1 SSH-2.0-OpenSSH_6.6.1`
     
@@ -337,7 +336,7 @@ ssh-keyscan 批量获取集群上机器的密钥指纹。
     `# 127.0.0.2 SSH-2.0-OpenSSH_6.6.1`
     
     `127.0.0.2 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCPWoEQ7iCCYDrpyb5KeMmCaQ8aOnSfehqmrplZRkbqqnkS9++PdSX/eSLJ0tkFd5902/C+HTCqbDgso4mCKpMo=`
-    
+    ```
 3.  可以直接将结果重定向
     
     `ssh-keyscan -f hostlist.txt 1>>~/.ssh/known_hosts 2>/dev/null`
@@ -391,5 +390,5 @@ ssh-agent是一种控制用来保存公钥身份验证所使用的私钥的程�
 -   [http://erik-2-blog.logdown.com/posts/74081-ssh-principle](http://erik-2-blog.logdown.com/posts/74081-ssh-principle)
 -   [http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDE4MzcxMDgsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTUxNjM0NDU2Miw3MzA5OTgxMTZdfQ==
 -->
