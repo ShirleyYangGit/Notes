@@ -48,7 +48,37 @@
 -   完整性：对数据本身使用Hash函数得到Digest，对比解密得到的Digest，如果两者一致，就证明数据没有被修改过。
 
 ![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/6%20%E8%A7%A3%E5%AF%86.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/6%20%E8%A7%A3%E5%AF%86.png)
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/7%20%E5%AF%B9%E6%AF%94Digest.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/7%20%E5%AF%B9%E6%AF%94Digest.png)
+
+## 应用
+
+虽然非对称加密很安全很强大，但是它也有缺点，相对于对称加密它计算量更大，计算时间更长。
+
+所以在大规模数据的安全通信场景中，**普遍采用非对称加密技术来相互验证，交换对称加密密钥。**
+
+之后会建立session key（比如128位AES key），后续交互的信息都是用session key和对称加密算法（比如AES）来加解密的。
+
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/8%20%E5%8A%A0%E5%AF%86%E4%BC%A0%E8%BE%93SessionKey.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/8%20%E5%8A%A0%E5%AF%86%E4%BC%A0%E8%BE%93SessionKey.png)
+
+# SSH protocol
+
+SSH协议是在1995年，由芬兰学者Tatu Ylonen设计开发的。起因是，他们在芬兰大学服务器的主干网上发现了一个“密码嗅探器”，上面有大量的用户名密码，甚至有Tatu Ylonen所在公司的很多账号密码。这给他的公司带了很多损失。
+
+这件事令他意识到加密传输的必要性。为此，他开发了SSH协议，将**登录信息安全加密**，并向IETF申请了22端口。目前SSH已经成为Linux系统的标准配置。
+
+## What is SSH protocol
+
+> The SSH protocol (also referred to as **Secure Shell**) is a method for secure remote login from one computer to another. It provides several alternative options for  **strong authentication**, and it protects the communications security and integrity with strong encryption. It is a secure alternative to the non-protected login protocols (such as [telnet](https://www.ssh.com/ssh/telnet), rlogin) and insecure file transfer methods (such as [FTP](https://www.ssh.com/ssh/ftp/)).
+
+简单说，SSH协议是创建在**应用层**上的安全协议，为计算机上的Shell提供安全的认证和数据传输环境。
+
+## How work
+
+> The protocol works in the  **client-server model**, which means that the connection is established by the SSH client connecting to the SSH server.
+
+SSH是一个Client-Server model。也就是说，它有SSH client 和 SSH server。
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzkwMTg2NjQsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTEyODQ1MTAxMyw3MzA5OTgxMTZdfQ==
 -->
