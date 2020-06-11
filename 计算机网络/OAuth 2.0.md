@@ -197,7 +197,6 @@ B步骤中，客户端发出的HTTP请求，包含以下参数：
 ![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/7%20Client%20Credentials%20Grant.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/7%20Client%20Credentials%20Grant.png)
 
 （A）客户端向认证服务器进行身份认证，并要求一个访问令牌。
-
 （B）认证服务器确认无误后，向客户端提供访问令牌。
 
 A步骤中，客户端发出的HTTP请求，包含以下参数：
@@ -213,7 +212,21 @@ A步骤中，客户端发出的HTTP请求，包含以下参数：
     
 2.  Client ID从哪里获取的？  
     这是要客户端在认证服务器中注册后，才能得到的。以Github认证服务器为例，可以在[New OAuth Application](https://github.com/settings/applications/new)中注册应用，进而获取Client ID和Client Secret。
+    ![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/8%20Register%20a%20new%20application.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/8%20Register%20a%20new%20application.png)
+   
+3.  资源服务器如何根据access token来确认可访问的资源的？  
+    认证服务器生成的access token中，包含了scope权限信息。资源服务器正确解析token后，可以根据scope权限信息设置客户端可访问的内容。
+
+# Demo [simple-oauth2](https://github.com/lelylan/simple-oauth2)
+
+客户端实现认证的内容，可以参考[https://github.com/lelylan/simple-oauth2/tree/master/example](https://github.com/lelylan/simple-oauth2/tree/master/example)
+
+
+Reference:
+
+-   [http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
+-   [https://blog.yumaojun.net/2017/12/07/oauth2/](https://blog.yumaojun.net/2017/12/07/oauth2/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwMjUyODkwMywtMzIwNjcwMzUsLTE3Nz
+eyJoaXN0b3J5IjpbMTM2NjMzMTI1OCwtMzIwNjcwMzUsLTE3Nz
 k3ODQ1MjJdfQ==
 -->
