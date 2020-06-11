@@ -248,42 +248,27 @@ Enter same passphrase again:
 Your identification has been saved in id_rsa_test.
 Your public key has been saved in id_rsa_test.pub.
 The key fingerprint is:
-
-`SHA256:jNmMVIVW0MCGmBQYTdeewEwF3xV/mNECQqeewi+racA mytest@example.com`
-
-`The key's randomart image is:`
-
-`+---[RSA 2048]----+`
-
-`|.o=+o+XoO=+.+o |`
-
-`| o.+o= * = +o |`
-
-`|. ..o o o o o o |`
-
-`| ....o o . o .|`
-
-`|. .o..O S |`
-
-`|.E o+ + |`
-
-`| . o |`
-
-`| + |`
-
-`| . |`
-
-`+----[SHA256]-----+`
+SHA256:jNmMVIVW0MCGmBQYTdeewEwF3xV/mNECQqeewi+racA mytest@example.com
+The key's randomart image is:
++---[RSA 2048]----+
+|.o=+o+XoO=+.+o |
+| o.+o= * = +o |
+|. ..o o o o o o |
+| ....o o . o .|
+|. .o..O S |
+|.E o+ + |
+| . o |
+| + |
+| . |
++----[SHA256]-----+
 ```
 运行结束以后，在$HOME/.ssh/目录下，会新生成两个文件：id_rsa_test.pub和id_rsa_test。前者是你的公钥，后者是你的私钥。
 
 ## ssh-copy-id
+将公钥传送到远程主机server上面
 
-`将公钥传送到远程主机server上面`
-
-`复杂实现`
-
-`$ ssh user@host -p 2222` `'mkdir -p .ssh && cat >> .ssh/authorized_keys'`  `< ./id_rsa_test.pub`
+复杂实现
+$ ssh user@host -p 2222` `'mkdir -p .ssh && cat >> .ssh/authorized_keys'`  `< ./id_rsa_test.pub`
 
 `命令解析：`
 
@@ -415,5 +400,5 @@ ssh-agent是一种控制用来保存公钥身份验证所使用的私钥的程�
 -   [http://erik-2-blog.logdown.com/posts/74081-ssh-principle](http://erik-2-blog.logdown.com/posts/74081-ssh-principle)
 -   [http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ2OTkyMDgyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTEyMDE0OTEwMjQsNzMwOTk4MTE2XX0=
 -->
