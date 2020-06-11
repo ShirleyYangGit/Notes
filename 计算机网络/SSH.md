@@ -112,6 +112,31 @@ ssh-client与ssh-server连接建立的主要阶段可以划分为：
 4.  服务端收到数据后，用Private Key进行解密，得到Session Key。
 
 ![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/12%20SSH%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AE%A4%E8%AF%81.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/12%20SSH%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AE%A4%E8%AF%81.png)
+注意：客户端和服务器会默认此次会话的session id为：服务端Public Key和8字节的随机数生成一个128位的MD5值。  
+
+## 客户端认证——加密通道
+
+### 密码认证
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/13%20SSH%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AF%86%E7%A0%81%E8%AE%A4%E8%AF%81.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/13%20SSH%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AF%86%E7%A0%81%E8%AE%A4%E8%AF%81.png)
+优点：简单，无需任何其他配置
+
+**缺点**: 每次登录都要输入密码很麻烦，密码容易忘记，过于简单的密码容易被暴力破解。
+
+### Public Key认证
+
+Public Key认证提供了一种更安全便捷的认证客户端的方式。这个技术也用到了非对称加密技术，由客户端生成公私密钥对，然后将公钥保存在服务端的密钥库（Linux中存储在~/.ssh/**authorized_keys**文件）。
+
+例如：Github中使用Git协议push代码前要先添加SSH Key。
+
+认证的过程大体如下：
+
+-   客户端发起一个Public Key的认证请求，并发送RSA Key的模数作为标识符。
+-   服务端检查是否存在请求帐号的公钥（Linux中存储在~/.ssh/**authorized_keys**文件中），以及其拥有的访问权限。如果没有则断开连接
+-   服务端使用对应的公钥对一个随机的256位的字符串进行加密，并发送给客户端
+-   客户端使用私钥对字符串进行解密，并将其结合session id生成一个MD5值发送给服务端。**结合session id的目的是为了避免攻击者采用重放攻击（replay attack）**。
+-   服务端采用同样的方式生成MD5值与客户端返回的MD5值进行比较，完成对客户端的认证。
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMTY1Nzc2Miw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTk2NzE3ODc1Myw3MzA5OTgxMTZdfQ==
 -->
