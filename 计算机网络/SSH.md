@@ -282,22 +282,18 @@ $ ssh user@host -p 2222 'mkdir -p .ssh && cat >> .ssh/authorized_keys' < ./id_rs
 `$ ssh-copy-id user@server`
 
 指定本地的ssh公钥文件:
-`$ ssh-copy-id -i ~/.ssh/id_rsa_test.pub yyx@127.0.0.1 -p 2222`
-
-`/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed:` `"./id_rsa_test.pub"`
-
-`/usr/bin/ssh-copy-id: INFO: attempting to` `log`  `in with the` `new`  `key(s), to filter out any that are already installed`
-
-`/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed --` `if`  `you are prompted now it is to install the` `new`  `keys`
-
+```
+$ ssh-copy-id -i ~/.ssh/id_rsa_test.pub yyx@127.0.0.1 -p 2222`
+`/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "./id_rsa_test.pub"`
+`/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed`
+`/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys`
 `yyx@127.0.0.1's password:`
-
 `Number of key(s) added: 1`
 
 `Now` `try`  `logging into the machine, with:` `"ssh -p '2222' 'yyx@127.0.0.1'"`
 
 `and check to make sure that only the key(s) you wanted were added.`
-
+```
 ## scp
 
 scp是 secure copy的缩写, scp是linux系统下基于ssh登陆进行安全的远程文件拷贝命令。
@@ -396,5 +392,5 @@ ssh-agent是一种控制用来保存公钥身份验证所使用的私钥的程�
 -   [http://erik-2-blog.logdown.com/posts/74081-ssh-principle](http://erik-2-blog.logdown.com/posts/74081-ssh-principle)
 -   [http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTE2NDkxNzQsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTkxOTEwNDcyMiw3MzA5OTgxMTZdfQ==
 -->
