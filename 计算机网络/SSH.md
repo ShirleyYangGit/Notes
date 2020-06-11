@@ -78,7 +78,27 @@ SSH协议是在1995年，由芬兰学者Tatu Ylonen设计开发的。起因是�
 
 SSH是一个Client-Server model。也就是说，它有SSH client 和 SSH server。
 
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/9%20client_server_connection.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/9%20client_server_connection.png)
+
+**实际上，SSH协议使用非对称加密进行传输session key。在数据传输阶段，使用session key对称加密的方式进行传输。**
+
+需要指出的是，SSH协议存在多种实现，既有商业实现，也有开源实现。本文针对的实现是**OpenSSH**，它是自由软件，应用非常广泛。
+
+此外，本文只讨论SSH在Linux Shell中的用法。如果要在Windows系统中使用SSH，会用到另一种软件PuTTY，在此不做介绍。
+
+# SSH连接建立流程
+
+ssh-client与ssh-server连接建立的主要阶段可以划分为：
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/10%20SSH%E6%B5%81%E7%A8%8B.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/10%20SSH%E6%B5%81%E7%A8%8B.png)
+每个阶段均涉及到客户端与服务端的多次交互，通过这些交互过程完成包括**证书传输**、**算法协商**、**通道加密**等过程。
+
+## 协议协商——明文通道
+
+1.  服务端打开服务端口（默认为22），等待客户端连接
+2.  客户端发起TCP连接请求，服务端接收到该请求后，向客户端发送包括SSH协议版本信息
+3.  客户端接根据该版本信息与自己的版本，决定将要使用的SSH版本，并向服务端发送选用的SSH版本信息
+4.  服务端检查是否支持客户端的决定使用的SSH版本
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyODQ1MTAxMyw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTc1Mjg5MDI3Miw3MzA5OTgxMTZdfQ==
 -->
