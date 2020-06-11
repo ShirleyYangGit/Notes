@@ -62,7 +62,7 @@ Harmonic mean is kind of an average when x and y are equal. But when x and y are
 
 [AUC stands for “Area under the ROC Curve.” That is, AUC measures the entire two-dimensional area underneath the entire ROC curve (think integral calculus) from (0,0) to (1,1).](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc)
 
-![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/7%20AUC.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/7%20AUC.png){:height="100px" width="400px"}
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/7%20AUC.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/7%20AUC.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNzY3NDExMiwtMTgwNDE2MTE5N119
+eyJoaXN0b3J5IjpbNzg5NjUwNTkwLC0xODA0MTYxMTk3XX0=
 -->
