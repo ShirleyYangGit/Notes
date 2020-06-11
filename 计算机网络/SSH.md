@@ -7,6 +7,8 @@
 
 在1976年以前，所有的加密都采用对称加密，既A使用某种加密规则对信息加密，B收到信息后逆向加密规则解密数据。
 
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/1%20%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.gif](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/1%20%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.gif)
+
 常用的对称加密算法有DES(Data Encryption Standard)、AES(Advanced Encryption Standard)等。
 
 但是这种通信方式产生了一个难以解决的问题：**A如何安全的把加密规则通知B？**
@@ -18,6 +20,8 @@
 > 1.A生成一对两把密钥（公钥和私钥）。公钥是公开的，任何人都可以获得，私钥则是保密的。
 > 2.B获取A生成的公钥，然后用它对信息加密。
 > 3.A得到加密后的信息，用私钥解密。
+
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/2%20%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.gif](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/2%20%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.gif)
 
 受这个思路的启发，三位数学家Rivest、Shamir 和 Adleman 设计了一种具体实现上面描述的非对称加密的算法，以他们三个人的名字命名，就是目前在计算机领域应用非常广泛的非对称加密算法[RSA加密算法](https://links.jianshu.com/go?to=https%3A%2F%2Fzh.wikipedia.org%2Fwiki%2FRSA%25E5%258A%25A0%25E5%25AF%2586%25E6%25BC%2594%25E7%25AE%2597%25E6%25B3%2595)。
 
@@ -36,5 +40,5 @@
 3.  将Signature附在数据后面发送出去。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NDc3MDIzLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTEyNzAzMzExNDMsNzMwOTk4MTE2XX0=
 -->
