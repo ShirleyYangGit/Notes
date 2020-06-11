@@ -40,8 +40,15 @@
 3.  将Signature附在数据后面发送出去。
 
 ![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/3%20digest.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/3%20digest.png)
-
 ![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/4%20signature.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/4%20signature.png)
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/5%20%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E5%90%8E%E7%9A%84%E6%B6%88%E6%81%AF.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/5%20%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E5%90%8E%E7%9A%84%E6%B6%88%E6%81%AF.png)
+
+对于收到数据的人来说，可以通过数字签名来完成认证和验证数据的完整性。
+-   认证：A用私钥加密数据，该数据只能用A的公钥解密。如果signature能够用A的公钥解密得到Digest，就可以证明该数据是A发出的
+-   完整性：对数据本身使用Hash函数得到Digest，对比解密得到的Digest，如果两者一致，就证明数据没有被修改过。
+
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/6%20%E8%A7%A3%E5%AF%86.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/6%20%E8%A7%A3%E5%AF%86.png)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxODIwODgyMyw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTIxMzkwMTg2NjQsNzMwOTk4MTE2XX0=
 -->
