@@ -14,7 +14,23 @@ Digest Auth (HTTP/1.1) is an application of [MD5](https://en.wikipedia.org/wiki/
 
 In a digest authentication flow, the client sends a request to a server, which sends back  **nonce**  and  **realm**  values for the client to authenticate. The client sends back a hashed username and password with the nonce and realm. The server then sends back the requested data.
 
+```
+HA1 = MD5( "Mufasa:testrealm@host.com:Circle Of Life" )
+    = 939e7578ed9e3c518a452acee763bce9`
 
+HA2 = MD5( "GET:/dir/index.html" )
+    = 39aff3a2bab6126f332b942af96d3366
+`Response = MD5( "939e7578ed9e3c518a452acee763bce9:\`
+
+`dcd98b7102dd2f0e8b11d0f600bfb0c093:\`
+
+`00000001:0a4f113b:auth:\`
+
+`39aff3a2bab6126f332b942af96d3366" )`
+
+`= 6629fae49393a05397450978507c4ef1`
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3ODk1MjcwNywtMzQxMjI4NzNdfQ==
+eyJoaXN0b3J5IjpbMTcwMzMxNzYyMywtMzQxMjI4NzNdfQ==
 -->
