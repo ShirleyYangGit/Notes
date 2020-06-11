@@ -81,20 +81,21 @@ OpenSSL是一个强大的安全套接字层密码库。作为一个基于密码�
     注意: 需要注意的是这个文件包含了公钥和密钥两部分，也就是说这个文件即可用来加密也可以用来解密, 后面的1024是生成密钥的长度.
     
 -   通过密钥文件private.key 提取公钥
-    
-    `[root@hunterfu ~]# openssl rsa -in private.key -pubout -out pub.key`
+    ```
+    [root@hunterfu ~]# openssl rsa -in private.key -pubout -out pub.key
+    ```
     
 -   使用公钥加密信息
-    
-    `[root@hunterfu ~]# echo -n "123456" | openssl rsautl -encrypt -inkey pub.key -pubin >encode.result`
+    ```
+    [root@hunterfu ~]# echo -n "123456" | openssl rsautl -encrypt -inkey pub.key -pubin >encode.result
+    ```
     
 -   使用私钥解密信息
+    ```
+    [root@hunterfu ~]#cat encode.result | openssl rsautl -decrypt -inkey private.key 
+    123456
+    ```
     
-    `[root@hunterfu ~]#cat encode.result | openssl rsautl -decrypt -inkey private.key`
-    
-    `123456`
-    
-
 至此，一次RSA加密解密的过程已经完成！
 
 ## DSA签名与认证
@@ -182,5 +183,5 @@ DSA只是一种算法，和RSA不同之处在于它不能用作加密和解密�
 [https://www.cnblogs.com/littlehann/p/3738141.html](https://www.cnblogs.com/littlehann/p/3738141.html)  
 [https://www.wosign.com/basic/howsslwork.htm](https://www.wosign.com/basic/howsslwork.htm)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU4NDkwNDcxLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTMxODM3OTQ3LDczMDk5ODExNl19
 -->
