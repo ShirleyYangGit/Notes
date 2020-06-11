@@ -39,6 +39,9 @@
 2.  A使用私钥对Digest进行加密，得到Signature。
 3.  将Signature附在数据后面发送出去。
 
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/3%20digest.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/3%20digest.png)
+
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/4%20signature.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/4%20signature.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzAzMzExNDMsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTgxODIwODgyMyw3MzA5OTgxMTZdfQ==
 -->
