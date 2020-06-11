@@ -146,7 +146,6 @@ SSH之所以能够保证安全，主要原因在于它采用了公钥加密来�
 
 （1）远程主机收到用户的登录请求，把自己的公钥发给用户。
 （2）用户使用这个公钥，将Session Key加密后，发送回来。
-
 （3）远程主机用自己的私钥，解密得到Session Key。
 
 这个过程本身是安全的，但是实施的时候存在一个风险：如果有人截获了登录请求，然后冒充远程主机，将伪造的公钥发给用户，那么用户很难辨别真伪。因为SSH协议的公钥都是自己签发的。
@@ -201,6 +200,237 @@ SSH其实是专门为shell设计的一种通信协议，它垮了两个网络层
 
 -   服务器的公开密钥
 -   数字签名 ：服务器证书内容--->Hash得到摘要Digest--->CA私钥进行加密
+
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/15%20%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/SSH/15%20%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D.png)
+# SSH Commands
+
+## 配置环境
+
+用Docker起一个ubuntu的container。安装ssh server, 它的配置文件默认位于/etc/ssh/sshd_config
+
+`config ssh server`
+
+`$ apt update`
+
+`$ apt-get install net-tools`
+
+`$ apt-get install iputils-ping`
+
+`安装sshd`
+
+`$ apt-get install openssh-server`
+
+`启动sshd`
+
+`$ /etc/init.d/ssh start`
+
+`or`
+
+`$ service ssh start`
+
+`查看`
+
+`$ ps -e | grep sshd`
+
+## SSH
+
+`远程登录命令: 使用ssh连接远程主机的2222端口`
+
+`$ ssh user@server -p 2222`
+
+`指定密钥文件`
+
+`$ ssh -i ~/.ssh/id_rsa_test user@server -p 2222`
+
+`调试信息`
+
+`$ ssh -v user@server -p 2222`
+
+## ssh-keygen
+
+运行上面的命令以后，系统会出现一系列提示，可以一路回车。其中有一个问题是，要不要对私钥设置口令（passphrase），如果担心私钥的安全，这里可以设置一个。
+
+`生成密钥：指定算法RSA，添加Email，指定密钥文件名`
+
+`$ ssh-keygen -t rsa -C` `"mytest@example.com"`  `-f` `"id_rsa_test"`
+
+`Generating` `public``/``private`  `rsa key pair.`
+
+`Enter passphrase (empty` `for`  `no passphrase):`
+
+`Enter same passphrase again:`
+
+`Your identification has been saved in id_rsa_test.`
+
+`Your` `public`  `key has been saved in id_rsa_test.pub.`
+
+`The key fingerprint is:`
+
+`SHA256:jNmMVIVW0MCGmBQYTdeewEwF3xV/mNECQqeewi+racA mytest@example.com`
+
+`The key's randomart image is:`
+
+`+---[RSA 2048]----+`
+
+`|.o=+o+XoO=+.+o |`
+
+`| o.+o= * = +o |`
+
+`|. ..o o o o o o |`
+
+`| ....o o . o .|`
+
+`|. .o..O S |`
+
+`|.E o+ + |`
+
+`| . o |`
+
+`| + |`
+
+`| . |`
+
+`+----[SHA256]-----+`
+
+运行结束以后，在$HOME/.ssh/目录下，会新生成两个文件：id_rsa_test.pub和id_rsa_test。前者是你的公钥，后者是你的私钥。
+
+## ssh-copy-id
+
+`将公钥传送到远程主机server上面`
+
+`复杂实现`
+
+`$ ssh user@host -p 2222` `'mkdir -p .ssh && cat >> .ssh/authorized_keys'`  `< ./id_rsa_test.pub`
+
+`命令解析：`
+
+`(1)` `"$ ssh user@host -p 2222"``，表示登录远程主机，端口2222；`
+
+`(2) 单引号中的mkdir .ssh && cat >> .ssh/authorized_keys，表示登录后在远程shell上执行的命令；`
+
+`(3）``"$ mkdir -p .ssh"``的作用是，如果用户主目录中的.ssh目录不存在，就创建一个；`
+
+`(4)` `'cat >> .ssh/authorized_keys'`  `< ~/.ssh/id_rsa_test.pub的作用是，将本地的公钥文件~/.ssh/id_rsa_test.pub，重定向追加到远程文件authorized_keys的末尾。`
+
+`简单实现`
+
+`$ ssh-copy-id user@server`
+
+`指定本地的ssh公钥文件:`
+
+`$ ssh-copy-id -i ~/.ssh/id_rsa_test.pub yyx@127.0.0.1 -p 2222`
+
+`/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed:` `"./id_rsa_test.pub"`
+
+`/usr/bin/ssh-copy-id: INFO: attempting to` `log`  `in with the` `new`  `key(s), to filter out any that are already installed`
+
+`/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed --` `if`  `you are prompted now it is to install the` `new`  `keys`
+
+`yyx@127.0.0.1's password:`
+
+`Number of key(s) added: 1`
+
+`Now` `try`  `logging into the machine, with:` `"ssh -p '2222' 'yyx@127.0.0.1'"`
+
+`and check to make sure that only the key(s) you wanted were added.`
+
+## scp
+
+scp是 secure copy的缩写, scp是linux系统下基于ssh登陆进行安全的远程文件拷贝命令。
+
+`$ scp [可选参数] file_source file_target`
+
+`从本地复制到远程 (远程端口 2222)`
+
+`$ scp -P 2222 local_file remote_username@remote_ip:remote_file`
+
+`从远程复制到本地（远程端口 2222）`
+
+`$ scp -P 2222 remote@www.runoob.com:/usr/local/``sin``.sh`
+
+## ssh-keyscan
+
+ssh-keyscan 批量获取集群上机器的密钥指纹。
+
+1.  准备公钥指纹的IP或hostname的列表，保存在hostlist.txt中  
+      
+    
+    `127.0.0.1`
+    
+    `127.0.0.2`
+    
+2.  执行命令
+    
+    `$ ssh-keyscan -f hostlist.txt`
+    
+    `# 127.0.0.1 SSH-2.0-OpenSSH_6.6.1`
+    
+    `127.0.0.1 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCWBZ3XrIajPmnd6R+g/wcUuOPOiRBMOYjAl4Dv8SfcZtgHqKTK6Zb1EeG3u/uzRYxqXMctG/2A4iXRDG9mvg9H9bimCWbA3xtR79NImPYg4m7BNuH9C+OXRYYJwoOGpjVMs0rGLXkq3/WVkXvQreBuhVD8NI2pEPnQsT1J5abdVbCHlwFYG6wVCJQqFY6jdntJJlxQv5EJu6w4/+Fd4LvdjysH+ngqArac6HMJUxqSxLQjzMdCRWEQKp3ySwmnRp9rHYVaJnnsXeYPfnMN1iMjdIQJPzc89Mepg4ip1q2bCMbMcx2XFO3I7YjYRdcOameFNafMGY0q5RHzhvgnNnal`
+    
+    `# 127.0.0.1 SSH-2.0-OpenSSH_6.6.1`
+    
+    `127.0.0.1 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCPWoEQ7iCCYDrpyb5KeMmCaQ8aOnSfehqmrplZRkbqqnkS9++PdSX/eSLJ0tkFd5902/C+HTCqbDgso4mCKpMo=`
+    
+    `# 127.0.0.2 SSH-2.0-OpenSSH_6.6.1`
+    
+    `127.0.0.2 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCWBZ3XrIajPmnd6R+g/wcUuOPOiRBMOYjAl4Dv8SfcZtgHqKTK6Zb1EeG3u/uzRYxqXMctG/2A4iXRDG9mvg9H9bimCWbA3xtR79NImPYg4m7BNuH9C+OXRYYJwoOGpjVMs0rGLXkq3/WVkXvQreBuhVD8NI2pEPnQsT1J5abdVbCHlwFYG6wVCJQqFY6jdntJJlxQv5EJu6w4/+Fd4LvdjysH+ngqArac6HMJUxqSxLQjzMdCRWEQKp3ySwmnRp9rHYVaJnnsXeYPfnMN1iMjdIQJPzc89Mepg4ip1q2bCMbMcx2XFO3I7YjYRdcOameFNafMGY0q5RHzhvgnNnal`
+    
+    `# 127.0.0.2 SSH-2.0-OpenSSH_6.6.1`
+    
+    `127.0.0.2 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCPWoEQ7iCCYDrpyb5KeMmCaQ8aOnSfehqmrplZRkbqqnkS9++PdSX/eSLJ0tkFd5902/C+HTCqbDgso4mCKpMo=`
+    
+3.  可以直接将结果重定向
+    
+    `ssh-keyscan -f hostlist.txt 1>>~/.ssh/known_hosts 2>/dev/null`
+    
+
+## ssh-agent & ssh-add
+
+ssh-agent是一种控制用来保存公钥身份验证所使用的私钥的程序，启动后，可以使用ssh-add将私钥交给ssh-agent保管。
+
+`start ssh-agent`
+
+``$ eval `ssh-agent -s` ``
+
+`add id_rsa_test`
+
+`$ ssh-add ~/.ssh/id_rsa_test`
+
+`查看`
+
+`$ ssh-add -l`
+
+`2048 SHA256:QOtjNmMVIVMEREWdsWfQdgdwF3xV/mNsdWEQqE+racA mytest@example.com (RSA)`
+
+`$ ssh-add -k`
+
+`Identity added: /Users/yaxingy/.ssh/id_rsa (yaxingy@splunk.com)`
+
+`在每台服务器上都配置，告诉ssh 允许 ssh-agent 转发`
+
+`修改全局：`
+
+`$ echo` `"ForwardAgent yes"`  `>> /etc/ssh/ssh_config`
+
+`修改个人`
+
+`$ touch ~/.ssh/config`
+
+`$ vim ~/.ssh/config`
+
+`Host *`
+
+`　　ForwardAgent yes`
+
+  
+
+# References
+
+-   [http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html](http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html)
+-   [https://www.ssh.com/ssh/#sec-The-SSH-protocol](https://www.ssh.com/ssh/#sec-The-SSH-protocol)
+-   [https://www.jianshu.com/p/5e3f9dfd2cb4](https://www.jianshu.com/p/5e3f9dfd2cb4)
+-   [http://erik-2-blog.logdown.com/posts/74081-ssh-principle](http://erik-2-blog.logdown.com/posts/74081-ssh-principle)
+-   [http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MzM4OTgzMyw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTE4Njk3NTA4NzgsNzMwOTk4MTE2XX0=
 -->
