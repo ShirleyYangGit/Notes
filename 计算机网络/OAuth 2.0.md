@@ -70,8 +70,16 @@ A步骤中，客户端申请认证的URI，包含以下参数：
 -   state：表示客户端的当前状态，可以指定任意值，认证服务器会原封不动地返回这个值。
 
 具体授权格式如下：
+```
+https://github.com/login/oauth/authorize?response_type=code&client_id=99a27aea912519cfeb7d&redirect_uri=http%3A%2F%2F10.66.4.95%3A3000%2Fcallback&scope=notifications&state=3(%230%2F!~
+```
+B步骤中，用户登陆授权：
+
+在用户第一次登陆“客户端”并通过“认证服务器”（Github）认证的时候，会有一个登陆以及确认授权的步骤，如下图。之后再次登陆，这个右图将自动跳过。（猜想：对于该用户，也许scope改变的时候，它会再次出现）
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/3%20user%20login.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/3%20user%20login.png)
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5MDk0NzYxOSwtMzIwNjcwMzUsLTE3Nz
+eyJoaXN0b3J5IjpbMTUxMTcyODQwMywtMzIwNjcwMzUsLTE3Nz
 k3ODQ1MjJdfQ==
 -->
