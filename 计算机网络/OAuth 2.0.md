@@ -104,9 +104,38 @@ POST /token HTTP/1.1 Host: server.example.com
 Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW 
 Content-Type: application/x-www-form-urlencoded 
 
-grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA &redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb
+grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA 
+&redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb
 ```
+E步骤中，认证服务器发送的HTTP回复，包含以下参数：
+
+-   access_token：表示访问令牌，必选项。
+-   token_type：表示令牌类型，该值大小写不敏感，必选项，可以是bearer类型或mac类型。
+-   expires_in：表示过期时间，单位为秒。如果省略该参数，必须其他方式设置过期时间。
+-   refresh_token：表示更新令牌，用来获取下一次的访问令牌，可选项。
+-   scope：表示权限范围，如果与客户端申请的范围一致，此项可省略。
+
+具体格式如下：
+```
+HTTP/1.1 200 OK 
+Content-Type: application/json;charset=UTF-8 
+Cache-Control: no-store 
+Pragma: no-cache 
+{ 
+"access_token":"2YotnFZFEjr1zCsicMWpAA", 
+"token_type":"example_value", "expires_in":3600, 
+"refresh_token":"tGzv3JOkF0XG5Qx2TlKWIA", 
+"example_parameter":"example_value" 
+}
+```
+## 简化模式（implicit）
+
+简化模式（implicit grant type）不通过第三方应用程序的服务器，直接在浏览器中向认证服务器申请令牌，跳过了"授权码"这个步骤，因此得名。所有步骤在浏览器中完成，令牌对访问者是可见的，且客户端不需要认证。
+
+应用场景: 适用于所有无Server端配合的应用(由于应用往往位于一个User Agent里，如浏览器里面，因此这类应用在某些平台下又被称为`Client-Side Application`), 如手机/桌面客户端程序、浏览器插件等，以及基于JavaScript等脚本客户端脚本语言实现的应用，他们的一个共同特点是，无服务端,无法监听端口直接收到回调token, 并且应用无法妥善保管其应用密钥(App Secret Key), 如果采取Authorization Code模式，则会存在泄漏其应用密钥(api_scret)的可能性
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzE1MjYxODAsLTMyMDY3MDM1LC0xNz
-c5Nzg0NTIyXX0=
+eyJoaXN0b3J5IjpbLTc4Njc5NjA5OSwtMzIwNjcwMzUsLTE3Nz
+k3ODQ1MjJdfQ==
 -->
