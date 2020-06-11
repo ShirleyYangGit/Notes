@@ -1,8 +1,6 @@
 # OAuth 2.0
 
-[传统认证的问题](#传统认证的问题)
-[OAuth2的解决思路](#OAuth2的解决思路)
-[OAuth2简介](#OAuth2简介)
+[TPC]
 
 ## 传统认证的问题 
 举个简单一点的例子来说明传统身份认证的问题:
@@ -20,5 +18,5 @@ OAuth的实现方式与此类似, OAuth在”客户端”(第三方服务)与”
 
 ### 名词定义
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MTEzNjEzMCwtMTc3OTc4NDUyMl19
+eyJoaXN0b3J5IjpbMjA1NjI5Njk0NSwtMTc3OTc4NDUyMl19
 -->
