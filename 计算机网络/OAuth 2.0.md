@@ -30,7 +30,7 @@ OAuth的实现方式与此类似, OAuth在”客户端”(第三方服务)与”
 
 ## 运行流程
 
-
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/1%20OAuth%202%20flow.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/1%20OAuth%202%20flow.png)
 （A）用户打开客户端以后，客户端要求用户给予授权。
 （B）用户同意给予客户端授权。
 （C）客户端使用上一步获得的授权，向认证服务器申请令牌。
@@ -40,7 +40,38 @@ OAuth的实现方式与此类似, OAuth在”客户端”(第三方服务)与”
 
 不难看出来，上面六个步骤之中，B是关键，即用户怎样才能给于客户端授权。有了这个授权以后，客户端就可以获取令牌，进而凭令牌获取资源
 
+# OAuth2客户端的授权模式
+
+客户端必须得到用户的授权（authorization grant），才能获得令牌（access token）。OAuth 2.0定义了四种授权方式。
+
+-   授权码模式（authorization code）
+-   简化模式（implicit）
+-   密码模式（resource owner password credentials）
+-   客户端模式（client credentials）
+
+## 授权码模式（authorization code）
+
+授权码模式（authorization code）是功能最完整、流程最严密的授权模式。它的特点就是通过客户端的后台服务器，与"服务提供商"的认证服务器进行互动。
+
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/2%20authorization%20code.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/2%20authorization%20code.png)
+
+（A）用户访问客户端，后者将前者导向认证服务器。
+（B）用户选择是否给予客户端授权。
+（C）假设用户给予授权，认证服务器将用户导向客户端事先指定的"重定向URI"（redirection URI），同时附上一个授权码。
+（D）客户端收到授权码，附上早先的"重定向URI"，向认证服务器申请令牌。这一步是在客户端的后台的服务器上完成的，对用户不可见。
+（E）认证服务器核对了授权码和重定向URI，确认无误后，向客户端发送访问令牌（access token）和更新令牌（refresh token）。
+ 
+A步骤中，客户端申请认证的URI，包含以下参数：
+
+-   **response_type**：表示授权类型，必选项，此处的值固定为"**code**"
+-   client_id：表示客户端的ID，必选项
+-   redirect_uri：表示重定向URI，可选项
+-   scope：表示申请的权限范围，可选项
+-   state：表示客户端的当前状态，可以指定任意值，认证服务器会原封不动地返回这个值。
+
+具体授权格式如下：
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODI3MjQwNzUsLTMyMDY3MDM1LC0xNz
-c5Nzg0NTIyXX0=
+eyJoaXN0b3J5IjpbMTY5MDk0NzYxOSwtMzIwNjcwMzUsLTE3Nz
+k3ODQ1MjJdfQ==
 -->
