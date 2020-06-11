@@ -1,7 +1,25 @@
+# SSH
+# 加密
 
+在解释SSH协议之前我先介绍一下对称和非对称加密协议。
 
+## 对称加密
 
-> Written with [StackEdit](https://stackedit.io/).
+在1976年以前，所有的加密都采用对称加密，既A使用某种加密规则对信息加密，B收到信息后逆向加密规则解密数据。
+
+常用的对称加密算法有DES(Data Encryption Standard)、AES(Advanced Encryption Standard)等。
+
+但是这种通信方式产生了一个难以解决的问题：**A如何安全的把加密规则通知B？**
+
+## 非对称加密
+
+在1976年有两位数学家提出了一个崭新的非对称加密的概念：
+
+> ```
+> 1.A生成一对两把密钥（公钥和私钥）。公钥是公开的，任何人都可以获得，私钥则是保密的。
+> 2.B获取A生成的公钥，然后用它对信息加密。
+> 3.A得到加密后的信息，用私钥解密。
+> ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTY4MzkyODE1Myw3MzA5OTgxMTZdfQ==
 -->
