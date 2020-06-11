@@ -207,45 +207,35 @@ SSH其实是专门为shell设计的一种通信协议，它垮了两个网络层
 ## 配置环境
 
 用Docker起一个ubuntu的container。安装ssh server, 它的配置文件默认位于/etc/ssh/sshd_config
+```
+config ssh server
 
-`config ssh server`
+$ apt update
+$ apt-get install net-tools
+$ apt-get install iputils-ping
 
-`$ apt update`
+安装sshd
+$ apt-get install openssh-server
 
-`$ apt-get install net-tools`
+启动sshd
+$ /etc/init.d/ssh start
+or
+$ service ssh start
 
-`$ apt-get install iputils-ping`
-
-`安装sshd`
-
-`$ apt-get install openssh-server`
-
-`启动sshd`
-
-`$ /etc/init.d/ssh start`
-
-`or`
-
-`$ service ssh start`
-
-`查看`
-
-`$ ps -e | grep sshd`
-
+查看
+$ ps -e | grep sshd
+```
 ## SSH
+```
+远程登录命令: 使用ssh连接远程主机的2222端口
+$ ssh user@server -p 2222
 
-`远程登录命令: 使用ssh连接远程主机的2222端口`
+指定密钥文件
+$ ssh -i ~/.ssh/id_rsa_test user@server -p 2222
 
-`$ ssh user@server -p 2222`
-
-`指定密钥文件`
-
-`$ ssh -i ~/.ssh/id_rsa_test user@server -p 2222`
-
-`调试信息`
-
-`$ ssh -v user@server -p 2222`
-
+调试信息
+$ ssh -v user@server -p 2222
+```
 ## ssh-keygen
 
 运行上面的命令以后，系统会出现一系列提示，可以一路回车。其中有一个问题是，要不要对私钥设置口令（passphrase），如果担心私钥的安全，这里可以设置一个。
@@ -432,5 +422,5 @@ ssh-agent是一种控制用来保存公钥身份验证所使用的私钥的程�
 -   [http://erik-2-blog.logdown.com/posts/74081-ssh-principle](http://erik-2-blog.logdown.com/posts/74081-ssh-principle)
 -   [http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Njk3NTA4NzgsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTIwNDE3NzY3NDIsNzMwOTk4MTE2XX0=
 -->
