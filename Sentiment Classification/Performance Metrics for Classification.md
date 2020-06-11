@@ -30,15 +30,19 @@ Accuracy in classification problems is the number of correct predictions made by
 
 Precision is a measure that tells us what proportion of class1 we predicted, actually belongs to class1.
 
-![https://github.com/ShirleyYangGit/Pictures/blob/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/3%20precision.png](https://github.com/ShirleyYangGit/Pictures/blob/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/3%20precision.png)
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/3%20precision.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/3%20precision.png)
 
 # Recall or Sensitivity 召回率或敏感性
 
 Precision is a measure that tells us what proportion of class1 was predicted to class1.
 
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/4%20Recall%20and%20Sensitivity.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/4%20Recall%20and%20Sensitivity.png)
+
 # Specificity 特异性
 
 Specificity is the exact opposite of Recall or Sensitivity.
+
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/5%20Specificity.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/Sentiment%20Classification/Performance%20Metrics%20for%20Classification/5%20Specificity.png)
 
 # F1-Score
 
@@ -56,6 +60,5 @@ Harmonic mean is kind of an average when x and y are equal. But when x and y are
 
 [AUC stands for “Area under the ROC Curve.” That is, AUC measures the entire two-dimensional area underneath the entire ROC curve (think integral calculus) from (0,0) to (1,1).](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDY4ODcwMzIsLTE4MDQxNjExOTddfQ
-==
+eyJoaXN0b3J5IjpbNDM0NDk1MDQwLC0xODA0MTYxMTk3XX0=
 -->
