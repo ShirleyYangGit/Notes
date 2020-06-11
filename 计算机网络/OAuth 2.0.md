@@ -78,8 +78,35 @@ B步骤中，用户登陆授权：
 在用户第一次登陆“客户端”并通过“认证服务器”（Github）认证的时候，会有一个登陆以及确认授权的步骤，如下图。之后再次登陆，这个右图将自动跳过。（猜想：对于该用户，也许scope改变的时候，它会再次出现）
 ![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/3%20user%20login.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/3%20user%20login.png)
 
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/4%20user%20authorize.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/4%20user%20authorize.png)
 
+C步骤中，服务器回应客户端的URI，包含以下参数：
+
+-   code：表示授权码，必选项。该码的有效期应该很短，通常设为10分钟，客户端只能使用该码一次，否则会被授权服务器拒绝。该码与客户端ID和重定向URI，是一一对应关系。
+-   state：如果客户端的请求中包含这个参数，认证服务器的回应也必须一模一样包含这个参数。
+
+具体格式如下：
+```
+HTTP/1.1 302 Found Location: 
+http://10.66.4.95:3000/callback?code=45ca6e53dab3a6cd744f &state=3(#0/!~
+```
+D步骤中，客户端向认证服务器申请令牌的HTTP请求，包含以下参数：
+
+-   **grant_type**：表示使用的授权模式，必选项，此处的值固定为"**authorization_code**"。
+-   code：表示上一步获得的授权码，必选项。
+-   redirect_uri：表示重定向URI，必选项，且必须与A步骤中的该参数值保持一致。
+-   client_id：表示客户端ID，必选项。
+-   测试发现request header中，需要**Authorization: Basic token。**该token是由client_id和client_secret组合的base64编码
+
+具体格式如下：
+```
+POST /token HTTP/1.1 Host: server.example.com 
+Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW 
+Content-Type: application/x-www-form-urlencoded 
+
+grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA &redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTcyODQwMywtMzIwNjcwMzUsLTE3Nz
-k3ODQ1MjJdfQ==
+eyJoaXN0b3J5IjpbLTIxMzE1MjYxODAsLTMyMDY3MDM1LC0xNz
+c5Nzg0NTIyXX0=
 -->
