@@ -176,7 +176,44 @@ Location: http://example.com/cb#access_token=2YotnFZFEjr1zCsicMWpAA &state=xyz&t
 密码模式（Resource Owner Password Credentials Grant）中，**用户向客户端提供自己的用户名和密码**。客户端使用这些信息，向"服务商提供商"索要授权。
 
 在这种模式中，用户必须把自己的密码给客户端，但是**客户端不得储存密码**。这通常用在用户对**客户端高度信任**的情况下，比如客户端是操作系统的一部分，或者由一个著名公司出品。而认证服务器只有在其他授权模式无法执行的情况下，才能考虑使用这种模式。
+
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/6%20Resource%20Owner%20Password%20Credentials%20Grant.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/6%20Resource%20Owner%20Password%20Credentials%20Grant.png)
+
+（A）用户向客户端提供用户名和密码。
+（B）客户端将用户名和密码发给认证服务器，向后者请求令牌。
+（C）认证服务器确认无误后，向客户端提供访问令牌。
+
+B步骤中，客户端发出的HTTP请求，包含以下参数：
+
+-   **grant_type**：表示授权类型，此处的值固定为"**password**"，必选项。
+-   username：表示用户名，必选项。
+-   password：表示用户的密码，必选项。
+-   scope：表示权限范围，可选项。
+
+## 客户端模式（client credentials）
+
+客户端模式（Client Credentials Grant）指**客户端以自己的名义**，而不是以用户的名义，向"服务提供商"进行认证。严格地说，客户端模式并不属于OAuth框架所要解决的问题。在这种模式中，用户直接向客户端注册，客户端以自己的名义要求"服务提供商"提供服务，其实不存在授权问题。
+
+![https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/7%20Client%20Credentials%20Grant.png](https://raw.githubusercontent.com/ShirleyYangGit/Pictures/master/ComputerNetwork/OAuth%202.0/7%20Client%20Credentials%20Grant.png)
+
+（A）客户端向认证服务器进行身份认证，并要求一个访问令牌。
+
+（B）认证服务器确认无误后，向客户端提供访问令牌。
+
+A步骤中，客户端发出的HTTP请求，包含以下参数：
+
+-   **grant_****type**：表示授权类型，此处的值固定为"**client_credentials**"，必选项。
+-   scope：表示权限范围，可选项。
+
+# FAQ
+
+1.  为什么授权码模式中一定要有authorization code, 不能直接根据callback url返回access token吗？  
+    主要原因是为了安全。callback url有可能是http开头，不是加密传输，这会导致access token很容易被黑客窃取。相比之下，authorization code只有几分钟的有效期，且只能使用该码一次，即使被盗，黑客也需要clientID、redirect uri等信息才能冒充客户端去申请access token，这就大大降低了token泄漏的问题。  
+      
+    
+2.  Client ID从哪里获取的？  
+    这是要客户端在认证服务器中注册后，才能得到的。以Github认证服务器为例，可以在[New OAuth Application](https://github.com/settings/applications/new)中注册应用，进而获取Client ID和Client Secret。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MDUzNzQ2NCwtMzIwNjcwMzUsLTE3Nz
+eyJoaXN0b3J5IjpbLTkwMjUyODkwMywtMzIwNjcwMzUsLTE3Nz
 k3ODQ1MjJdfQ==
 -->
