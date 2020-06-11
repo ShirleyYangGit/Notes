@@ -19,6 +19,19 @@ OAuth的实现方式与此类似, OAuth在”客户端”(第三方服务)与”
 ## OAuth2简介
 
 ### 名词定义
+（1）Third-party application：第三方应用程序，本文中又称"客户端"（client），即上一节例子中的园艺公司、清洁公司。
+
+（2）HTTP service：HTTP服务提供商，本文中简称"服务提供商"，即上一节例子中的别墅。
+
+（3）Resource Owner：资源所有者，本文中又称"用户"（user）。
+
+（4）User Agent：用户代理，本文中就是指浏览器。
+
+（5）Authorization server：认证服务器，即服务提供商专门用来处理认证的服务器。
+
+（6）Resource server：资源服务器，即服务提供商存放用户生成的资源的服务器。它与认证服务器，可以是同一台服务器，也可以是不同的服务器。
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3ODA1MjY5MCwtMTc3OTc4NDUyMl19
+eyJoaXN0b3J5IjpbLTMyMDY3MDM1LC0xNzc5Nzg0NTIyXX0=
 -->
