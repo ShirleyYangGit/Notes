@@ -27,6 +27,14 @@ github上有一个字体：yizhen20133868/fonts
 ```
 
 然后打开terminal的偏好设置Preferences->描述文件Profiles->Text->Change Font，在Family中更改字体为刚刚导入的那个字体，我选择的是 Meslo LG S DZ Regular for Powerline 字体
+
+## Install homebrew failed with curl connection refused
+Here's the work around way to install home brew
+1.  open the home page of brew  [https://brew.sh/](https://brew.sh/)
+2.  copy the URL from the install cmd and open it on your browser  [https://raw.githubusercontent.com/Homebrew/install/master/install.sh](https://raw.githubusercontent.com/Homebrew/install/master/install.sh)
+3.  right-click and save it to your computer
+4.  open a terminal and run it with: /bin/bash path-to/install.sh
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MTY1MzczNywtMTczNTcxNzczNF19
+eyJoaXN0b3J5IjpbLTY3MDQ3NDU0NiwxNjgxNjUzNzM3LC0xNz
+M1NzE3NzM0XX0=
 -->
